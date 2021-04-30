@@ -408,10 +408,12 @@ footer{
         display: block;
         width: 100%;
         margin: 0%;
-        height: auto;
+        min-height: auto;
+        /* height: ; */
     }
     .project-main >div{
         width: 75%;
+        min-height: 500px;
         margin: 12.5%;
     }
     .project-live {
