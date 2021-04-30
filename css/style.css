@@ -100,7 +100,7 @@ body{
     width: 70%;
     /* margin: auto; */
     margin: 0px 15%;
-    min-height: 530px;
+    height: 530px;
 }
 .about  >div{
     /* border: 2px solid green; */
@@ -334,14 +334,12 @@ footer{
     .about img{
         width:60%;
         margin: 2% 20% ;
-        min-height: 530px;
+        height: 530px;
     }
     .intro h1{
         font-size: 1.5rem;
     }
-    .intro p{
-        /* font-size: 30px; */
-    }
+
 }
 @media screen and (max-width:700px){
     .main{
@@ -349,14 +347,16 @@ footer{
         /* height: 500px; */
     }
     .main >div{
-        height: 300px;
+        height: 400px;
+        width: 80%;
     }
     .content{
-        display: block;
+        /* width:60%; */
+        display: inline-block;
         padding: 0%;
         /* width: 80%; */
-        margin: 5% auto;
-        font-size: 20px;
+        margin: 10% 10%;
+        font-size: 24px;
         word-spacing: 0px;
         letter-spacing: 0px;
         font-weight: 100;
@@ -365,11 +365,12 @@ footer{
     }
     .content-heading{
         word-break: keep-all;
-        font-size: 1.5rem;
+        font-size: 2.2rem;
     }
     .main-img{
-        width: 120%;
-        margin:  10% 35%;
+        margin: 0px;
+        width: 110%;
+        margin:  10% 7%;
         
     }
     .about{
@@ -377,9 +378,14 @@ footer{
         /* height: 300px; */
     }
     .about >div{
-        /* height: 300px; */
+
+        width: 100%;
     }
-    .about>div> img{
-        /* height: 200px; */
+    .about img{
+        height: 400px;
+    }
+    .intro p{
+        margin: 0px 10%;
+        height: 450px;
     }
 }
