@@ -388,4 +388,51 @@ footer{
         margin: 0px 10%;
         height: 450px;
     }
+    .dev>h1{
+        font-size: 2.5rem;
+    }
+    .dev img{
+        width: 200px;
+        height: 200px;
+    }
+    .tool{
+        display: block;
+        margin-bottom:0px ;
+        padding-bottom:20px ;
+        /* min-height: 1000px; */
+    }
+    .tool-item h1{
+        font-size: 2rem;
+    }
+    .project-main{
+        display: block;
+        width: 100%;
+        margin: 0%;
+        height: auto;
+    }
+    .project-main >div{
+        width: 75%;
+        margin: 12.5%;
+    }
+    .project-live {
+        font-size: 16px;
+        padding: 5px;
+        margin: 0%;
+    }
+    .project-main>div>div{
+        /* width: 1; */
+        margin: 10% auto;
+    }
+    .project-div{
+        justify-content: space-around;
+        /* margin: 0%; */
+    }
+    #project-title{
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    #project-content{
+        font-size: 14px;
+        font-weight: 600;
+    }
 }
