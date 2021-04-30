@@ -413,7 +413,7 @@ footer{
     }
     .project-main >div{
         width: 75%;
-        min-height: 500px;
+        min-height: 600px;
         margin: 12.5%;
     }
     .project-live {
