@@ -339,6 +339,18 @@ footer{
     .intro h1{
         font-size: 1.5rem;
     }
+    .project-div{
+        justify-content: space-between;
+        font-size: 16px;
+        padding: 5px;
+    }
+    .project-main > div{
+        width: 50%;
+
+    }
+    #project-content{
+        padding: 5px 10px;
+    }
 
 }
 @media screen and (max-width:700px){
@@ -413,7 +425,7 @@ footer{
     }
     .project-main >div{
         width: 75%;
-        min-height: 600px;
+        min-height: 450px;
         margin: 12.5%;
     }
     .project-live {
