@@ -54,6 +54,9 @@ body{
 .h12{
     display: none;
 }
+/* .h11:hover{
+    color: #2EC4BC;
+} */
 #s-2{
     font-family: 'Roboto Mono', monospace;
     width: 100%;
@@ -315,6 +318,7 @@ footer{
         height: 50px;
         line-height: 50px;
     }
+    
     #h11{
         /* transition: all 5s; */
         display: none;
