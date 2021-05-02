@@ -20,19 +20,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/84637082cc.js" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="home">
         <section id="s-1">
             <div class="h1" id="h1">Amit Sharma
 
-                <div class="h12"><a href=""><i class="fas fa-bars"></i></a></div>
+                <div class="h12" onclick="show()"><i class="fas fa-bars"></i></div>
             </div>
-            <div class="h1">
-                <div class="h11"><a href="#"> Home</a></div>
-                <div class="h11"><a href="#"> About</a></div>
+            <div class="h1" id="h11" >
+                <div class="h11"><a href="#home" onclick="show()"> Home</a></div>
+                <div class="h11"><a href="#p" onclick="show()">Project</a></div>
             </div>
         </section>
         <section id="s-2">
@@ -104,7 +104,7 @@
 
     </section>
 
-    <section class="project">
+    <section class="project" id ='p'>
         <h1>Projects</h1>
         <div class="project-main">
             <div><a target="_blank" href="https://amitsharma45.github.io/JavaScript-Project/Quote/index.html"><img
@@ -123,7 +123,7 @@
 <!-- 
             <div>
 
-            </div>
+            </div>z
             <div>
 
             </div> -->
@@ -147,7 +147,7 @@
             All rights reserved.</div>
     </footer>
     <!-- Script -->
-
+    <script src="js/script.js"></script>
 </body>
 
 </html>

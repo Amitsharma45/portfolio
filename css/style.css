@@ -298,13 +298,19 @@ footer{
         display: block;
     }
     #h1{
+        /* display: none; */
         display: flex;
         justify-content: space-between;
     }
     .h11 {
-        display: none;
+        display: flex;
         align-items: center;
         justify-content: center;
+        /* display: none; */
+    }
+    #h11{
+        display: none;
+        transition: all 5s;
     }
     .h12 ,i{
 
