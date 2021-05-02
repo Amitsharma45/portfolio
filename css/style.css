@@ -303,14 +303,21 @@ footer{
         justify-content: space-between;
     }
     .h11 {
+        /* border: 2px solid white; */
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 50px;
         /* display: none; */
     }
+    .h11 a{
+        color: #cccccc;
+        height: 50px;
+        line-height: 50px;
+    }
     #h11{
+        /* transition: all 5s; */
         display: none;
-        transition: all 5s;
     }
     .h12 ,i{
 
