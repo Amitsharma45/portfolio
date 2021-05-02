@@ -300,6 +300,10 @@ footer{
     #s-1{
         display: block;
     }
+    #s-2{
+        margin-top: 0px;
+        height: 500px;
+    }
     #h1{
         /* display: none; */
         display: flex;
