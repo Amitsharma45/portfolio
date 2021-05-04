@@ -54,9 +54,14 @@ body{
 .h12{
     display: none;
 }
-/* .h11:hover{
-    color: #2EC4BC;
-} */
+.h12>i:hover{
+    border-radius: 50%;
+    color: #cccccc;
+}
+.h11>a:hover{
+
+    color: #cccccc;
+}
 #s-2{
     font-family: 'Roboto Mono', monospace;
     width: 100%;
@@ -302,7 +307,7 @@ footer{
     }
     #s-2{
         margin-top: 0px;
-        height: 500px;
+        /* height: 500px; */
     }
     #h1{
         /* display: none; */
@@ -344,10 +349,12 @@ footer{
         font-size: 16px;
     }
     .content{
-        margin: auto;
+
+        /* margin: auto; */
+        margin-bottom: 0px;
         font-size: 18px;
         font-weight: 200;
-    }
+    
     .main-img{
         width: 60%;
         margin: 30% 20%;
@@ -380,10 +387,16 @@ footer{
         /* height: 500px; */
     }
     .main >div{
-        height: 400px;
+        /* height: 450px; */
+        height: auto;
         width: 80%;
     }
+    #s-2{
+    height: auto;
+    margin-top: 70px;
+}
     .content{
+        
         /* width:60%; */
         display: inline-block;
         padding: 0%;
@@ -401,7 +414,7 @@ footer{
         font-size: 2.2rem;
     }
     .main-img{
-        margin: 0px;
+        /* margin: 0px; */
         width: 110%;
         margin:  10% 7%;
         
