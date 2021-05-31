@@ -301,6 +301,7 @@ footer{
 @media screen and (max-width:1120px) {
     body{
         background-color: black;
+        /* color: #cccccc; */
     }
     #s-1{
         display: block;
@@ -432,10 +433,17 @@ footer{
     }
     .intro p{
         margin: 0px 10%;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: normal;
         height: 450px;
     }
+    .intro h1{
+        font-size: 2.rem;
+        padding-bottom: 50px;
+    }
     .dev>h1{
-        font-size: 2.5rem;
+        font-size: 1.7rem;
     }
     .dev img{
         width: 200px;
@@ -448,7 +456,10 @@ footer{
         /* min-height: 1000px; */
     }
     .tool-item h1{
-        font-size: 2rem;
+        font-size: 20px;
+    }
+    .tool-item li{
+        font-size: 16px;
     }
     .project-main{
         display: block;
