@@ -65,10 +65,11 @@ body{
 #s-2{
     font-family: 'Roboto Mono', monospace;
     width: 100%;
-    /* height: 500px */
+    /* min-height: 500px */
     height: auto;
     background-color: #011627;
     margin-top: 70px;
+    padding-bottom: 25px;
 }
 .main{
     display: flex;
