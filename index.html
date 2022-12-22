@@ -28,164 +28,112 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/84637082cc.js" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Crete+Round&family=Montserrat:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7RK2CL5GY4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
-        gtag('config', 'G-7RK2CL5GY4');
-    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
 
-<body onresize="s()">
-    <header class="header" id="home">
-        <section id="s-1">
-            <div class="h1" id="h1">Amit Sharma
+<body>
 
-                <div class="h12" onclick="show()"><i class="fas fa-bars"></i></div>
+    <div class="main">
+        <nav class="navbar navbar-expand-lg navbar-dark " id="nav">
+            <a class="navbar-brand" href="#">Amit Sharma</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+              <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+              </form> -->
             </div>
-            <div class="h1" id="h11">
-                <div class="h11"><a href="#home" onclick="show()"> Home</a></div>
-                <div class="h11"><a href="#p" onclick="show()">Project</a></div>
-                <div class="h11"><a href="resume/resume.pdf" target="_blank" onclick="show()">Resume</a></div>
-            </div>
-        </section>
-        <section id="s-2">
-            <div class="main">
-                <div class="content" style="color: #CCCCCC;">
-                    <div class="content-heading" style="color: #2EC4BC;">Hello World!</div>
-                    <div style="color: #cccccc;">I'm <span style="color: #2EC4BC; font-weight: 100;">Amit Sharma.</span>
-                    </div>
-                    I am a Front-end Developer, CSE student with problem-solving and development skills. Passionate about coding and enjoy doing the coding.
-
-                </div>
-                <div>
-                    <img class="main-img" src="img/programmingsvg.svg" alt="">
-                     <!-- <img src="img/20943758.jpg" alt="">  -->
-                </div>
-
-            </div>
-        </section>
-    </header>
-
-    <section class="about">
-        <div class="about-img">
-            <img src="img/a.jpg" alt="">
-        </div>
-        <div class="intro">
-            <h1>Short Introduction</h1>
-            <p>Hey there! Let me introduce myself again, my name is <b>Amit Sharma</b>, and I am on way to Front-end developer. My go to library on front-end is React
-                . If you are looking
-                to hire someone with my skills then you can drop me a mail at If you'd like, you scroll to see my
-                development backpack (in other words the technologies I use daily).
-            </p>
-        </div>
-
-    </section>
-
-    <section class="dev">
-        <img src="img/git1.png" alt="">
-        <h1>My development backpack</h1>
-
-        <div class="tool">
-            <div class="tool-item">
-                <h1>Languages</h1>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Python</li>
-                </ul>
-
-            </div>
-            <div class="tool-item">
-                <h1>Libraries and Frameworks</h1>
-                <ul>
-                    <li>React</li>
-                    <li>Django</li>
-                </ul>
-            </div>
-            <div class="tool-item">
-                <h1>Tools and Others</h1>
-                <ul>
-                    <li>Git</li>
-                    <li>SQL</li>
-                    <li>Sass</li>
-                    <li>JQuery</li>
-                </ul>
-            </div>
-        </div>
-
-
-    </section>
-
-    <section class="project" id='p'>
-        <h1>Projects</h1>
-        <div class="project-main">
-            <div><a target="_blank" href="https://amitsharma45.github.io/JavaScript-Project/Quote/index.html"><img
-                        src="img/quote.jpg" alt="loading"></a>
-                <div
-                    style="margin: 10px 5px 0px 5px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ">
-
-                    <p id="project-title">Random Quote Generator</p>
-                    <p id="project-content">Web page which show random quote fetch from api by
-                        (lukePeavey).</p>
-                    <div class="project-div">
-                        <a href="https://amitsharma45.github.io/JavaScript-Project/Quote/index.html" target="_blank"
-                            class="project-live">Live project</a>
-                        <a href="https://github.com/Amitsharma45/JavaScript-Project/tree/master/Quote" target="_blank"
-                            class="project-live">Github</a>
+          </nav>
+        <div class="home">
+            <div class="banner">
+                <div id="intro" class="pt-5">
+                    <div>
+                        <div class="mt-5 name">Hi, I'm <span style="color: #2EC4BC;"> Amit Sharma </span></div>
+                        <div class="title_name ">JavaScript Developer</div>
+                        <!-- <p>
+                        B.Tech Computer Science and Engineering 2022 Graduate. I have worked on MERN stack development
+                        for
+                        the last 1.5 years and built some projects using MERN technology
+                    </p> -->
+                        <div class="contact">
+                            <a href="https://github.com/Amitsharma45" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/amit-sharma-047434177/" target="_blank"><i
+                                    class="fab fa-brands fa-linkedin-in linkdin"></i></a>
+                        </div>
+                        <div class="mt-4">
+                            <button class="btn btn-light"><a target="_blank"
+                                    style="color: black; text-decoration: none; font-weight: 500 ;"
+                                    href="https://drive.google.com/file/d/1GQs-zhOd9zC1NN1CB3i4FPKulhRusK0V/view?usp=share_link">Resume</a>
+                            </button>
+                            <button class="btn btn-outline-light"><a target="_blank"
+                                    style="color: white; text-decoration: none; font-weight: 600 ;"> Contact
+                                    me</a></button>
+                        </div>
                     </div>
                 </div>
+                <div class="banner_img">
+                    <img src="./img4.svg" alt="">
+                </div>
             </div>
-
-
-
-
-            <div><a target="_blank" href="https://amitsharma45.github.io/Weather-forecast/"><img
-                        src="img/img-min.JPG" alt="loading"></a>
-                <div
-                    style="margin: 10px 5px 0px 5px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ">
-
-                    <p id="project-title">Weather Forecasting</p>
-                    <p id="project-content">Weather Forecast is a  weather dashboard that retrieved data from Open Weather Map, a third-party APIs. </p>
-                    <div class="project-div">
-                        <a href="https://amitsharma45.github.io/Weather-forecast/" target="_blank"
-                            class="project-live">Live project</a>
-                        <a href="https://github.com/Amitsharma45/Weather-forecast" target="_blank"
-                            class="project-live">Github</a>
-                    </div>
+            <div id="skills">
+                <div class="heading">SKILLS</div>
+                <div class="icon">
+                    <img class="skills-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" alt="">
+                    <img class="skills-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" alt="">
+                    <img class="skills-icon" src="https://cdn-icons-png.flaticon.com/512/1199/1199124.png" alt="">
+                    <img class="skills-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" alt="">
                 </div>
             </div>
 
-
+            <!-- <div id="projects">
+                <div class="heading">Projects</div>
+            </div> -->
+            <!-- <div id="education">
+                <div class="heading">Education</div>
+            </div>
+            <div id="Contact">
+                <div class="heading">Contact Me</div>
+            </div> -->
         </div>
 
-    </section>
 
-    <footer>
-        <h1 style="padding: 3px 0px; font-weight: 100; font-size: 2rem;">Amit Sharma</h1>
-        <div>Front-end Developer</div>
-        <div style="color: #2EC4BC;">sharma.amit20111@gmail.com</div>
-        <div class="resume"><a href="resume/resume.pdf" class="resume-main" target="_blank">Resume</a></div>
-        <div class="icon">
-            <a href="https://github.com/Amitsharma45" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/amit-sharma-047434177/" target="_blank"><i
-                    class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/amitsharma_045/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="mailto: sharma.amit20111@gmail.com" target="_blank"><i class="far fa-envelope"></i></a>
-        </div>
-        <div style="padding: 5px 0px; letter-spacing: 1px;">Copyright <i class="far fa-copyright"></i> 2021 Amit Sharma.
-            All rights reserved.</div>
-    </footer>
-    <!-- Script -->
+    </div>
+
     <script src="js/script.js"></script>
-
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
