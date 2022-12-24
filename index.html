@@ -20,8 +20,6 @@
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&family=Slabo+27px&display=swap"
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -40,46 +38,43 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
     <div class="main">
-        <nav class="navbar navbar-expand-lg navbar-dark " id="nav">
-            <a class="navbar-brand" href="#">Amit Sharma</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+        <nav class="navbar navbar-expand-lg navbar-dark  " id="nav">
+            <a class="navbar-brand " href="#" id="name"> &lt;Amit Sharma /&gt;</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-          
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-              </ul>
-              <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search">
-              </form> -->
+            <div class="pr-5 collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                <ul class="navbar-nav nav_ul mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Contact Me</a>
+                    </li>
+                </ul>
             </div>
-          </nav>
+        </nav>
         <div class="home">
             <div class="banner">
                 <div id="intro" class="pt-5">
                     <div>
                         <div class="mt-5 name">Hi, I'm <span style="color: #2EC4BC;"> Amit Sharma </span></div>
                         <div class="title_name ">JavaScript Developer</div>
-                        <!-- <p>
-                        B.Tech Computer Science and Engineering 2022 Graduate. I have worked on MERN stack development
-                        for
-                        the last 1.5 years and built some projects using MERN technology
-                    </p> -->
+
                         <div class="contact">
                             <a href="https://github.com/Amitsharma45" target="_blank"><i class="fab fa-github"></i></a>
                             <a href="https://www.linkedin.com/in/amit-sharma-047434177/" target="_blank"><i
@@ -100,13 +95,42 @@
                     <img src="./img4.svg" alt="">
                 </div>
             </div>
-            <div id="skills">
-                <div class="heading">SKILLS</div>
+            <div id="about" class="my-4">
+                <div class="heading">About_me.json</div>
+                <div class="about">
+                    <div class="about_me">
+                        <div id="img">
+                            <img style="width: 250px; height: 230px;" src="./2UUb4-removebg-preview.png" alt="">
+                        </div>
+                        <p >
+                            B.Tech Computer Science and Engineering 2022 Graduate. I have worked on MERN stack
+                            development
+                            for
+                            the last 1.5 years and built some projects using MERN technology
+                        </p>
+
+                    </div>
+                    <div class="json_onbject" >
+                        <div>{</div>
+                        <div style="padding-left: 30px;">"Type":"Person"</div>
+                        <div style="padding-left: 30px;">"Properties":</div>
+                        <div style="padding-left: 30px;">{</div>
+                            <div style="padding-left: 50px;">"Name":"Amit Sharma"</div>    
+                            <div style="padding-left: 50px;">"Email":<a 
+                            style="text-decoration: none; color: white;"    href="mailto:sharma.amit20111@gmail.com"> "sharma.amit20111@gmail.com</a></div>
+                            <div style="padding-left: 50px;">"Number":<a href="tel:+919634870380"  style="text-decoration: none; color: white;"  > "9634870380</a></div>
+                            <div style="padding-left: 50px;">"Skills": "Font-end Developer"</div>
+                            <div style="padding-left: 50px;">"Hobby": "Playing Cricket"</div>
+                        <div style="padding-left: 30px;">}</div>
+                        <div>}</div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="skills" >
+                <div class="heading">Skills</div>
                 <div class="icon">
-                    <img class="skills-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" alt="">
-                    <img class="skills-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" alt="">
-                    <img class="skills-icon" src="https://cdn-icons-png.flaticon.com/512/1199/1199124.png" alt="">
-                    <img class="skills-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" alt="">
+                   
                 </div>
             </div>
 
