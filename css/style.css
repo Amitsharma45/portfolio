@@ -89,13 +89,21 @@
 }
 
 .icon {
-    padding: 50px;
+    font-size: 22px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.skill_icon{
+    margin: 15px ;
+}
+.skill_icon >img{
+    height: 100px;
+    width: 100px;
 }
 
-.skills-icon {
-    width: 100px;
-    height: 100px;
-}
 
 #projects {
 
