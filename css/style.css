@@ -95,6 +95,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 100px 0;
 }
 .skill_icon{
     margin: 15px ;
