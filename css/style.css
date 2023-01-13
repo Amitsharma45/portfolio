@@ -83,7 +83,7 @@
     font-size: 3rem;
     background-color: rgb(0, 0, 0, .2);
     height: 80px;
-    padding-left: 50px;
+    /* padding-left: 50px; */
     color: white;
     text-align: center;
 }
@@ -124,8 +124,14 @@
     background-color: rgb(0, 0, 0, .2);
     margin: 30px 0;
     width: 350px;
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 15px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #ede0d4;
+}
+.project_card:hover{
+    transform: scale(105%);
+    transition: all .2s ease-in-out;
 }
 .banner {
     display: flex;
@@ -181,6 +187,19 @@
 #img{
     text-align: center;
 }
+#footer{
+    min-height: 50px;
+    background-color: rgb(0, 0, 0, .6);
+    color: white;
+    width: 100%;
+    line-height: 50px;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
 
 @media screen and (max-width: 980px) {
     .banner {
@@ -232,5 +251,10 @@
     .skill_icon >img{
         width: 80px;
         height: 80px;
+    }
+    .footer{
+        flex-direction: column;
+        line-height: 30px;
+        padding: 20px 0;
     }
 }
