@@ -52,21 +52,21 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="pr-5 collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
-                <ul class="navbar-nav nav_ul mt-2 mt-lg-0">
+                <ul class="navbar-nav nav_ul mt-2 mt-lg-0" id="nav_list">
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" id="nav_hover" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" id="nav_hover" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#project">Projects</a>
+                        <a class="nav-link " id="nav_hover" href="#project">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#education">Education</a>
+                        <a class="nav-link " id="nav_hover" href="#education">Education</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#footer">Contact Me</a>
+                        <a class="nav-link " id="nav_hover" href="#footer">Contact Me</a>
                     </li>
                 </ul>
             </div>
@@ -83,15 +83,14 @@
                             </p>
                         </div>
 
-
                         <div class="contact">
-                            <a href="https://github.com/Amitsharma45" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/Amitsharma45" target="_blank"><i class="fab fa-github github" ></i></a>
                             <a href="https://www.linkedin.com/in/amit-sharma-047434177/" target="_blank"><i
                                     class="fab fa-brands fa-linkedin-in linkdin"></i></a>
                         </div>
                         <div class="mt-4">
-                            <button class="btn btn-light"><a target="_blank"
-                                    style="color: black; text-decoration: none; font-weight: 500 ;"
+                            <button class="btn btn-light"><a target="_blank" style=" text-decoration: none; font-weight: 600 ; color: black !important;
+                                    " id="text_color"
                                     href="https://drive.google.com/file/d/1GQs-zhOd9zC1NN1CB3i4FPKulhRusK0V/view?usp=share_link">Resume</a>
                             </button>
                             <button id="btn" class="btn btn-outline-light"><a href="#footer"
@@ -149,6 +148,35 @@
                         <div class="text-center">JavaScript</div>
                     </div>
                     <div class="skill_icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                            height="40" alt="typescript logo" />
+                        <div class="text-center">TypeScript</div>
+                    </div>
+                    <div class="skill_icon">
+                        <img src="./skill/react.png" alt="" srcset="">
+                        <div class="text-center">React Js</div>
+                    </div>
+                    <div class="skill_icon">
+                        <img src="./skill/nodejs.png" alt="" srcset="">
+                        <div class="text-center">Node Js</div>
+                    </div>
+                    <div class="skill_icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                            height="40" alt="express logo" />
+                        <div class="text-center">Express Js</div>
+                    </div>
+                    <div class="skill_icon">
+                        <img style="margin-left: 10px;"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+                            height="40" alt="redux logo" />
+                        <div class="text-center">Redex Toolkit</div>
+                    </div>
+                    <div class="skill_icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg"
+                            alt="tailwindcss logo" />
+                        <div class="text-center">Tailwind Css</div>
+                    </div>
+                    <div class="skill_icon">
                         <img src="./skill/html.png" alt="" srcset="">
                         <div class="text-center">HTML</div>
                     </div>
@@ -157,16 +185,8 @@
                         <div class="text-center">CSS</div>
                     </div>
                     <div class="skill_icon">
-                        <img src="./skill/react.png" alt="" srcset="">
-                        <div class="text-center">React Js</div>
-                    </div>
-                    <div class="skill_icon">
                         <img src="./skill/c++.png" alt="" srcset="">
                         <div class="text-center">C++</div>
-                    </div>
-                    <div class="skill_icon">
-                        <img src="./skill/nodejs.png" alt="" srcset="">
-                        <div class="text-center">Node Js</div>
                     </div>
                     <div class="skill_icon">
                         <img style="width: 150px; height: 100px;" src="./skill/git.png" alt="" srcset="">
@@ -185,96 +205,138 @@
                 <div class="my-5  cards">
                     <div class="project_card ">
                         <h4 class="pl-3">Book App</h4>
-                        <img style=" margin: 10px; width: 280px; height: 170px;" src="./bookapp.png" alt="" srcset="">
-                        <ul style=" margin-left: 15px ;">
-                            <li>
-                                Book App is a library catalog, that was developed with the help of Open Library API,
-                                with the goal of making
-                                all the published works of humankind are available to everyone in the world.
-                            </li>
-                            <li>Tech Stack Used: JavaScript, React Js, Node Js, MongoDB, Express Js, Bootstrap.</li>
-                        </ul>
+                        <div class="project_card_inside">
+                            <img style=" margin: 10px; width: 280px; height: 170px;" src="./bookapp.png" alt=""
+                                srcset="">
+                            <ul style=" margin-left: 15px ;">
+                                <li style="padding-top:  10px; padding-left: 5px;">
+                                    Book App is a library catalog, that was developed with the help of Open Library API,
+                                    with the goal of making
+                                    all the published works of humankind are available to everyone in the world.
+                                </li>
+                                <li>Tech Stack Used: JavaScript, React Js, Node Js, MongoDB, Express Js, Bootstrap.</li>
+                            </ul>
+                        </div>
                         <div class="d-flex justify-content-between">
-                            <a class="btn btn-outline-light" style="border: none;"
+                            <a class="btn btn-outline-light" style="border: none;" id="text_color1"
                                 href="https://bookappclient.netlify.app/">Line Project</a>
-                            <a class="text-end btn btn-outline-light" style="border: none;"
+                            <a class="text-end btn btn-outline-light" style="border: none;" id="text_color1"
                                 href="https://github.com/Amitsharma45/BookApp">Project Source
                                 Link</a>
                         </div>
                     </div>
                     <div class="project_card ">
-                        <h4 class="pl-3">Weather ForeCasting App</h4>
-                        <img style=" margin: 10px; width: 280px; height: 170px;" src="./projectImg/weather.png" alt=""
-                            srcset="">
-                        <ul style=" margin-left: 15px ;">
-                            <li>
-                                Weather Forecast is a PWA application that was developed with the help of Open weather
-                                API.To show weather report of next 24 Hours, and the next 7 days.
-                            </li>
-                            <li>• Tech Stack Used: React Js, Chart Js, Bootstrap, Git.</li>
-                        </ul>
+                        <h4 class="pl-3">Note Manager</h4>
+                        <div class="project_card_inside">
+                            <img style=" margin: 10px; width: 280px; height: 170px;" src="./projectImg/note.png" alt=""
+                                srcset="">
+                            <ul style=" margin-left: 15px ;">
+                                <li>
+                                    Note Manager is a web application built using the MERN stack that enables users to
+                                    manage and organize
+                                    their notes effectively. With an intuitive interface and versatile features
+                                </li>
+                                <li>Tech Stack Used: JavaScript, React Js, Node Js, MongoDB, Express Js, Tailwind Css,
+                                    Recdux Toolkit, RTK
+                                    query,and JWT token</li>
+                            </ul>
+                        </div>
                         <div class="d-flex justify-content-between">
-                            <a class="btn btn-outline-light" style="border: none;" target="_blank"
+                            <a class="btn btn-outline-light" style="border: none;" id="text_color1"
+                                href="https://notemanager45.vercel.app/home">Line Project</a>
+                            <a class="text-end btn btn-outline-light" style="border: none;" id="text_color1"
+                                href="https://github.com/Amitsharma45/Note_Manager">Project Source
+                                Link</a>
+                        </div>
+                    </div>
+                    <div class="project_card ">
+                        <h4 class="pl-3">Weather ForeCasting App</h4>
+                        <div class="project_card_inside">
+                            <img style=" margin: 10px; width: 280px; height: 170px;" src="./projectImg/weather.png"
+                                alt="" srcset="">
+                            <ul style=" margin-left: 15px ;">
+                                <li>
+                                    Weather Forecast is a PWA application that was developed with the help of Open
+                                    weather
+                                    API.To show weather report of next 24 Hours, and the next 7 days.
+                                </li>
+                                <li>• Tech Stack Used: React Js, Chart Js, Bootstrap, Git.</li>
+                            </ul>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-outline-light" style="border: none;" target="_blank" id="text_color1"
                                 href="https://weatherappamit45.netlify.app/">Line Project</a>
-                            <a class="text-end btn btn-outline-light" style="border: none;"
+                            <a class="text-end btn btn-outline-light" style="border: none;" id="text_color1"
                                 href="https://github.com/Amitsharma45/Weather-forecast" target="_blank">Project Source
                                 Link</a>
                         </div>
                     </div>
                     <div class="project_card ">
                         <h4 class="pl-3">Crypto Hub</h4>
-                        <img style=" margin: 10px; width: 280px; height: 170px;" src="./projectImg/crypto.png" alt=""
-                            srcset="">
-                        <ul style=" margin-left: 15px ;">
-                            <li>
-                                CryptoHub is used to find the detail of any cryptocurrency like the current price of
-                                the coin, total market cap
-                                of the coin, and 24-hour price low and high.
-                            </li>
-                            <li>Tech Stack Used: React Js, Chart Js, Bootstrap, Git.</li>
-                        </ul>
+                        <div class="project_card_inside">
+                            <img style=" margin: 10px; width: 280px; height: 170px;" src="./projectImg/crypto.png"
+                                alt="" srcset="">
+                            <ul style=" margin-left: 15px ;">
+                                <li>
+                                    CryptoHub is used to find the detail of any cryptocurrency like the current price of
+                                    the coin, total market cap
+                                    of the coin, and 24-hour price low and high.
+                                </li>
+                                <li>Tech Stack Used: React Js, Chart Js, Bootstrap, Git.</li>
+                            </ul>
+                        </div>
                         <div class="d-flex justify-content-between mt-4">
-                            <a class="btn btn-outline-light" style="border: none;"
+                            <a class="btn btn-outline-light" style="border: none;" id="text_color1"
                                 href="https://cryptohub45.netlify.app/">Line Project</a>
-                            <a class="text-end btn btn-outline-light" style="border: none;"
+                            <a class="text-end btn btn-outline-light" style="border: none;" id="text_color1"
                                 href="https://github.com/Amitsharma45/CryptoHub">Project Source
                                 Link</a>
                         </div>
                     </div>
+
                     <div class="project_card ">
                         <h4 class="pl-3">To Do List App</h4>
-                        <img style=" margin: 10px; width: 280px; height: 170px;" src="./projectImg/todo.png" alt=""
-                            srcset="">
-                        <ul style=" margin-left: 15px ;">
-                            <li>
-                                Book App is a library catalog, that was developed with the help of Open Library API,
-                                with the goal of making
-                                all the published works of humankind are available to everyone in the world.
-                            </li>
-                            <li>Tech Stack Used: JavaScript, React Js, Node Js, MongoDB, Express Js, Bootstrap.</li>
-                        </ul>
+                        <div class="project_card_inside">
+                            <img style=" margin: 10px; width: 280px; height: 170px;" src="./projectImg/todo.png" alt=""
+                                srcset="">
+                            <ul style=" margin-left: 15px ;">
+                                <li>
+                                    Book App is a library catalog, that was developed with the help of Open Library API,
+                                    with the goal of making
+                                    all the published works of humankind are available to everyone in the world.
+                                </li>
+                                <li>Tech Stack Used: JavaScript, React Js, Node Js, MongoDB, Express Js, Bootstrap.</li>
+                            </ul>
+                        </div>
                         <div class="d-flex justify-content-between">
-                            <a class="btn btn-outline-light" style="border: none;"
+                            <a class="btn btn-outline-light" style="border: none;" id="text_color1"
                                 href="https://to-do-list-aeb99.web.app/signin">Line Project</a>
-                            <a class="text-end btn btn-outline-light" style="border: none;" href="">Project Source
+                            <a class="text-end btn btn-outline-light" style="border: none;" id="text_color1"
+                                href="https://github.com/Amitsharma45/to-do-list">Project Source
                                 Link</a>
                         </div>
                     </div>
                     <div class="project_card ">
                         <h4 class="pl-3">Random Quote </h4>
-                        <img style=" margin: 10px; width: 280px; height: 170px;" src="./projectImg/quote.png" alt=""
-                            srcset="">
-                        <ul style=" margin-left: 15px ;">
-                            <li>
-                                Book App is a library catalog, that was developed with the help of Open Library API,
-                                with the goal of making
-                                all the published works of humankind are available to everyone in the world.
-                            </li>
-                            <li>Tech Stack Used: JavaScript, React Js, Node Js, MongoDB, Express Js, Bootstrap.</li>
-                        </ul>
+                        <div class="project_card_inside">
+                            <img style=" margin: 10px; width: 280px; height: 170px;" src="./projectImg/quote.png" alt=""
+                                srcset="">
+                            <ul style=" margin-left: 15px ;">
+                                <li>
+                                    Book App is a library catalog, that was developed with the help of Open Library API,
+                                    with the goal of making
+                                    all the published works of humankind are available to everyone in the world.
+                                </li>
+                                <li>Tech Stack Used: JavaScript, React Js, Node Js, MongoDB, Express Js, Bootstrap.</li>
+                            </ul>
+                        </div>
                         <div class="d-flex justify-content-between">
-                            <a class="btn btn-outline-light" style="border: none;" href="">Line Project</a>
-                            <a class="text-end btn btn-outline-light" style="border: none;" href="">Project Source
+                            <a class="btn btn-outline-light" id="text_color1" style="border: none;"
+                                href="https://amitsharma45.github.io/JavaScript-Project/Quote/index.html">Line
+                                Project</a>
+                            <a class="text-end btn btn-outline-light" style="border: none;" id="text_color1"
+                                href="https://github.com/Amitsharma45/JavaScript-Project/tree/master/Quote">Project
+                                Source
                                 Link</a>
                         </div>
                     </div>
@@ -283,33 +345,41 @@
             </div>
             <div id="education" class="my-5">
                 <div class="heading">Education</div>
-                <div class="edu container">
-                    <div class="eduactionCard ">
-                        <div style="font-size: 1.5rem;"> Dr. A.P.J Abdul Kalam University</div>
-                        <div style="color: #D6D6D6">B.Tech Computer Science and Engineeing</div>
-                        <div style="color: hsl(35, 100%, 68%);">2018-2022</div>
+                <div class="edu ">
+                    <div class="">
+                        <div class="eduactionCard ">
+                            <div class="edu_temp">
+                                <img width="50" height="50" src="/book.png" alt="open-book--v1" />
+                            </div>
+                            <div style="font-size: 1.5rem;"> Dr. A.P.J Abdul Kalam University, Lucknow</div>
+                            <div style="color: #D6D6D6">B.Tech Computer Science and Engineeing</div>
+                            <div style="color: hsl(35, 100%, 68%) !important;">2018-2022</div>
+                        </div>
+                        <div class="eduactionCard ">
+                            <div style="font-size: 1.5rem;"> Maharishi Vidya Mandir (Sr. Sec. Public School), Aligarh
+                            </div>
+                            <div>PCM 12th standard</div>
+                            <div style="color: hsl(35, 100%, 68%) !important;">2016-2018</div>
+                        </div>
+                        <div class="eduactionCard ">
+                            <div style="font-size: 1.5rem;"> Maharishi Vidya Mandir (Sr. Sec. Public School), Aligarh
+                            </div>
+                            <div>Science 10th standard</div>
+                            <div style="color: hsl(35, 100%, 68%) !important;">2014-2016</div>
+                        </div>
                     </div>
-                    <div class="eduactionCard ">
-                        <div style="font-size: 1.5rem;"> Dr. A.P.J Abdul Kalam University, Lucknow</div>
-                        <div>B.Tech Computer Science and Engineeing</div>
-                        <div>2018-2022</div>
-                    </div>
-                    <div class="eduactionCard ">
-                        <div style="font-size: 1.5rem;"> Dr. A.P.J Abdul Kalam University, Lucknow</div>
-                        <div>B.Tech Computer Science and Engineeing</div>
-                        <div>2018-2022</div>
-                    </div>
-
-                </div>z
+                </div>
             </div>
 
             <div id="footer">
                 <div class="container  footer ">
-                    <div class="text-center">Made With By Amit Sharma </div>
+                    <div class="text-center">Made With By ❤️ Amit Sharma </div>
                 </div>
             </div>
         </div>
-
+        <div id="myBtn" onclick="topFunction()"  >
+            <img style="height: 40px; width: 40px;" src="https://cdn-icons-png.flaticon.com/128/3272/3272638.png" />
+        </div>
 
     </div>
 
