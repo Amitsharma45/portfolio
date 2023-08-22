@@ -2,11 +2,12 @@
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    color:  #95a2b3 !important;
 }
 
 .home {
     background-color: #19181a;
-    background-image: url('../download.png');
+    /* background-image: url('../download.png'); */
 }
 
 #nav {
@@ -92,7 +93,7 @@
     background-color:  hsl(240, 2%, 12%);
     height: 80px;
     /* padding-left: 50px; */
-    color: white;
+    color: #283847;
     text-align: center;
     
 }
@@ -146,7 +147,7 @@
 .project_card:hover {
     transform: scale(101%);
     transition: all .3s ease-in-out;
-    box-shadow: 0 0 15px #ede0d4;
+    box-shadow: 0 0 20px #000;
 }
 
 .banner {
@@ -230,13 +231,12 @@
 }
 .edu{
     margin: 50px auto;
-    margin-left: 50px;
 }
 .eduactionCard{
     position: relative;
     color: white;
+    /* font-size: 18px; */
     padding: 50px 50px;
-    font-size: 1.5em;
     border-left: 2px solid hsl(0, 0%, 22%);
 }
 .eduactionCard::before{
