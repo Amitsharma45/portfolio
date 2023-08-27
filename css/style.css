@@ -274,15 +274,14 @@
 }
 
 .footer {
-    /* display: flex;
-    justify-content: space-between; */
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-
+    overflow: hidden;
 }
 
 
 .edu {
-    margin: 50px 10px 50px 50px ;
     display: flex;
     justify-content: center;
     align-items: center;
