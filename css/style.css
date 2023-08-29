@@ -398,10 +398,10 @@
         width: 80px;
         height: 80px;
     }
+    .edu{
+        margin-top: 80px;
+        margin-left: 35px;
+    }
 
-    /* .footer {
-        flex-direction: column;
-        line-height: 30px;
-        padding: 20px 0;
-    } */
+   
 }
