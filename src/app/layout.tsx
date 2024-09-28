@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Theme } from "@radix-ui/themes";
 import '@radix-ui/themes/styles.css';
+import './globals.css'
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Fardeen Mansoori",
@@ -15,7 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Theme>
+        <Theme appearance='dark' >
+          <Navbar />
           {children}
         </Theme>
       </body>
