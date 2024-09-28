@@ -3,6 +3,7 @@ import { Theme } from "@radix-ui/themes";
 import '@radix-ui/themes/styles.css';
 import './globals.css'
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Fardeen Mansoori",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Theme appearance='dark' >
           <Navbar />
           {children}
+          <Footer />
         </Theme>
       </body>
     </html>
