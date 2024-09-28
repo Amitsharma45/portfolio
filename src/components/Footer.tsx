@@ -4,9 +4,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='w-full py-6 flex justify-center fixed bottom-0'>
-        <div className="rounded-3xl w-[320px] px-2 py-4 bg-white bg-opacity-10 backdrop-blur-md z-50 border border-white/20 flex items-center">
-        <Flex gap='5' justify='center' align='center' className='pl-5'>
+    <footer className='w-full py-6 flex justify-end fixed bottom-0 right-5'>
+        <div className="rounded-3xl h-[300px] px-2 py-4 bg-white bg-opacity-10 backdrop-blur-md z-50 border border-white/20 flex flex-col items-center">
+        <Flex gap='5' justify='center' align='center' px='2' direction='column' >
             <div>
                 <Tooltip content="Resume">
                     <Link href="https://github.com/Fardeen26" className='text-black dark:text-white hover:text-purple-300'>
@@ -22,26 +22,34 @@ const Footer = () => {
                     </Link>
                 </Tooltip>
             </div>
-            <Separator orientation='vertical' size='1' className='bg-black dark:bg-gray-400' />
+            <Separator orientation='horizontal' size='1' className='bg-black dark:bg-gray-400' />
             <div>
-                <Link href="https://github.com/Fardeen26" className='text-black dark:text-white hover:text-purple-300'>
-                    <GitHubLogoIcon width={20} height={20} />
-                </Link>
+                <Tooltip content="Github">
+                    <Link href="https://github.com/Fardeen26" className='text-black dark:text-white hover:text-purple-300'>
+                        <GitHubLogoIcon width={20} height={20} />
+                    </Link>
+                </Tooltip>
             </div>
             <div>
-                <Link href="#" className='text-black dark:text-white hover:text-purple-400'>
-                    <TwitterLogoIcon width={20} height={20} />
-                </Link>
+                <Tooltip content="x (twitter)">
+                    <Link href="#" className='text-black dark:text-white hover:text-purple-400'>
+                        <TwitterLogoIcon width={20} height={20} />
+                    </Link>
+                </Tooltip>
             </div>
             <div>
-                <Link href="https://github.com/Fardeen26" className='text-black dark:text-white hover:text-purple-300'>
-                    <LinkedInLogoIcon width={20} height={20} />
-                </Link>
+                <Tooltip content="Linkedin">
+                    <Link href="https://github.com/Fardeen26" className='text-black dark:text-white hover:text-purple-300'>
+                        <LinkedInLogoIcon width={20} height={20} />
+                    </Link>
+                </Tooltip>
             </div>
             <div>
+                <Tooltip content="Geeks for Geeks">
                 <Link href="#" className='text-black dark:text-white hover:text-purple-300'>
                     <CodeIcon width={20} height={20} />
                 </Link>
+                </Tooltip>
             </div>
 
         </Flex>
