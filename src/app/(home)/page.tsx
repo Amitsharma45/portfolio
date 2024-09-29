@@ -1,11 +1,12 @@
 import Avatar from "./components/Avatar";
 import BlurIn from "@/components/ui/blur-in";
 import ProjectCardList from "../projects/components/ProjectCardList";
+import Skills from "@/components/Skills";
   
 export default function Home() {
   return (
     <>
-    <div className="w-full flex justify-center py-5">
+    <div className="w-full flex justify-center py-5 pt-28">
       <div className="w-2/3">
         <div className="flex justify-center">
           <Avatar />
@@ -26,6 +27,11 @@ export default function Home() {
       <div className="w-full flex justify-center mt-16">
               <ProjectCardList />
       </div>
+
+      <div className="w-full flex justify-center mt-4">
+              <Skills />
+      </div>
+
     </>
   );
 }
