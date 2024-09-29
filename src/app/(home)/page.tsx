@@ -1,7 +1,6 @@
 import Avatar from "./components/Avatar";
-import Projects from "@/components/Projects";
-// import SparklesText from "@/components/ui/sparkles-text";
 import BlurIn from "@/components/ui/blur-in";
+import ProjectCardList from "../projects/components/ProjectCardList";
   
 export default function Home() {
   return (
@@ -25,7 +24,7 @@ export default function Home() {
       
     </div>
       <div className="w-full flex justify-center mt-16">
-        <Projects />
+              <ProjectCardList />
       </div>
     </>
   );

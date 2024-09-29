@@ -3,6 +3,7 @@ export type Project = {
     title: string,
     description: string,
     techStack: string[],
-    link: string,
+    link?: string,
     source: string
 };
+

@@ -28,11 +28,16 @@ const ProjectCard = ({logo,title, description, techStack, link, source } : Proje
                     }
                 </div>
                 <div className='px-3 mt-3 !pointer-events-auto flex gap-1'>
-                    <Link href={link}>
-                        <Badge color="gray" variant="solid" highContrast className='text-[10px] hover:bg-gray-300'>
-                            <GlobeIcon width={11} height={11}/> Website
-                        </Badge>
-                    </Link>
+                    {
+                        link && (
+                        <Link href={link}>
+                            <Badge color="gray" variant="solid" highContrast className='text-[10px] hover:bg-gray-300'>
+                                <GlobeIcon width={11} height={11}/> Website
+                            </Badge>
+                        </Link>
+                        )
+                    }
+                
                     <Link href={source}>
                         <Badge color="gray" variant="solid" highContrast className='text-[10px] hover:bg-gray-300'>
                             <GitHubLogoIcon width={11} height={11}/> Source
