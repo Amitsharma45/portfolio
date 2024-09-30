@@ -14,11 +14,11 @@ export default function Home() {
         <div className="mt-3 px-32 max-sm:px-2">
           <BlurIn
             word="Hi, I&apos;m Fardeen Mansoori👋"
-            className="!text-[3rem] font-bold tracking-tight text-center font-sans"
+            className="!text-[3rem] font-bold tracking-tight text-center bricolage-grotesque"
           />
           <BlurIn
-              word="I specialize in building Web2 and Web3 apps from the ground up. With hands-on experience in full-stack development and blockchain technology, I turn complex ideas into scalable solutions. Check out my work or catch me on Twitter for tech insights and the occasional meme."
-              className="mt-3 !text-lg text-center font-medium font-sans tracking-tighter"
+              word="I specialize in building Web2 and Web3 apps from the ground up. With hands-on experience in full-stack development and blockchain technology, I turn complex ideas into scalable solutions. Check out my work or catch me on Twitter for current updates and the occasional meme."
+              className="mt-3 !text-base text-center !font-normal !tracking-normal bricolage-grotesque !opacity-80 !leading-6"
           />
         </div>
       </div>

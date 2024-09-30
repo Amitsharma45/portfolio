@@ -6,7 +6,7 @@ const ProjectCardList = () => {
   return (
     <div className='w-full px-64 max-sm:px-2 flex flex-col items-center mt-4 pb-8'>
           <div className='px-40 max-sm:px-2'>
-              <h1 className='text-[2rem] font-semibold tracking-tight text-start font-sans'>
+              <h1 className='text-[2rem] font-semibold tracking-tight text-start font-sans bricolage-grotesque'>
                   Projects
               </h1>
           </div>

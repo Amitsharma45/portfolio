@@ -15,13 +15,13 @@ const ProjectCard = ({logo,title, description, techStack, link, source } : Proje
                     <Image src={logo} alt='project-logo' width={30} height={30} />
                 </div>
                 <div className="px-3 mt-4">
-                    <h1 className='text-xl font-bold tracking-tight text-start font-sans'>{title}</h1>
-                    <p className='mt-2 text-sm text-gray-400'>{description}</p>
+                    <h1 className='text-xl font-bold tracking-tight text-start bricolage-grotesque'>{title}</h1>
+                    <p className='mt-2 text-sm text-gray-400 bricolage-grotesque'>{description}</p>
                 </div>
                 <div className="flex gap-1 px-3 mt-4 flex-wrap">
                     {
                         techStack.map((tech, idx) => (
-                            <Badge key={idx} color="gray" variant="outline" highContrast className='text-[10px]'>
+                            <Badge key={idx} color="gray" variant="outline" highContrast className='text-[10px] bricolage-grotesque'>
                                 {tech}                     
                             </Badge>
                         ))
@@ -31,7 +31,7 @@ const ProjectCard = ({logo,title, description, techStack, link, source } : Proje
                     {
                         link && (
                         <Link href={link}>
-                            <Badge color="gray" variant="solid" highContrast className='text-[10px] hover:bg-gray-300'>
+                            <Badge color="gray" variant="solid" highContrast className='text-[10px] hover:bg-gray-300 bricolage-grotesque'>
                                 <GlobeIcon width={11} height={11}/> Website
                             </Badge>
                         </Link>
@@ -39,7 +39,7 @@ const ProjectCard = ({logo,title, description, techStack, link, source } : Proje
                     }
                 
                     <Link href={source}>
-                        <Badge color="gray" variant="solid" highContrast className='text-[10px] hover:bg-gray-300'>
+                        <Badge color="gray" variant="solid" highContrast className='text-[10px] hover:bg-gray-300 bricolage-grotesque'>
                             <GitHubLogoIcon width={11} height={11}/> Source
                         </Badge>
                     </Link>
