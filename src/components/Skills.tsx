@@ -1,4 +1,4 @@
-import { Badge } from '@radix-ui/themes'
+import { Badge, Tooltip } from '@radix-ui/themes'
 import React from 'react'
 
 const Skills = () => {
@@ -10,12 +10,14 @@ const Skills = () => {
               </h1>
         </div>
           
-          <div className="flex w-full flex-col gap-4 lg:flex-row mt-4 px-40 max-sm:px-2 flex-wrap justify-center items-center max-sm:ml-0">
+          <div className="flex w-full flex-col gap-3 lg:flex-row mt-4 px-40 max-sm:px-2 flex-wrap justify-center items-center max-sm:ml-0">
             {
-                data.map((skill, idx) => (
-                    <Badge key={idx} color="gray" variant="solid" highContrast className='text-[12px] hover:bg-gray-300 py-1 px-2'>
+                data.map((skill, idx) => (   
+                <Tooltip key={idx} content={skill}>
+                    <Badge color="gray" variant="solid" highContrast className='text-[12px] hover:bg-gray-300 py-1 px-2 cursor-pointer'>
                         {skill}
                     </Badge>
+                </Tooltip>
                 ))
             }
           </div>
