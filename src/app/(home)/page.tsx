@@ -4,6 +4,8 @@ import ProjectCardList from "../projects/components/ProjectCardList";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
+import { RainbowButton } from "@/components/ui/rainbow-button";
+import { Link } from "@radix-ui/themes";
   
 export default function Home() {
   return (
@@ -22,6 +24,11 @@ export default function Home() {
               word="I specialize in building Web2 and Web3 apps from the ground up. With hands-on experience in full-stack development and blockchain technology, I turn complex ideas into scalable solutions. Check out my work or catch me on Twitter for current updates and the occasional meme."
               className="mt-1 !text-base text-center !font-normal !tracking-normal inter !leading-6"
           />
+        </div>
+        <div className="flex justify-center mt-10">
+          <Link href="https://twitter.com/fardeen14693425" target="blank">
+            <RainbowButton>Get in touch</RainbowButton>
+          </Link>
         </div>
       </div>
       
