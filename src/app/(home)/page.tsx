@@ -2,6 +2,7 @@ import Avatar from "./components/Avatar";
 import BlurIn from "@/components/ui/blur-in";
 import ProjectCardList from "../projects/components/ProjectCardList";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
   
 export default function Home() {
   return (
@@ -25,13 +26,16 @@ export default function Home() {
       
     </div>
       <div className="w-full flex justify-center mt-16">
-              <ProjectCardList />
+        <ProjectCardList />
       </div>
 
       <div className="w-full flex justify-center mt-4">
-              <Skills />
+        <Skills />
       </div>
 
+      <div className="w-full flex justify-center mt-4">
+        <Experience />
+      </div>
     </>
   );
 }
