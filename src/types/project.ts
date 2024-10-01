@@ -7,3 +7,6 @@ export type Project = {
     source: string
 };
 
+export interface I_Heading {
+    title: string
+}

@@ -2,15 +2,12 @@ import Image from 'next/image'
 import React from 'react'
 import { MagicCard } from './ui/magic-card'
 import { Link } from '@radix-ui/themes'
+import Heading from './ui/heading'
 
 const Experience = () => {
   return (
     <div className='w-1/2 max-sm:px-2 flex flex-col items-center mt-4 pb-8'>
-        <div className='px-40 max-sm:px-2 text-center'>
-              <h1 className='text-[2rem] font-semibold tracking-tight text-start font-sans bricolage-grotesque'>
-                  Experience
-              </h1>
-        </div>
+        <Heading title='Experience'/>
 
         <MagicCard className="cursor-pointer shadow-2xl mt-5 !bg-transparent border-none" gradientColor= "#262626">
           <div className="flex w-full px-5 py-3 bricolage-grotesque">
