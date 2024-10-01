@@ -20,3 +20,12 @@ export interface I_Education {
     cgpa: number,
     description: string
 }
+
+export interface I_Experience {
+    company_link: string,
+    company_logo: string,
+    company_name: string,
+    duration: string,
+    job_title: string,
+    description: string
+}

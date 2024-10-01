@@ -8,7 +8,7 @@ import React from 'react'
 
 const ProjectCard = ({logo,title, description, techStack, link, source } : Project) => {
   return (
-        <MagicCard className="cursor-pointer shadow-2xl w-[45%] max-sm:!w-fit h-[300px] border-none !bg-transparent" gradientColor= "#262626">
+        <MagicCard className="cursor-pointer rounded-lg shadow-2xl w-[45%] max-sm:!w-fit h-[310px] border-none !bg-transparent" gradientColor= "#262626">
             <ShineBorder className="border h-full w-full relative rounded-lg flex flex-col justify-center items-start md:shadow-xl !bg-transparent !pointer-events-none" color={["#FF9933", "#FFFFFF", "#138808"]}>
                 
                 <div className='px-3'>
@@ -33,7 +33,7 @@ const ProjectCard = ({logo,title, description, techStack, link, source } : Proje
                     {
                         link && (
                         <Link href={link} target='blank'>
-                            <Badge color="gray" variant="solid" highContrast className='text-[10px] hover:bg-gray-300 bricolage-grotesque'>
+                            <Badge color="gray" variant="solid" highContrast className='text-[10px] py-[3px] hover:bg-gray-300 bricolage-grotesque'>
                                 <GlobeIcon width={11} height={11}/> Website
                             </Badge>
                         </Link>
@@ -41,7 +41,7 @@ const ProjectCard = ({logo,title, description, techStack, link, source } : Proje
                     }
                 
                     <Link href={source} target='blank'>
-                        <Badge color="gray" variant="solid" highContrast className='text-[10px] hover:bg-gray-300 bricolage-grotesque'>
+                        <Badge color="gray" variant="solid" highContrast className='text-[10px] py-[3px] hover:bg-gray-300 bricolage-grotesque'>
                             <GitHubLogoIcon width={11} height={11}/> Source
                         </Badge>
                     </Link>
