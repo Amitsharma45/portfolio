@@ -3,7 +3,9 @@ import ProjectCardList from './components/ProjectCardList';
 
 const Projects = () => {
   return (
-    <ProjectCardList />
+    <div className="mt-32 bg-black">
+      <ProjectCardList />
+    </div>
   )
 }
 
