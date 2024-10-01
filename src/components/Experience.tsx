@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { MagicCard } from './ui/magic-card'
 
 const Experience = () => {
   return (
@@ -10,7 +11,8 @@ const Experience = () => {
               </h1>
         </div>
 
-        <div className="flex w-full px-5 py-3 mt-10 bricolage-grotesque">
+<MagicCard className="cursor-pointer shadow-2xl mt-5 !bg-transparent !border-none" gradientColor= "#262626">
+        <div className="flex w-full px-5 py-3 bricolage-grotesque">
           <div className="w-24 flex items-center justify-center">
               <Image src='/cmp.jpeg' alt='company-logo' width={50} height={50} className='rounded-full'/>
           </div>
@@ -27,6 +29,7 @@ const Experience = () => {
             </div>
           </div>
         </div>
+        </MagicCard>
     </div>
   )
 }
