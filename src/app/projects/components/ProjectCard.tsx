@@ -30,7 +30,7 @@ const ProjectCard = ({logo,title, description, techStack, link, source } : Proje
                 <div className='px-3 mt-3 !pointer-events-auto flex gap-1'>
                     {
                         link && (
-                        <Link href={link}>
+                        <Link href={link} target='blank'>
                             <Badge color="gray" variant="solid" highContrast className='text-[10px] hover:bg-gray-300 bricolage-grotesque'>
                                 <GlobeIcon width={11} height={11}/> Website
                             </Badge>
@@ -38,7 +38,7 @@ const ProjectCard = ({logo,title, description, techStack, link, source } : Proje
                         )
                     }
                 
-                    <Link href={source}>
+                    <Link href={source} target='blank'>
                         <Badge color="gray" variant="solid" highContrast className='text-[10px] hover:bg-gray-300 bricolage-grotesque'>
                             <GitHubLogoIcon width={11} height={11}/> Source
                         </Badge>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { MagicCard } from './ui/magic-card'
 import Image from 'next/image'
+import { Link } from '@radix-ui/themes'
 
 const Education = () => {
   return (
@@ -14,7 +15,9 @@ const Education = () => {
         <MagicCard className="cursor-pointer shadow-2xl mt-5 !bg-transparent border-none" gradientColor= "#262626">
           <div className="flex w-full px-5 py-3">
             <div className="w-24 flex items-center justify-center">
-                <Image src='/uok-logo.gif' alt='company-logo' width={50} height={50} className='rounded-full'/>
+                <Link href='https://www.uok.ac.in/'>
+                    <Image src='/uok-logo.gif' alt='company-logo' width={50} height={50} className='rounded-full'/>
+                </Link>
             </div>
             <div className="w-full">
               <div className="">

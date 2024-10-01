@@ -1,14 +1,16 @@
 import React from 'react'
-import { Avatar as Picture } from '@radix-ui/themes'
+import { Link, Avatar as Picture } from '@radix-ui/themes'
 
 const Avatar = () => {
   return (
-    <Picture
-    src='/developer.jpg'
-    fallback="A"
-    size='6'
-    radius='full'
-  />
+  <Link href='https://twitter.com/fardeen14693425'>
+      <Picture
+        src='/developer.jpg'
+        fallback="A"
+        size='6'
+        radius='full'
+    />
+  </Link>
   )
 }
 

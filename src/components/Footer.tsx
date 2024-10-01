@@ -10,7 +10,7 @@ const Footer = () => {
         <Flex gap='5' justify='center' align='center' px='2' direction='column' >
             <div>
                 <Tooltip content="Resume">
-                    <Link href="https://github.com/Fardeen26" className='text-black dark:text-white hover:text-purple-300'>
+                    <Link href="https://drive.google.com/file/d/1BvmKeNsKERxnUUIRJcGf-grLydwr-yfn/view?usp=sharing" target='blank' className='text-black dark:text-white hover:text-purple-300'>
                         <FileIcon width={20} height={20} />
                     </Link>
                 </Tooltip>
@@ -18,7 +18,7 @@ const Footer = () => {
 
             <div>
                 <Tooltip content="Blog">
-                    <Link href="#" className='text-black dark:text-white hover:text-purple-300'>
+                    <Link href="/blogs" className='text-black dark:text-white hover:text-purple-300'>
                         <RowsIcon width={17} height={17} />
                     </Link>
                 </Tooltip>
@@ -26,30 +26,30 @@ const Footer = () => {
             <Separator orientation='horizontal' size='1' className='bg-black dark:bg-gray-400' />
             <div>
                 <Tooltip content="Github">
-                    <Link href="https://github.com/Fardeen26" className='text-black dark:text-white hover:text-purple-300'>
+                    <Link href="https://github.com/Fardeen26" target='blank' className='text-black dark:text-white hover:text-purple-300'>
                         <GitHubLogoIcon width={20} height={20} />
                     </Link>
                 </Tooltip>
             </div>
             <div>
                 <Tooltip content="x (twitter)">
-                    <Link href="#" className='text-black dark:text-white hover:text-purple-400'>
+                    <Link href="https://twitter.com/fardeen14693425" target='blank' className='text-black dark:text-white hover:text-purple-400'>
                         <TwitterLogoIcon width={20} height={20} />
                     </Link>
                 </Tooltip>
             </div>
             <div>
                 <Tooltip content="Linkedin">
-                    <Link href="https://github.com/Fardeen26" className='text-black dark:text-white hover:text-purple-300'>
+                    <Link href="https://www.linkedin.com/in/fardeenmansoori/" target='blank' className='text-black dark:text-white hover:text-purple-300'>
                         <LinkedInLogoIcon width={20} height={20} />
                     </Link>
                 </Tooltip>
             </div>
             <div>
                 <Tooltip content="Geeks for Geeks">
-                <Link href="#" className='text-black dark:text-white hover:text-purple-300'>
-                    <CodeIcon width={20} height={20} />
-                </Link>
+                    <Link href="https://www.geeksforgeeks.org/user/fardeenmanxtyn/" target='blank' className='text-black dark:text-white hover:text-purple-300'>
+                        <CodeIcon width={20} height={20} />
+                    </Link>
                 </Tooltip>
             </div>
 
