@@ -1,12 +1,12 @@
 import { Flex, Link, Separator } from '@radix-ui/themes'
-import { GitHubLogoIcon, SunIcon } from '@radix-ui/react-icons'
+import { GitHubLogoIcon, SunIcon, HamburgerMenuIcon } from '@radix-ui/react-icons'
 import React from 'react'
 
 const Navbar = () => {
   return (
     <nav className='w-full py-6 flex justify-center fixed top-0 z-50'>
-        <div className="rounded-xl w-[1100px] px-2 py-3 bg-white bg-opacity-10 backdrop-blur-md border border-white/20 flex items-center">
-        <Flex gap='8' justify='center' align='center' width='1000px' className='pl-10'>
+        <div className="rounded-xl w-[1100px] max-sm:w-[350px] px-2 py-3 bg-white bg-opacity-10 backdrop-blur-md border border-white/20 flex items-center">
+        <Flex gap='8' justify='center' align='center' width='1000px' className='pl-10 max-sm:hidden'>
             <div>
                 <Link href="/" className='text-black dark:text-white text-[15px] font-medium tracking-tight text-center inter'>Home</Link>
             </div>
@@ -20,6 +20,10 @@ const Navbar = () => {
                 <Link href="/about" className='text-black dark:text-white text-[15px] font-medium tracking-tight text-center inter'>About</Link>
             </div>
         </Flex>
+
+        <div className="hidden max-sm:block w-full pl-3">
+            <HamburgerMenuIcon width={22} height={22}/>
+        </div>
 
         <Separator orientation='vertical' size='1' className='bg-black dark:bg-gray-400' />
 

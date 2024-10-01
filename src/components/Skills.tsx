@@ -4,13 +4,13 @@ import Heading from './ui/heading'
 
 const Skills = () => {
   return (
-    <div className='w-2/3 max-sm:px-2 flex flex-col items-center mt-4 pb-8'>
+    <div className='w-2/3 max-sm:w-full flex flex-col items-center mt-4 pb-8'>
         <Heading title='Skills'/>          
-          <div className="flex w-full flex-col gap-3 lg:flex-row mt-4 px-40 max-sm:px-2 flex-wrap justify-center items-center max-sm:ml-0">
+          <div className="flex w-full flex-col max-sm:flex-row gap-3 max-sm:gap-2 lg:flex-row mt-4 px-40 max-sm:px-4 flex-wrap justify-center items-center max-sm:ml-0">
             {
                 data.map((skill, idx) => (   
                 <Tooltip key={idx} content={skill}>
-                    <Badge color="gray" variant="solid" highContrast className='text-[12px] hover:bg-gray-300 py-1 px-2 cursor-pointer'>
+                    <Badge color="gray" variant="solid" highContrast className='text-xs max-sm:text-[10px] hover:bg-gray-300 py-1 px-2 cursor-pointer'>
                         {skill}
                     </Badge>
                 </Tooltip>

@@ -8,7 +8,7 @@ import { I_Education } from '@/types/project'
 
 const Education = ({institute_link, institute_logo, course_title, ending_date, institute_name, cgpa, description}: I_Education) => {
   return (
-    <div className='w-1/2 max-sm:px-2 flex flex-col items-center mt-4 pb-8 bricolage-grotesque'>
+    <div className='w-1/2 max-sm:w-full max-sm:px-2 flex flex-col items-center mt-4 pb-8 bricolage-grotesque'>
         <Heading title='Education'/>
         
         <MagicCard className="cursor-pointer shadow-2xl mt-5 !bg-transparent border-none" gradientColor= "#262626">
@@ -21,12 +21,12 @@ const Education = ({institute_link, institute_logo, course_title, ending_date, i
             <div className="w-full">
               <div className="">
                 <div className="flex justify-between">
-                  <h1 className='text-lg font-semibold'>{course_title}</h1>
-                  <span className='text-xs'>{ending_date}</span>
+                  <h1 className='text-lg max-sm:text-base font-semibold'>{course_title}</h1>
+                  <span className='text-xs max-sm:text-[10px]'>{ending_date}</span>
                 </div>
-                <h2 className='text-sm'>{institute_name} &nbsp; &nbsp; cgpa: {cgpa}</h2>
+                <h2 className='text-sm max-sm:text-xs'>{institute_name} &nbsp; &nbsp; cgpa: {cgpa}</h2>
               </div>
-              <div className="mt-3 text-sm">
+              <div className="mt-3 text-sm max-sm:text-xs">
                 <p>{description}</p>
               </div>
             </div>

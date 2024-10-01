@@ -7,7 +7,7 @@ import { I_Experience } from '@/types/project'
 
 const Experience = ({company_link, company_logo, company_name, duration, job_title, description}: I_Experience) => {
   return (
-    <div className='w-1/2 max-sm:px-2 flex flex-col items-center mt-4 pb-8'>
+    <div className='w-1/2 max-sm:w-full max-sm:px-2 flex flex-col items-center mt-4 pb-8'>
         <Heading title='Experience'/>
 
         <MagicCard className="cursor-pointer shadow-2xl mt-5 !bg-transparent border-none" gradientColor= "#262626">
@@ -19,13 +19,13 @@ const Experience = ({company_link, company_logo, company_name, duration, job_tit
             </div>
             <div className="w-full">
               <div className="">
-                <div className="flex justify-between">
+                <div className="flex justify-between max-sm:items-center">
                   <h1 className='text-lg font-semibold'>{company_name}</h1>
-                  <span className='text-xs'>{duration}</span>
+                  <span className='text-xs max-sm:text-[10px]'>{duration}</span>
                 </div>
                 <h2 className='text-sm'>{job_title}</h2>
               </div>
-              <div className="mt-3 text-sm">
+              <div className="mt-3 text-sm max-sm:text-xs">
                 <p>{description}</p>
               </div>
             </div>
