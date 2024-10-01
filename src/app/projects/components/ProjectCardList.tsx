@@ -46,14 +46,7 @@ const data: Project[] = [
       link: "https://wanderlust-6cr5.onrender.com/",
       source: "https://github.com/Fardeen26/wanderlust_app",
     },
-    {
-      logo: "/ghostgram.png",
-      title: "GhostGram - SaaS platform",
-      description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
-      techStack: ["NextJS", "Typescript", "MongoDB", "NextAuth", "TailwindCSS", "Shadcn"],
-      link: "",
-      source: "https://github.com/Fardeen26/ghostgram",
-    },
+    
     {
       logo: "/lexicon.jpeg",
       title: "Lexicon",
@@ -62,14 +55,7 @@ const data: Project[] = [
       link: "https://lexicon-sand.vercel.app/",
       source: "https://github.com/Fardeen26/lexicon",
     },
-    {
-      logo: "/textify.png",
-      title: "Textify - Canva App",
-      description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
-      techStack: ["React", "Canva SDK", "Typescript", "API"],
-      link: "",
-      source: "https://github.com/Fardeen26/Textify",
-    },
+   
     {
       logo: "/sumz.svg",
       title: "SumZ - Article Summarizer",
@@ -78,6 +64,25 @@ const data: Project[] = [
       link: "https://sumz-summarize.netlify.app/",
       source: "https://github.com/Fardeen26/Article-Summarizer",
     },
+
+    {
+      logo: "/ghostgram.png",
+      title: "GhostGram - SaaS platform",
+      description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
+      techStack: ["NextJS", "Typescript", "MongoDB", "NextAuth", "TailwindCSS", "Shadcn"],
+      link: "",
+      source: "https://github.com/Fardeen26/ghostgram",
+    },
+
+    {
+      logo: "/textify.png",
+      title: "Textify - Canva App",
+      description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
+      techStack: ["React", "Canva SDK", "Typescript", "API"],
+      link: "",
+      source: "https://github.com/Fardeen26/Textify",
+    },
+    
     {
       logo: "/foundry.webp",
       title: "Foundry Crowdsourcing",

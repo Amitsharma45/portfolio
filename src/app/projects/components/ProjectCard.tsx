@@ -14,8 +14,10 @@ const ProjectCard = ({logo,title, description, techStack, link, source } : Proje
                 <div className='px-3'>
                     <Image src={logo} alt='project-logo' width={30} height={30} />
                 </div>
-                <div className="px-3 mt-4">
-                    <h1 className='text-xl font-bold tracking-tight text-start bricolage-grotesque'>{title}</h1>
+                <div className="px-3 mt-4 !pointer-events-auto">
+                    <Link href={link ? link : source} underline='none'>
+                        <h1 className='text-xl text-white font-bold tracking-tight text-start bricolage-grotesque'>{title}</h1>
+                    </Link>
                     <p className='mt-2 text-sm text-[#D1D5DB] inter'>{description}</p>
                 </div>
                 <div className="flex gap-1 px-3 mt-4 flex-wrap !pointer-events-auto">

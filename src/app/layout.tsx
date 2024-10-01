@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${bricolage_grotesque_init.variable} ${inter_init.variable}`}>
-        <Theme appearance="dark" className="bg-black">
+        <Theme appearance="dark" className="!bg-[#09080A]">
           <Navbar/>
           {children}
           <Footer />
