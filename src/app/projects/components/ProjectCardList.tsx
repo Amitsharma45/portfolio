@@ -23,7 +23,7 @@ export default ProjectCardList;
 
 const data: Project[] = [
     {
-      logo: '/salon-favicon.png',
+      logo: '/enrich.png',
       title: "Enrich Salon Management",
       description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
       techStack: ["React", "MUI", "Tailwind CSS", "Razorpay", "Nodemailer", "React Charts", "NodeJS", "MongoDB"],
@@ -31,7 +31,7 @@ const data: Project[] = [
       source: "https://github.com/Fardeen26/enrich-salon-management",
     },
     {
-      logo: '/orbittoken-favicon.png',
+      logo: '/orbittoken.png',
       title: "OrbitToken",
       description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
       techStack: ["React", "Web3.js", "spl-token", "TailwindCSS"],
@@ -39,15 +39,15 @@ const data: Project[] = [
       source: "https://github.com/Fardeen26/OrbitToken",
     },
     {
-      logo: '/developer.jpg',
-      title: "Wanderlust booking application",
+      logo: '/gobegin.webp',
+      title: "GoBegin booking application",
       description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
       techStack: ["NodeJS", "ExpressJS", "MongoDB", "Bootstrap", "PassportJS", "EJS"],
       link: "https://wanderlust-6cr5.onrender.com/",
       source: "https://github.com/Fardeen26/wanderlust_app",
     },
     {
-      logo: "https://utfs.io/f/9e53247a-090e-4b56-ae1e-03c9e4bff653-md47.png",
+      logo: "/ghostgram.png",
       title: "GhostGram - SaaS platform",
       description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
       techStack: ["NextJS", "Typescript", "MongoDB", "NextAuth", "TailwindCSS", "Shadcn"],
@@ -55,7 +55,7 @@ const data: Project[] = [
       source: "https://github.com/Fardeen26/ghostgram",
     },
     {
-      logo: "https://utfs.io/f/9e53247a-090e-4b56-ae1e-03c9e4bff653-md47.png",
+      logo: "/lexicon.jpeg",
       title: "Lexicon",
       description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
       techStack: ["NextJS", "Typescript", "Tailwind CSS", "MongoDB", "Zod"],
@@ -63,7 +63,7 @@ const data: Project[] = [
       source: "https://github.com/Fardeen26/lexicon",
     },
     {
-      logo: "https://utfs.io/f/9e53247a-090e-4b56-ae1e-03c9e4bff653-md47.png",
+      logo: "/textify.png",
       title: "Textify - Canva App",
       description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
       techStack: ["React", "Canva SDK", "Typescript", "API"],
@@ -71,7 +71,7 @@ const data: Project[] = [
       source: "https://github.com/Fardeen26/Textify",
     },
     {
-      logo: "https://utfs.io/f/9e53247a-090e-4b56-ae1e-03c9e4bff653-md47.png",
+      logo: "/sumz.svg",
       title: "SumZ - Article Summarizer",
       description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
       techStack: ["React", "OpenAI", "Tailwind CSS"],
@@ -79,7 +79,7 @@ const data: Project[] = [
       source: "https://github.com/Fardeen26/Article-Summarizer",
     },
     {
-      logo: "https://utfs.io/f/9e53247a-090e-4b56-ae1e-03c9e4bff653-md47.png",
+      logo: "/foundry.webp",
       title: "Foundry Crowdsourcing",
       description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
       techStack: ["Solidity", "Foundry", "Makefile", "Alchemy", "zkSync"],

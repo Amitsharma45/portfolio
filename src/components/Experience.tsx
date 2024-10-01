@@ -16,7 +16,7 @@ const Experience = () => {
           <div className="flex w-full px-5 py-3 bricolage-grotesque">
             <div className="w-24 flex items-center justify-center">
                 <Link href='https://www.apnacollege.in/'>
-                  <Image src='/cmp.jpeg' alt='company-logo' width={50} height={50} className='rounded-full'/>                
+                  <Image src='/company1.jpeg' alt='company-logo' width={50} height={50} className='rounded-full'/>                
                 </Link>
             </div>
             <div className="w-full">

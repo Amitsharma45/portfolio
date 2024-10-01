@@ -16,7 +16,7 @@ const Education = () => {
           <div className="flex w-full px-5 py-3">
             <div className="w-24 flex items-center justify-center">
                 <Link href='https://www.uok.ac.in/'>
-                    <Image src='/uok-logo.gif' alt='company-logo' width={50} height={50} className='rounded-full'/>
+                    <Image src='/uok.gif' alt='company-logo' width={50} height={50} className='rounded-full'/>
                 </Link>
             </div>
             <div className="w-full">
