@@ -82,3 +82,7 @@ body {
 .bricolage-grotesque {
   font-family: var(--font-bricolage-grotesque);
 }
+
+.inter {
+  font-family: var(--font-inter);
+}
