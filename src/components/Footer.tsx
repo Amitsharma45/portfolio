@@ -32,7 +32,7 @@ const Footer = () => {
                 </Tooltip>
             </div>
             <div>
-                <Tooltip content="x (twitter)">
+                <Tooltip content="X">
                     <Link href="https://twitter.com/fardeen14693425" target='blank'>
                         <TwitterLogoIcon width={20} height={20} className='text-black dark:text-white hover:scale-110' />
                     </Link>
