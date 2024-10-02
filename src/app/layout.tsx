@@ -5,6 +5,7 @@ import '@radix-ui/themes/styles.css';
 import './globals.css'
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import DarkModeProvider from "@/context/DarkModeContext";
 
 const bricolage_grotesque_init = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -30,13 +31,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${bricolage_grotesque_init.variable} ${inter_init.variable} bg-black`}>
-        <Theme appearance="dark" className="!bg-[#09080A]">
+    <DarkModeProvider>
+      <body className={`${bricolage_grotesque_init.variable} ${inter_init.variable} bg-white dark:bg-black`}>
+        <Theme className="dark:!bg-black">
           <Navbar/>
           {children}
           <Footer />
         </Theme>
       </body>
+    </DarkModeProvider>
     </html>
   );
 }

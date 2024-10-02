@@ -10,7 +10,7 @@ const Skills = () => {
             {
                 data.map((skill, idx) => (   
                 <Tooltip key={idx} content={skill}>
-                    <Badge color="gray" variant="solid" highContrast className='text-xs max-sm:text-[10px] hover:bg-gray-300 py-1 px-2 cursor-pointer'>
+                    <Badge color="gray" variant="solid" highContrast className='text-xs max-sm:text-[10px] dark:hover:bg-gray-300 py-1 px-2 cursor-pointer hover:bg-gray-800'>
                         {skill}
                     </Badge>
                 </Tooltip>

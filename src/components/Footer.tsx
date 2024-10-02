@@ -6,7 +6,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className='py-6 flex justify-end fixed bottom-0 right-5'>
-        <div className="rounded-3xl h-[300px] px-2 py-4 bg-white bg-opacity-10 backdrop-blur-md z-50 border border-white/20 flex flex-col items-center">
+        <div className="rounded-3xl h-[300px] px-2 py-4 bg-white bg-opacity-10 backdrop-blur-md z-50 border dark:border-white/20 flex flex-col items-center">
         <Flex gap='5' justify='center' align='center' px='2' direction='column' >
             <div>
                 <Tooltip content="Resume">

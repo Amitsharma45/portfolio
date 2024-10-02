@@ -1,3 +1,4 @@
+'use client'
 import Avatar from "./components/Avatar";
 import BlurIn from "@/components/ui/blur-in";
 import ProjectCardList from "../projects/components/ProjectCardList";
@@ -10,9 +11,9 @@ import { Link } from "@radix-ui/themes";
 export default function Home() {
   return (
     <>
-    <div className="w-full flex justify-center py-5 pt-28">
-      <div className="w-2/3 max-sm:w-full">
-        <div className="flex justify-center">
+    <div className="w-full flex justify-center py-5 pt-28 dark:bg-black">
+      <div className="w-2/3 max-sm:w-full flex flex-col items-center">
+        <div className="">
           <Avatar />
         </div>
         <div className="mt-3 px-32 max-sm:px-2">
@@ -25,7 +26,7 @@ export default function Home() {
               className="mt-1 max-sm:mt-5 max-sm:px-3 !text-base max-sm:!text-sm text-center !font-normal !tracking-normal inter !leading-6"
           />
         </div>
-        <div className="flex justify-center mt-10">
+        <div className="mt-10">
           <Link href="https://twitter.com/fardeen14693425" target="blank">
             <RainbowButton>Get in touch</RainbowButton>
           </Link>

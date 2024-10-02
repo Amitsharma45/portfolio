@@ -29,3 +29,8 @@ export interface I_Experience {
     job_title: string,
     description: string
 }
+
+export interface DarkModeContextType {
+    isDarkMode: boolean;
+    toggleDarkMode: () => void;
+}
