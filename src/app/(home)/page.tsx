@@ -7,6 +7,7 @@ import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { Link } from "@radix-ui/themes";
+import Coursework from "@/components/Coursework";
   
 export default function Home() {
   return (
@@ -48,6 +49,10 @@ export default function Home() {
       
       <div className="w-full flex justify-center mt-4">
         <Education />
+      </div>
+
+      <div className="w-full flex justify-center mt-4">
+        <Coursework />
       </div>
     </>
   );
