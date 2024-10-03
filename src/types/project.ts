@@ -34,3 +34,12 @@ export interface DarkModeContextType {
     isDarkMode: boolean;
     toggleDarkMode: () => void;
 }
+
+export interface I_Coursework {
+    course_link: string,
+    course_company_logo: string,
+    course_title: string,
+    duration: string,
+    course_company_name: string,
+    description: string
+}

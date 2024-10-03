@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import { ChevronDownIcon, ChevronRightIcon } from "@radix-ui/react-icons"
+import { ChevronRightIcon } from "@radix-ui/react-icons"
 
 import { cn } from "@/lib/utils"
 
@@ -28,7 +28,7 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between text-sm font-medium transition-all [&[data-state=open]>svg]:rotate-90",
+        "flex flex-1 items-center justify-between transition-all [&[data-state=open]>svg]:rotate-90",
         className
       )}
       {...props}
