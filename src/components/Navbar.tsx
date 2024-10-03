@@ -23,16 +23,16 @@ const Navbar = () => {
             <div className="rounded-xl w-[1100px] max-sm:w-[350px] px-2 py-3 bg-white bg-opacity-10 backdrop-blur-md border dark:border-white/20 flex items-center">
                 <Flex gap='8' justify='center' align='center' width='1000px' className='pl-10 max-sm:hidden'>
                     <div>
-                        <Link href="/" underline='none' className={`text-black dark:text-white text-[15px] font-medium tracking-tight text-center inter ${pathname == '/' ? 'dark:text-blue-400 text-blue-500' : ''}`}>Home</Link>
+                        <Link href="/" underline='none' className={`text-black dark:text-white text-[15px] font-medium tracking-tight text-center inter ${pathname == '/' ? 'dark:!text-blue-400 text-blue-500' : ''}`}>Home</Link>
                     </div>
                     <div>
-                        <Link href="/blogs" underline='none' className={`text-black dark:text-white text-[15px] font-medium tracking-tight text-center inter ${pathname == '/blogs' ? 'dark:text-blue-400 text-blue-500' : ''}`}>Blog</Link>
+                        <Link href="/blogs" underline='none' className={`text-black dark:text-white text-[15px] font-medium tracking-tight text-center inter ${pathname == '/blogs' ? 'dark:!text-blue-400 text-blue-500' : ''}`}>Blog</Link>
                     </div>
                     <div className='relative'>
-                        <Link href="/projects" underline='none' className={`text-black dark:text-white text-[15px] font-medium tracking-tight text-center inter ${pathname == '/projects' ? 'dark:text-blue-400 text-blue-500' : ''}`}>Projects</Link>
+                        <Link href="/projects" underline='none' className={`text-black dark:text-white text-[15px] font-medium tracking-tight text-center inter ${pathname == '/projects' ? 'dark:!text-blue-400 text-blue-500' : ''}`}>Projects</Link>
                     </div>
                     <div>
-                        <Link href="/about" underline='none' className={`text-black dark:text-white text-[15px] font-medium tracking-tight text-center inter ${pathname == '/about' ? 'dark:text-blue-400 text-blue-500' : ''}`}>About</Link>
+                        <Link href="/about" underline='none' className={`text-black dark:text-white text-[15px] font-medium tracking-tight text-center inter ${pathname == '/about' ? 'dark:!text-blue-400 text-blue-500' : ''}`}>About</Link>
                     </div>
                 </Flex>
 
