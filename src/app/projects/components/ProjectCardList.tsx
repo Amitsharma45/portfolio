@@ -22,7 +22,7 @@ const data: Project[] = [
     {
       logo: '/enrich.png',
       title: "Enrich Salon Management",
-      description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
+      description: "Enrich Hair Salon is a salon booking system with online payments and an admin dashboard for managing services and bookings.",
       techStack: ["React", "MUI", "Tailwind CSS", "Razorpay", "Nodemailer", "React Charts", "NodeJS", "MongoDB"],
       link: "https://enrich-hair-salon.vercel.app/",
       source: "https://github.com/Fardeen26/enrich-salon-management",
@@ -30,7 +30,7 @@ const data: Project[] = [
     {
       logo: '/orbittoken.png',
       title: "OrbitToken",
-      description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
+      description: "OrbitToken enables users to create and launch custom tokens on the Solana blockchain, with features to transfer tokens, view token balances, send SOL, receive airdrops, and check account balances",
       techStack: ["React", "Web3.js", "spl-token", "TailwindCSS"],
       link: "https://orbit-token-chi.vercel.app/",
       source: "https://github.com/Fardeen26/OrbitToken",

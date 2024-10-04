@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/accordion"
 import { Link } from '@radix-ui/themes';
 import { I_Coursework } from '@/types/project';
+import { inter, bricolage_grotesque } from '@/utils/fonts';
 
 
 const Coursework = () => {
@@ -24,7 +25,7 @@ const Coursework = () => {
   return (
     <div className='w-1/2 max-sm:w-full max-sm:px-2 flex flex-col items-center mt-4 pb-8 bricolage-grotesque'>
         <Heading title='Coursework'/>
-
+        <span className='mt-2'></span>
         {data.map((course, idx) => (
             <MagicCard key={idx} className="cursor-pointer dark:shadow-2xl h-fit mt-2 !bg-transparent border-none" gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}>
             <div className="flex !justify-between w-[50vw] max-sm:w-full px-5 py-3">
@@ -39,11 +40,11 @@ const Coursework = () => {
                             <AccordionItem value="item-1">
                                 <div className="w-full flex justify-between">
                                     <AccordionTrigger>
-                                        <h2 className="text-base max-sm:text-base font-semibold">{course.course_title}</h2>
+                                        <h2 className={`text-base max-sm:text-base font-semibold ${bricolage_grotesque}`}>{course.course_title}</h2>
                                     </AccordionTrigger>
-                                    <span className='text-xs max-sm:text-[10px] max-sm:hidden'>{course.duration}</span>
+                                    <span className='text-xs max-sm:text-[10px] max-sm:hidden pr-1'>{course.duration}</span>
                                 </div>
-                                <p className="text-sm max-sm:text-xs">{course.course_company_name}</p>
+                                <p className={`text-sm max-sm:text-xs font-inter ${inter}`}>{course.course_company_name}</p>
                                 <AccordionContent className='mt-2'>
                                     {course.description}
                                 </AccordionContent>

@@ -10,6 +10,10 @@ const config: Config = {
   darkMode: 'class',
   theme: {
   	extend: {
+		// fontFamily: {
+        // 	inter: ['var(--font-inter)'],
+		// 	bricolage: ['var(--font-bricolage-grotesque)']
+      	// },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

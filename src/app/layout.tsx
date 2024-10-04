@@ -1,23 +1,11 @@
 import type { Metadata } from "next";
 import { Theme } from "@radix-ui/themes";
-import { Bricolage_Grotesque, Inter } from "next/font/google";
 import '@radix-ui/themes/styles.css';
-import './globals.css'
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import DarkModeProvider from "@/context/DarkModeContext";
+import './globals.css'
 
-const bricolage_grotesque_init = Bricolage_Grotesque({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-bricolage-grotesque",
-});
-
-const inter_init = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
 
 export const metadata: Metadata = {
   title: "Fardeen Mansoori",
@@ -32,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
     <DarkModeProvider>
-      <body className={`${bricolage_grotesque_init.variable} ${inter_init.variable} bg-white dark:bg-black`}>
+      <body className={`bg-white dark:bg-black`}>
         <Theme className="dark:!bg-black">
           <Navbar/>
           {children}
