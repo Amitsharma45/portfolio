@@ -9,6 +9,7 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 import { Link } from "@radix-ui/themes";
 import Coursework from "@/components/Coursework";
 import { inter, bricolage_grotesque } from '@/utils/fonts';
+import About from "../about/components/About";
   
 export default function Home() {
   return (
@@ -54,6 +55,10 @@ export default function Home() {
 
       <div className="w-full flex justify-center mt-4">
         <Coursework />
+      </div>
+
+      <div className="w-full flex justify-center mt-4">
+        <About />
       </div>
     </>
   );

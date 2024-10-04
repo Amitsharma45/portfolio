@@ -43,3 +43,8 @@ export interface I_Coursework {
     course_company_name: string,
     description: string
 }
+
+export interface I_About {
+    year: number,
+    events: string[]
+}
