@@ -1,6 +1,7 @@
 import { Badge, Tooltip } from '@radix-ui/themes'
 import React from 'react'
 import Heading from './ui/heading'
+import { bricolage_grotesque } from '@/utils/fonts'
 
 const Skills = () => {
   return (
@@ -10,7 +11,7 @@ const Skills = () => {
             {
                 data.map((skill, idx) => (   
                 <Tooltip key={idx} content={skill}>
-                    <Badge color="gray" variant="solid" highContrast className='text-xs max-sm:text-[10px] dark:hover:bg-gray-300 py-1 px-2 cursor-pointer hover:bg-gray-800'>
+                    <Badge color="gray" variant="solid" highContrast className={`text-xs max-sm:text-[10px] dark:hover:bg-gray-300 py-1 px-2 cursor-pointer hover:bg-gray-800 ${bricolage_grotesque}`}>
                         {skill}
                     </Badge>
                 </Tooltip>

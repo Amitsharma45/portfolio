@@ -6,6 +6,7 @@ import { Link } from '@radix-ui/themes';
 import Heading from './ui/heading';
 import { I_Experience } from '@/types/project';
 import { DarkModeContext } from '@/context/DarkModeContext';
+import { bricolage_grotesque, inter } from '@/utils/fonts';
 
 const Experience = ({
     company_link = 'https://www.apnacollege.in/',
@@ -24,10 +25,10 @@ const Experience = ({
 
     return (
         <div className='w-1/2 max-sm:w-full max-sm:px-2 flex flex-col items-center mt-4 pb-8'>
-            <Heading title='Experience' />
+            <Heading title='Experience'/>
 
             <MagicCard className="cursor-pointer dark:shadow-2xl mt-5 !bg-transparent border-none" gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}>
-                <div className="flex w-full px-5 py-3 bricolage-grotesque">
+                <div className="flex w-full px-5 py-3">
                     <div className="w-24 flex items-center justify-center">
                         <Link href={company_link}>
                             <Image src={company_logo} alt='company-logo' width={50} height={50} className='rounded-full' />
@@ -35,11 +36,11 @@ const Experience = ({
                     </div>
                     <div className="w-full">
                         <div className="">
-                            <div className="flex justify-between max-sm:items-center">
+                            <div className={`flex justify-between max-sm:items-center ${bricolage_grotesque}`}>
                                 <h1 className='text-lg font-semibold'>{company_name}</h1>
-                                <span className='text-xs max-sm:text-[10px]'>{duration}</span>
+                                <span className={`text-xs max-sm:text-[10px]`}>{duration}</span>
                             </div>
-                            <h2 className='text-sm'>{job_title}</h2>
+                            <h2 className={`text-sm ${inter}`}>{job_title}</h2>
                         </div>
                         <div className="mt-3 text-sm max-sm:text-xs">
                             <p>{description}</p>

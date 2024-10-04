@@ -88,11 +88,3 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
-/* .bricolage-grotesque {
-  font-family: var(--font-bricolage-grotesque);
-} */
-
-/* .inter {
-  font-family: var(--font-inter);
-} */

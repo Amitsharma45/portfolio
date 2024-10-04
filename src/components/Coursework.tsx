@@ -1,3 +1,4 @@
+'use client'
 import React, { useContext } from 'react'
 import Heading from './ui/heading'
 import { MagicCard } from './ui/magic-card'
@@ -23,7 +24,7 @@ const Coursework = () => {
 
     const { isDarkMode } = darkModeContext;
   return (
-    <div className='w-1/2 max-sm:w-full max-sm:px-2 flex flex-col items-center mt-4 pb-8 bricolage-grotesque'>
+    <div className='w-1/2 max-sm:w-full max-sm:px-2 flex flex-col items-center mt-4 pb-8'>
         <Heading title='Coursework'/>
         <span className='mt-2'></span>
         {data.map((course, idx) => (
@@ -38,13 +39,13 @@ const Coursework = () => {
                     <div className="w-full">
                         <Accordion type="single" collapsible>
                             <AccordionItem value="item-1">
-                                <div className="w-full flex justify-between">
+                                <div className={`w-full flex justify-between ${bricolage_grotesque}`}>
                                     <AccordionTrigger>
-                                        <h2 className={`text-base max-sm:text-base font-semibold ${bricolage_grotesque}`}>{course.course_title}</h2>
+                                        <h2 className='text-base max-sm:text-base font-semibold'>{course.course_title}</h2>
                                     </AccordionTrigger>
                                     <span className='text-xs max-sm:text-[10px] max-sm:hidden pr-1'>{course.duration}</span>
                                 </div>
-                                <p className={`text-sm max-sm:text-xs font-inter ${inter}`}>{course.course_company_name}</p>
+                                <p className={`text-sm max-sm:text-xs ${inter}`}>{course.course_company_name}</p>
                                 <AccordionContent className='mt-2'>
                                     {course.description}
                                 </AccordionContent>

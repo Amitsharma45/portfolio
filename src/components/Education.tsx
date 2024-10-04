@@ -6,6 +6,7 @@ import { Link } from '@radix-ui/themes';
 import Heading from './ui/heading';
 import { I_Education } from '@/types/project';
 import { DarkModeContext } from '@/context/DarkModeContext';
+import { bricolage_grotesque, inter } from '@/utils/fonts';
 
 const Education = ({
     institute_link = 'https://www.uok.ac.in/',
@@ -25,8 +26,8 @@ const Education = ({
     const { isDarkMode } = darkModeContext;
 
     return (
-        <div className='w-1/2 max-sm:w-full max-sm:px-2 flex flex-col items-center mt-4 pb-8 bricolage-grotesque'>
-            <Heading title='Education' />
+        <div className='w-1/2 max-sm:w-full max-sm:px-2 flex flex-col items-center mt-4 pb-8'>
+            <Heading title='Education'/>
 
             <MagicCard className="cursor-pointer dark:shadow-2xl mt-5 !bg-transparent border-none" gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}>
                 <div className="flex w-full px-5 py-3">
@@ -37,11 +38,11 @@ const Education = ({
                     </div>
                     <div className="w-full">
                         <div className="">
-                            <div className="flex justify-between">
+                            <div className={`flex justify-between ${bricolage_grotesque}`}>
                                 <h1 className='text-lg max-sm:text-base font-semibold'>{course_title}</h1>
                                 <span className='text-xs max-sm:text-[10px]'>{ending_date}</span>
                             </div>
-                            <h2 className='text-sm max-sm:text-xs'>{institute_name} &nbsp; &nbsp; cgpa: {cgpa}</h2>
+                            <h2 className={`text-sm max-sm:text-xs ${inter}`}>{institute_name} &nbsp; &nbsp; cgpa: {cgpa}</h2>
                         </div>
                         <div className="mt-3 text-sm max-sm:text-xs">
                             <p>{description}</p>
