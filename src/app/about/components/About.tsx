@@ -87,7 +87,7 @@ const data : I_About[] = [
         events: [
             "Deep dive into Web Development, learned many new technologies and made 5-6 good projects and still counting. 🔥",
             "Started with Web3 development and doing good in it ⛓",
-            "At this stage I can proudly say I come an long way",            
+            "At this stage I can proudly say I come an6 long way",            
         ]
     },
     {
