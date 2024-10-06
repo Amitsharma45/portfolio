@@ -1,5 +1,6 @@
 import { Flex, Link, Separator, Tooltip } from '@radix-ui/themes'
-import { GitHubLogoIcon, TwitterLogoIcon, LinkedInLogoIcon, FileIcon, CodeIcon, RowsIcon } from '@radix-ui/react-icons'
+import { GitHubLogoIcon, LinkedInLogoIcon, FileIcon, CodeIcon, RowsIcon } from '@radix-ui/react-icons'
+import { FaXTwitter } from "react-icons/fa6";
 import React from 'react'
 
 
@@ -34,7 +35,7 @@ const Footer = () => {
             <div>
                 <Tooltip content="X">
                     <Link href="https://twitter.com/fardeen14693425" target='blank'>
-                        <TwitterLogoIcon width={20} height={20} className='text-black dark:text-white hover:scale-110' />
+                        <FaXTwitter width={20} height={20} className='text-black dark:text-white hover:scale-110' />
                     </Link>
                 </Tooltip>
             </div>
