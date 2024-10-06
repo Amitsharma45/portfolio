@@ -24,7 +24,7 @@ export default function RootLayout({
         <Theme className="dark:!bg-black">
           <Navbar/>
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </Theme>
       </body>
     </DarkModeProvider>
