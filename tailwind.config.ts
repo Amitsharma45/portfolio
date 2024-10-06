@@ -66,7 +66,8 @@ const config: Config = {
   			shine: 'shine var(--duration) infinite linear',
   			rainbow: 'rainbow var(--speed, 2s) infinite linear',
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+  			pulse: 'pulse var(--duration) ease-out infinite'
   		},
   		keyframes: {
   			'border-beam': {
@@ -107,6 +108,14 @@ const config: Config = {
   				},
   				to: {
   					height: '0'
+  				}
+  			},
+  			pulse: {
+  				'0%, 100%': {
+  					boxShadow: '0 0 0 0 var(--pulse-color)'
+  				},
+  				'50%': {
+  					boxShadow: '0 0 0 8px var(--pulse-color)'
   				}
   			}
   		}
