@@ -6,7 +6,7 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import { RainbowButton } from "@/components/ui/rainbow-button";
-import { Link } from "@radix-ui/themes";
+import { Link as ScrollLink } from 'react-scroll';
 import Coursework from "@/components/Coursework";
 import { inter, bricolage_grotesque } from '@/utils/fonts';
 import About from "../about/components/About";
@@ -31,9 +31,9 @@ export default function Home() {
           />
         </div>
         <div className="mt-10">
-          <Link href="https://twitter.com/fardeen14693425" target="blank">
-            <RainbowButton>Get in touch</RainbowButton>
-          </Link>
+            <RainbowButton>
+              <ScrollLink to="contact-section" activeClass="active" smooth={true} offset={-120} duration={1100}>Get in touch</ScrollLink>
+            </RainbowButton>
         </div>
       </div>
       
@@ -62,7 +62,7 @@ export default function Home() {
         <About />
       </div>
 
-      <div className="w-full flex justify-center mt-4">
+      <div className="w-full flex justify-center mt-4" id="contact-section">
         <Contact />
       </div>
     </>
