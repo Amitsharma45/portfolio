@@ -48,3 +48,8 @@ export interface I_About {
     year: number,
     events: string[]
 }
+
+export interface ApiResponse {
+  success: boolean;
+  message: string;
+};

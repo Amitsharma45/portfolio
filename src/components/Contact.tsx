@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Heading from './ui/heading'
 import { Link } from '@radix-ui/themes'
 import { FaWhatsapp } from "react-icons/fa";
@@ -8,8 +8,33 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
 import { Button } from './ui/button';
+import axios from 'axios';
+import { ApiResponse } from '@/types/project';
+
 
 const Contact = () => {
+    const [email, setEmail] = useState<string>('')
+    const [message, setMessage] = useState<string>('')
+    const [isEmailSending, setIsEmailSending] = useState<boolean>(false)
+
+    const sendEmailMessage = async(e: React.FormEvent) => {
+        e.preventDefault();
+        setIsEmailSending(true);
+        try {
+            const response = await axios.post<ApiResponse>('/api/send-email', {
+                email,
+                message
+            });
+
+            alert(response.data.message)
+
+        } catch (emailError) {
+            console.log(emailError);
+        } finally {
+            setIsEmailSending(false)
+        }
+    }
+
   return (
     <div className='w-full px-64 max-sm:px-2 flex flex-col items-center mt-6 pb-8'>
         <Heading title='Get in Touch'/>
@@ -38,16 +63,16 @@ const Contact = () => {
 
             <div className="w-full flex justify-center">
                 <div className="mt-4 w-full">
-                    <form action="" className='flex flex-col gap-4'>
+                    <form className='flex flex-col gap-4' onSubmit={sendEmailMessage}>
                         <div className="grid w-full gap-2">
                             <Label htmlFor="message">Your Email</Label>
-                            <Input type="text" className='w-full h-full border' placeholder='johndoe69@xyz.com'/>
+                            <Input type="text" className='w-full h-full border' placeholder='johndoe69@xyz.com' onChange={(e) => setEmail(e.target.value)}/>
                         </div>
                         <div className="grid w-full gap-2">
                             <Label htmlFor="message">Your message</Label>
-                            <Textarea placeholder="Type your message here." id="message" />
+                            <Textarea placeholder="Type your message here." id="message" onChange={(e) => setMessage(e.target.value)}/>
                         </div>
-                        <Button className='mt-3'>Send message</Button>
+                        <Button className='mt-3'>{isEmailSending ? 'Sending Message...' : 'Send message'}</Button>
                     </form>
                 </div>
             </div>
