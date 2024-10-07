@@ -34,7 +34,7 @@ const Navbar = () => {
                 <Tooltip content="Home">
             <div className='hover:px-3 py-3 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all'>
                     <Link href="/" underline='none'>
-                        <HomeIcon width={20} height={20} className={`text-black dark:text-white ${pathname == '/' ? 'dark:!text-[#FFC83D] text-[#cc9e2b]' : ''}`}/>
+                        <HomeIcon width={20} height={20} className={`text-black dark:text-white ${pathname == '/' ? 'dark:!text-[#FFC83D] !text-[#cc9e2b]' : ''}`}/>
                     </Link>
             </div>
                 </Tooltip>
@@ -42,7 +42,7 @@ const Navbar = () => {
                 <Tooltip content="Projects">
             <div className='hover:px-3 py-3 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all'>
                     <Link href="/projects">
-                        <CodeIcon width={20} height={20} className={`text-black dark:text-white ${pathname == '/projects' ? 'dark:!text-[#FFC83D] text-[#cc9e2b]' : ''}`} />
+                        <CodeIcon width={20} height={20} className={`text-black dark:text-white ${pathname == '/projects' ? 'dark:!text-[#FFC83D] !text-[#cc9e2b]' : ''}`} />
                     </Link>
             </div>
                 </Tooltip>
@@ -50,7 +50,7 @@ const Navbar = () => {
                 <Tooltip content="Blog">
             <div className='hover:px-3 py-3 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all'>
                     <Link href="/blogs">
-                        <RowsIcon width={16} height={16} className={`text-black dark:text-white ${pathname == '/blogs' ? 'dark:!text-[#FFC83D] text-[#cc9e2b]' : ''}`}/>
+                        <RowsIcon width={16} height={16} className={`text-black dark:text-white ${pathname == '/blogs' ? 'dark:!text-[#FFC83D] !text-[#cc9e2b]' : ''}`}/>
                     </Link>
             </div>
                 </Tooltip>
@@ -58,7 +58,7 @@ const Navbar = () => {
                 <Tooltip content="About">
             <div className='hover:px-3 py-3 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all'>
                     <Link href="/about">
-                        <IoPerson width={20} height={20} className={`w-[19px] h-[19px] text-black dark:text-white ${pathname == '/about' ? 'dark:!text-[#FFC83D] text-[#cc9e2b]' : ''}`}/>
+                        <IoPerson width={20} height={20} className={`w-[19px] h-[19px] text-black dark:text-white ${pathname == '/about' ? 'dark:!text-[#FFC83D] !text-[#cc9e2b]' : ''}`}/>
                     </Link>
             </div>
                 </Tooltip>
