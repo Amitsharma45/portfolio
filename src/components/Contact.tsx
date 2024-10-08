@@ -44,7 +44,7 @@ const Contact = () => {
     }
 
   return (
-    <div className='w-full px-64 max-sm:px-2 flex flex-col items-center mt-6 pb-8'>
+    <div className='w-full px-64 max-[1285px]:px-52 max-lg:px-4 max-sm:px-2 flex flex-col items-center mt-6 pb-8'>
         <Toaster />
         <Heading title='Get in Touch'/>
 

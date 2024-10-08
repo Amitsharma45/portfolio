@@ -14,12 +14,12 @@ import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <>
-    <div className="w-full flex justify-center py-5 pt-28 dark:bg-black">
+    <div className="w-full flex justify-center py-5 pt-32 dark:bg-black">
       <div className="w-2/3 max-sm:w-full flex flex-col items-center">
         <div>
           <Avatar />
         </div>
-        <div className="mt-3 px-32 max-sm:px-2">
+        <div className="mt-4 px-32 max-sm:px-4">
 
           <h1 className={`!text-[3rem] mt-2 max-sm:!text-[1.6rem] !whitespace-nowrap font-bold tracking-tight text-center ${bricolage_grotesque}`}>Hi, I&apos;m Fardeen Mansoori👋</h1>
 

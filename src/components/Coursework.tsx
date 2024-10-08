@@ -24,12 +24,12 @@ const Coursework = () => {
 
     const { isDarkMode } = darkModeContext;
   return (
-    <div className='w-1/2 max-sm:w-full max-sm:px-2 flex flex-col items-center mt-4 pb-8'>
+    <div className='w-1/2 max-lg:w-full max-lg:px-20 max-sm:w-full max-sm:px-5 flex flex-col items-center mt-4 pb-8'>
         <Heading title='Coursework'/>
         <span className='mt-2'></span>
         {data.map((course, idx) => (
             <MagicCard key={idx} className="cursor-pointer dark:shadow-2xl h-fit mt-2 !bg-transparent border-none" gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}>
-            <div className="flex !justify-between w-[50vw] max-sm:w-full px-5 py-3">
+            <div className="flex !justify-between w-[50vw] max-lg:w-full max-sm:w-full px-5 max-sm:px-0 py-3">
                 <div className="w-full flex">
                     <div className="w-24 h-12 flex justify-center">
                         <Link href={course.course_link} target='blank'>
@@ -39,14 +39,14 @@ const Coursework = () => {
                     <div className="w-full">
                         <Accordion type="single" collapsible>
                             <AccordionItem value="item-1">
-                                <div className={`w-full flex justify-between ${bricolage_grotesque}`}>
+                                <div className={`max-lg:w-[68vw] w-full flex justify-between ${bricolage_grotesque}`}>
                                     <AccordionTrigger>
-                                        <h2 className='text-base max-sm:text-base font-semibold'>{course.course_title}</h2>
+                                        <h2 className='text-base max-sm:text-[15px] font-semibold'>{course.course_title}</h2>
                                     </AccordionTrigger>
                                     <span className='text-xs max-sm:text-[10px] max-sm:hidden pr-1'>{course.duration}</span>
                                 </div>
-                                <p className={`text-sm max-sm:text-xs ${inter}`}>{course.course_company_name}</p>
-                                <AccordionContent className='mt-2'>
+                                <p className={`text-sm max-sm:text-xs ${inter}`}>{course.course_company_name} </p>
+                                <AccordionContent className='mt-2 max-sm:text-[11px]'>
                                     {course.description}
                                 </AccordionContent>
                             </AccordionItem>
