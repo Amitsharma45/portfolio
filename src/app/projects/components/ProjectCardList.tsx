@@ -30,7 +30,7 @@ const data: Project[] = [
     {
       logo: '/orbittoken.png',
       title: "OrbitToken",
-      description: "OrbitToken enables users to create and launch custom tokens on the Solana blockchain, with features to transfer tokens, view token balances, send SOL, receive airdrops, and check account balances",
+      description: "OrbitToken enables users launch their custom tokens on the Solana blockchain, with features to transfer tokens, view token balances, transfer SOL, receive airdrops, and check account balances.",
       techStack: ["React", "Web3.js", "spl-token", "TailwindCSS"],
       link: "https://orbit-token-chi.vercel.app/",
       source: "https://github.com/Fardeen26/OrbitToken",
@@ -38,7 +38,7 @@ const data: Project[] = [
     {
       logo: '/gobegin.webp',
       title: "GoBegin booking application",
-      description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
+      description: "GoBegin is a platform where users can list residences, view details, comment, and see locations on a map—similar to Airbnb.",
       techStack: ["NodeJS", "ExpressJS", "MongoDB", "Bootstrap", "PassportJS", "EJS"],
       link: "https://wanderlust-6cr5.onrender.com/",
       source: "https://github.com/Fardeen26/wanderlust_app",
@@ -47,7 +47,7 @@ const data: Project[] = [
     {
       logo: "/lexicon.jpeg",
       title: "Lexicon",
-      description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
+      description: "Lexicon is a platform for discovering, downloading, and uploading books with a clean, user-friendly interface, working on auth and review functionality.",
       techStack: ["NextJS", "Typescript", "Tailwind CSS", "MongoDB", "Zod"],
       link: "https://lexicon-sand.vercel.app/",
       source: "https://github.com/Fardeen26/lexicon",
@@ -56,7 +56,7 @@ const data: Project[] = [
     {
       logo: "/sumz.svg",
       title: "SumZ - Article Summarizer",
-      description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
+      description: "SumZ is an article summarizer that quickly generates concise summaries of lengthy articles, helping users grasp key points efficiently. It's designed for speed and accuracy with a clean, user-friendly interface.",
       techStack: ["React", "OpenAI", "Tailwind CSS"],
       link: "https://sumz-summarize.netlify.app/",
       source: "https://github.com/Fardeen26/Article-Summarizer",
@@ -65,7 +65,7 @@ const data: Project[] = [
     {
       logo: "/ghostgram.png",
       title: "GhostGram - SaaS platform",
-      description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
+      description: "GhostGram is an anonymous messaging platform where users can send and receive messages securely via unique links. It ensures user anonymity with authentication and dynamic link generation.",
       techStack: ["NextJS", "Typescript", "MongoDB", "NextAuth", "TailwindCSS", "Shadcn"],
       link: "",
       source: "https://github.com/Fardeen26/ghostgram",
@@ -74,7 +74,7 @@ const data: Project[] = [
     {
       logo: "/textify.png",
       title: "Textify - Canva App",
-      description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
+      description: "Textify is an image-to-text extractor that converts popular image formats like PNG, JPEG, and SVG into text. It supports large image files and provides accurate text extraction for easy content processing.",
       techStack: ["React", "Canva SDK", "Typescript", "API"],
       link: "",
       source: "https://github.com/Fardeen26/Textify",
@@ -83,7 +83,7 @@ const data: Project[] = [
     {
       logo: "/foundry.webp",
       title: "Foundry Crowdsourcing",
-      description: "Opinify is a feedback collection platform where users can embed a code in their website to collect user feedbacks.",
+      description: "Foundry-Crowdsourcing is a decentralized app build on Ethereum Blockchain that enables users to create and contribute to crowdfunding campaigns using secure smart contracts.",
       techStack: ["Solidity", "Foundry", "Makefile", "Alchemy", "zkSync"],
       link: "",
       source: "https://github.com/Fardeen26/Foundry-Crowdsourcing",

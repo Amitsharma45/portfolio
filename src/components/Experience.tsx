@@ -14,7 +14,7 @@ const Experience = ({
     company_name = 'Apna College',
     duration = 'Feb 2024 - June 2024',
     job_title = 'Teaching Assistant (MERN Stack)',
-    description = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto maxime harum facere voluptas officiis doloribus nobis accusamus, laboriosam ratione in!',
+    description = 'Mentored over 5,000 students in MERN Stack development, resolving 500+ coding issues and improving understanding. Achieved an average rating of 4.75 for effective teaching and support.',
 }: I_Experience) => {
     const darkModeContext = useContext(DarkModeContext);
     if (!darkModeContext) {

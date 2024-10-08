@@ -15,7 +15,7 @@ const Education = ({
     ending_date = 'Expected July 2025',
     institute_name = 'University of Kota',
     cgpa = 8.5,
-    description = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto maxime harum facere voluptas officiis doloribus nobis accusamus, laboriosam ratione in!',
+    description = 'Currently pursuing a BCA degree, focusing on software development, web technologies, and programming languages. Maintaining a CGPA of 8.5, with coursework in data structures, operating systems, DBMS, computer networks.',
 }: I_Education) => {
     const darkModeContext = useContext(DarkModeContext);
 

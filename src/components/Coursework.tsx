@@ -70,7 +70,7 @@ const data: I_Coursework[] = [
       course_title: "Full Stack + DevOps + Web3",
       duration: 'Aug 2024 - March 2025',
       course_company_name: "100xdevs",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ea, totam rem eaque non voluptate ipsa? Perferendis nisi facere corrupti",
+      description: "In this cohort, I expanded my Full Stack Development skills by diving into DevOps and Web3 technologies. Led by Harkirat Singh, the course covered CI/CD, cloud infrastructure, and decentralized application (dApp) development. It provided hands-on experience with advanced tools and techniques, enhancing my proficiency in modern development practices.",
     },
     {
       course_link: 'https://app.100xdevs.com/',
@@ -78,7 +78,7 @@ const data: I_Coursework[] = [
       course_title: "MERN Stack Development",
       duration: 'Sep 2023 - Feb 2024',
       course_company_name: "Apna College",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ea, totam rem eaque non voluptate ipsa? Perferendis nisi facere corrupti",
+      description: "It was an comprehensive MERN Stack program that covers the entire development process, from building responsive front-end applications to managing back-end services and databases. Through this course, I mastered essential web development technologies, including MongoDB, Express.js, React.js, and Node.js. The curriculum also focused on creating full-stack applications, RESTful APIs, state management with Redux, and integrating databases for dynamic content.",
     },
     {
       course_link: 'https://www.coderarmy.in/',
@@ -86,6 +86,6 @@ const data: I_Coursework[] = [
       course_title: "Data Structures and Algorithm",
       duration: 'Aug 2023 - Feb 2024',
       course_company_name: "Coder Army",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ea, totam rem eaque non voluptate ipsa? Perferendis nisi facere corrupti",
+      description: "In this course, I gained a solid understanding of key data structures like arrays, linked lists, trees, and graphs, along with algorithms for sorting, searching, and dynamic programming. Focused on hands-on problem-solving, the course enhanced my ability to write efficient, optimized code and improved my readiness for technical interviews and competitive programming.",
     },  
   ];
