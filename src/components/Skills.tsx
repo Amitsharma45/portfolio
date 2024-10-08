@@ -1,12 +1,13 @@
 import { Badge, Tooltip } from '@radix-ui/themes'
 import React from 'react'
-import Heading from './ui/heading'
 import { bricolage_grotesque } from '@/utils/fonts'
+import Title from './ui/Title'
 
 const Skills = () => {
   return (
     <div className='w-2/3 max-lg:w-full max-sm:w-full flex flex-col items-center mt-4 pb-8'>
-        <Heading title='Skills'/>          
+          <Title title='Skills' />
+
           <div className="flex w-full flex-col max-lg:flex-row max-sm:flex-row gap-3 max-sm:gap-2 lg:flex-row mt-4 px-40 max-[1285px]:px-24 max-lg:px-28 max-sm:px-6 flex-wrap justify-center items-center max-sm:ml-">
             {
                 data.map((skill, idx) => (   

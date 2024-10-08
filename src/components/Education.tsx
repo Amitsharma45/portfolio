@@ -3,10 +3,10 @@ import React, { useContext } from 'react';
 import { MagicCard } from './ui/magic-card';
 import Image from 'next/image';
 import { Link } from '@radix-ui/themes';
-import Heading from './ui/heading';
 import { I_Education } from '@/types/project';
 import { DarkModeContext } from '@/context/DarkModeContext';
 import { bricolage_grotesque, inter } from '@/utils/fonts';
+import Title from './ui/Title';
 
 const Education = ({
     institute_link = 'https://www.uok.ac.in/',
@@ -27,7 +27,7 @@ const Education = ({
 
     return (
         <div className='w-1/2 max-lg:w-full max-lg:px-20 max-sm:w-full max-sm:px-5 flex flex-col items-center mt-4 pb-8'>
-            <Heading title='Education'/>
+            <Title title='Education' />
 
             <MagicCard className="cursor-pointer dark:shadow-2xl mt-5 !bg-transparent border-none" gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}>
                 <div className="flex w-full px-5 max-sm:px-0 max-sm:pr-1 py-3">

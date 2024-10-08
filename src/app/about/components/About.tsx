@@ -1,17 +1,17 @@
 'use client';
-import Heading from '@/components/ui/heading'
+import React, { useState } from 'react'
 import { I_About } from '@/types/project'
 import { bricolage_grotesque } from '@/utils/fonts'
 import { ChevronDownIcon } from '@radix-ui/react-icons';
 import { Badge, Separator } from '@radix-ui/themes'
-import React, { useState } from 'react'
+import Title from '@/components/ui/Title';
 
 
 const About = () => {
     const [isMore, setIsMore] = useState<boolean>(false);
   return (
     <div className='w-full px-64 max-[1285px]:px-52 max-lg:px-4 max-sm:px-5 flex flex-col items-center mt-4 pb-8'>
-        <Heading title='The Evolution of My Tech Journey'/>
+        <Title title='The Evolution of My Tech Journey' />
 
         <div className="w-full pl-36 pr-28 max-sm:px-2">
 

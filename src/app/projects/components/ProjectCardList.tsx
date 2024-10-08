@@ -1,16 +1,25 @@
 import { Project } from '@/types/project';
 import React from 'react'
 import ProjectCard from './ProjectCard';
-import Heading from '@/components/ui/heading';
+import Title from '@/components/ui/Title';
+
 
 const ProjectCardList = () => {
   return (
     <div className='w-full px-64 max-[1025px]:px-4 max-[1285px]:px-40 max-lg:px-0 max-sm:px-4 flex flex-col items-center mt-4 pb-8'>
-          <Heading title='Projects' />
+          <Title title='Projects'/>
           <div className="flex w-full flex-col gap-4 lg:flex-row mt-4 px-32 max-lg:px-0 max-sm:px-2 flex-wrap items-center ml-14 max-sm:ml-0 max-lg:ml-0">
               { data.map((project: Project, idx: number) => (
-            <ProjectCard key={idx} logo={project.logo} title={project.title} description={project.description} techStack={project.techStack} link={project.link} source={project.source} />
-        ))}
+                  <ProjectCard 
+                    key={idx} 
+                    logo={project.logo} 
+                    title={project.title} 
+                    description={project.description} 
+                    techStack={project.techStack} 
+                    link={project.link} 
+                    source={project.source} 
+                  />
+              ))}
           </div>
     </div>
   )

@@ -1,6 +1,5 @@
 'use client'
 import React, { useContext } from 'react'
-import Heading from './ui/heading'
 import { MagicCard } from './ui/magic-card'
 import { DarkModeContext } from '@/context/DarkModeContext';
 import Image from 'next/image';
@@ -13,6 +12,7 @@ import {
 import { Link } from '@radix-ui/themes';
 import { I_Coursework } from '@/types/project';
 import { inter, bricolage_grotesque } from '@/utils/fonts';
+import Title from './ui/Title';
 
 
 const Coursework = () => {
@@ -25,7 +25,8 @@ const Coursework = () => {
     const { isDarkMode } = darkModeContext;
   return (
     <div className='w-1/2 max-lg:w-full max-lg:px-20 max-sm:w-full max-sm:px-5 flex flex-col items-center mt-4 pb-8'>
-        <Heading title='Coursework'/>
+        <Title title='Coursework' />
+
         <span className='mt-2'></span>
         {data.map((course, idx) => (
             <MagicCard key={idx} className="cursor-pointer dark:shadow-2xl h-fit mt-2 !bg-transparent border-none" gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}>

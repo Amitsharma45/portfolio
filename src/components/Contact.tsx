@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Heading from './ui/heading'
 import { Link } from '@radix-ui/themes'
 import { FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -11,6 +10,7 @@ import { Button } from './ui/button';
 import axios, { AxiosError } from 'axios';
 import { ApiResponse } from '@/types/project';
 import { Toaster, toast } from 'sonner'
+import Title from './ui/Title';
 
 
 const Contact = () => {
@@ -46,7 +46,7 @@ const Contact = () => {
   return (
     <div className='w-full px-64 max-[1285px]:px-52 max-lg:px-4 max-sm:px-2 flex flex-col items-center mt-6 pb-8'>
         <Toaster />
-        <Heading title='Get in Touch'/>
+        <Title title='Get in Touch'/>
 
         <div className={`w-full flex flex-col gap-3 mt-6 px-36 max-sm:px-4 ${bricolage_grotesque}`}>
             <div>
