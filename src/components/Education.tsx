@@ -9,13 +9,13 @@ import { bricolage_grotesque, inter } from '@/utils/fonts';
 import Title from './ui/Title';
 
 const Education = ({
-    institute_link = 'https://www.uok.ac.in/',
-    institute_logo = '/uok.gif',
-    course_title = 'Bachelors of Computer Application',
-    ending_date = 'Expected July 2025',
-    institute_name = 'University of Kota',
-    cgpa = 8.5,
-    description = 'Currently pursuing a BCA degree, focusing on software development, web technologies, and programming languages. Maintaining a CGPA of 8.5, with coursework in data structures, operating systems, DBMS, computer networks.',
+    institute_link,
+    institute_logo,
+    course_title,
+    ending_date,
+    institute_name,
+    cgpa,
+    description
 }: I_Education) => {
     const darkModeContext = useContext(DarkModeContext);
 
