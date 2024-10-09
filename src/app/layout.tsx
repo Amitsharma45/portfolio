@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import DarkModeProvider from "@/context/DarkModeContext";
 import { Toaster } from "sonner";
+import { Analytics } from '@vercel/analytics/react';
 import './globals.css'
 
 
@@ -43,6 +44,7 @@ export default function RootLayout({
         <Theme className="dark:!bg-black">
           <Navbar/>
           {children}
+          <Analytics />
           <Footer />
         </Theme>
       </body>
