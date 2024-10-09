@@ -79,22 +79,4 @@ const data: Project[] = [
       link: "",
       source: "https://github.com/Fardeen26/ghostgram",
     },
-
-    {
-      logo: "/textify.png",
-      title: "Textify - Canva App",
-      description: "Textify is an image-to-text extractor that converts popular image formats like PNG, JPEG, and SVG into text. It supports large image files and provides accurate text extraction for easy content processing.",
-      techStack: ["React", "Canva SDK", "Typescript", "API"],
-      link: "",
-      source: "https://github.com/Fardeen26/Textify",
-    },
-    
-    {
-      logo: "/foundry.webp",
-      title: "Foundry Crowdsourcing",
-      description: "Foundry-Crowdsourcing is a decentralized app build on Ethereum Blockchain that enables users to create and contribute to crowdfunding campaigns using secure smart contracts.",
-      techStack: ["Solidity", "Foundry", "Makefile", "Alchemy", "zkSync"],
-      link: "",
-      source: "https://github.com/Fardeen26/Foundry-Crowdsourcing",
-    },
   ];
