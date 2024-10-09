@@ -4,6 +4,7 @@ import '@radix-ui/themes/styles.css';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import DarkModeProvider from "@/context/DarkModeContext";
+import { Toaster } from "sonner";
 import './globals.css'
 
 
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="en">
     <DarkModeProvider>
       <body className={`bg-white dark:bg-black`}>
+        <Toaster position='bottom-right' />
         <Theme className="dark:!bg-black">
           <Navbar/>
           {children}
