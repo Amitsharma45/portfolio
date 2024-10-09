@@ -15,6 +15,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { data, error } = await resend.emails.send({
       from: 'Fardeen <onboarding@resend.dev>',
       to: ['fardeenmansuri0316@gmail.com'],
