@@ -7,7 +7,6 @@ import { DarkModeContext } from '@/context/DarkModeContext';
 import { usePathname } from 'next/navigation';
 import { FaXTwitter } from 'react-icons/fa6';
 import { IoPerson } from "react-icons/io5";
-import { SiGeeksforgeeks } from "react-icons/si";
 
 
 const useDarkMode = () => {
@@ -59,8 +58,9 @@ const Navbar = () => {
                         </Tooltip>
                     </Link>
 
-                        <Separator orientation='vertical' size={{sm: '1', lg: '2', xl: '2'}} className='bg-black dark:bg-gray-400' />
-                    <Link href="https://drive.google.com/file/d/1BvmKeNsKERxnUUIRJcGf-grLydwr-yfn/view?usp=sharing" target='blank' underline='none'>
+                    <Separator orientation='vertical' size={{sm: '1', lg: '2', xl: '2'}} className='bg-black dark:bg-gray-400' />
+                    
+                    <Link href="https://drive.google.com/file/d/1BvmKeNsKERxnUUIRJcGf-grLydwr-yfn/view?usp=sharing" target='_blank' underline='none'>
                         <Tooltip content="Resume">
                             <div className='hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300'>
                                 <FileIcon className='w-[19px] h-[19px] max-sm:h-[15px] max-sm:w-[15px] text-black dark:text-white'/>
@@ -68,7 +68,7 @@ const Navbar = () => {
                         </Tooltip>
                     </Link>
 
-                    <Link href="https://github.com/Fardeen26" target='blank'>
+                    <Link href="https://github.com/Fardeen26" target='_blank'>
                         <Tooltip content="Github">
                             <div className='hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300'>
                                 <GitHubLogoIcon className='w-[19px] h-[19px] max-sm:w-[15px] max-sm:h-[15px] text-black dark:text-white' />
@@ -76,7 +76,7 @@ const Navbar = () => {
                         </Tooltip>
                     </Link>
 
-                    <Link href="https://x.com/intent/follow?screen_name=fardeen14693425" target='blank'>
+                    <Link href="https://x.com/intent/follow?screen_name=fardeen14693425" target='_blank'>
                         <Tooltip content="X">
                             <div className='hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300'>
                                 <FaXTwitter className='w-[17px] h-[17px] max-sm:w-[15px] max-sm:h-[15px] text-black dark:text-white' />
@@ -84,18 +84,10 @@ const Navbar = () => {
                         </Tooltip>
                     </Link>
 
-                    <Link href="https://www.linkedin.com/in/fardeenmansoori/" target='blank'>
+                    <Link href="https://www.linkedin.com/in/fardeenmansoori/" target='_blank'>
                         <Tooltip content="Linkedin">
                             <div className='hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300'>
                                 <LinkedInLogoIcon className='w-[19px] h-[19px] max-sm:w-[15px] max-sm:h-[15px] text-black dark:text-white' />
-                            </div>
-                        </Tooltip>
-                    </Link>
-
-                    <Link href="https://www.geeksforgeeks.org/user/fardeenmanxtyn/" target='blank'>
-                        <Tooltip content="Geeks for Geeks">
-                            <div className='hover:px-3 max-sm:hover:px-2 py-2.5 max-sm:hidden dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300'>
-                                <SiGeeksforgeeks className='h-[19px] w-[19px] text-black dark:text-white' />
                             </div>
                         </Tooltip>
                     </Link>

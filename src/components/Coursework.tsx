@@ -33,7 +33,7 @@ const Coursework = () => {
             <div className="flex !justify-between w-[50vw] max-lg:w-full max-sm:w-full px-5 max-sm:px-0 py-3">
                 <div className="w-full flex">
                     <div className="w-24 h-12 flex justify-center">
-                        <Link href={course.course_link} target='blank'>
+                        <Link href={course.course_link} target='_blank'>
                             <Image src={course.course_company_logo} alt='100xdevs' width={50} height={50} className='rounded-full'/>
                         </Link>
                     </div>

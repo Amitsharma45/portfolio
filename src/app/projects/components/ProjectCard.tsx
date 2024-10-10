@@ -27,7 +27,7 @@ const ProjectCard = ({logo,title, description, techStack, link, source } : Proje
                     <Image src={logo} alt='project-logo' width={30} height={30} />
                 </div>
                 <div className="px-3 mt-4 !pointer-events-auto">
-                    <Link href={link ? link : source} underline='none'>
+                    <Link href={link ? link : source} target='_blank' underline='none'>
                         <h1 className={`text-xl text-black dark:text-white font-bold tracking-tight text-start ${bricolage_grotesque}`}>{title}</h1>
                     </Link>
                     <p className={`mt-2 text-sm dark:text-[#D1D5DB] ${inter}`}>{description}</p>
@@ -44,7 +44,7 @@ const ProjectCard = ({logo,title, description, techStack, link, source } : Proje
                 <div className='px-3 mt-3 !pointer-events-auto flex gap-1'>
                     {
                         link && (
-                        <Link href={link} target='blank'>
+                        <Link href={link} target='_blank'>
                             <Badge color="gray" variant="solid" highContrast className={`text-[10px] py-[3px] dark:hover:bg-gray-300 ${bricolage_grotesque}`}>
                                 <GlobeIcon width={11} height={11}/> Website
                             </Badge>
@@ -52,7 +52,7 @@ const ProjectCard = ({logo,title, description, techStack, link, source } : Proje
                         )
                     }
                 
-                    <Link href={source} target='blank'>
+                    <Link href={source} target='_blank'>
                         <Badge color="gray" variant="solid" highContrast className={`text-[10px] py-[3px] dark:hover:bg-gray-300 ${bricolage_grotesque}`}>
                             <GitHubLogoIcon width={11} height={11}/> Source
                         </Badge>

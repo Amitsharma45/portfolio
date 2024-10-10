@@ -32,7 +32,7 @@ const Education = ({
             <MagicCard className="cursor-pointer dark:shadow-2xl mt-5 !bg-transparent border-none" gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}>
                 <div className="flex w-full px-5 max-sm:px-0 max-sm:pr-1 py-3">
                     <div className="w-24 flex items-center justify-center">
-                        <Link href={institute_link}>
+                        <Link href={institute_link} target='_blank'>
                             <Image src={institute_logo} alt='institute-logo' width={50} height={50} className='rounded-full' />
                         </Link>
                     </div>
