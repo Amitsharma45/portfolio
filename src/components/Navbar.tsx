@@ -23,7 +23,7 @@ const Navbar = () => {
 
     return (
         <nav className='w-full py-6 flex justify-center fixed top-0 z-50'>
-            <div className="rounded-full w-[850px] max-lg:w-[800px] max-[400px]:w-[345px] max-[450px]:w-[400px] px-2 py-1 bg-white bg-opacity-10 backdrop-blur-md border dark:border-white/20 flex items-center justify-center dark:shadow-none shadow">
+            <div className="rounded-full w-[850px] max-lg:w-[800px] max-[400px]:w-[345px] max-[450px]:w-[400px] max-[350px]:w-[330px] max-[321px]:w-[310px] px-2 py-1 bg-white bg-opacity-10 backdrop-blur-md border dark:border-white/20 flex items-center justify-center dark:shadow-none shadow">
                 <div className='flex justify-center px-2 items-center max-sm:gap-4 gap-8 max-[400px]:gap-4 max-[450px]:gap-5 transition-all'>
 
                     <Link href="/" underline='none'>

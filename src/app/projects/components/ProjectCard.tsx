@@ -28,7 +28,7 @@ const ProjectCard = ({logo,title, description, techStack, link, source } : Proje
                 </div>
                 <div className="px-3 mt-4 !pointer-events-auto">
                     <Link href={link ? link : source} target='_blank' underline='none'>
-                        <h1 className={`text-xl text-black dark:text-white font-bold tracking-tight text-start ${bricolage_grotesque}`}>{title}</h1>
+                        <h1 className={`text-xl text-black dark:text-white font-bold tracking-tight text-start whitespace-nowrap ${bricolage_grotesque}`}>{title}</h1>
                     </Link>
                     <p className={`mt-2 text-sm dark:text-[#D1D5DB] ${inter}`}>{description}</p>
                 </div>

@@ -40,9 +40,9 @@ const Coursework = () => {
                     <div className="w-full">
                         <Accordion type="single" collapsible>
                             <AccordionItem value="item-1">
-                                <div className={`max-lg:w-[68vw] w-full flex justify-between ${bricolage_grotesque}`}>
+                                <div className={`max-lg:w-[68vw] w-full flex justify-between max-[350px]:justify-start ${bricolage_grotesque}`}>
                                     <AccordionTrigger>
-                                        <h2 className='text-base max-sm:text-[15px] font-semibold'>{course.course_title}</h2>
+                                        <h2 className='text-base max-sm:text-[15px] font-semibold text-start'>{course.course_title}</h2>
                                     </AccordionTrigger>
                                     <span className='text-xs max-sm:text-[10px] max-sm:hidden pr-1'>{course.duration}</span>
                                 </div>
