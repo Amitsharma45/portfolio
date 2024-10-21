@@ -2,6 +2,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 
+
 const CreateBlog = () => {
     const [title, setTitle] = useState<string>('')
     const [content, setContent] = useState<string>('')

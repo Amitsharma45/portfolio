@@ -43,7 +43,7 @@ export async function POST(req:NextRequest) {
             }
         )
 
-        console.log(result)
+        console.log("image uploaded", result)
       
       return NextResponse.json({ message: "File uploaded successfully!" });
   } catch (error) {
