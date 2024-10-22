@@ -1,12 +1,15 @@
 'use client'
+
 import axios from 'axios'
 import React, { useState } from 'react'
+import BlogEditor from './BlogEditor'
 
 
 const CreateBlog = () => {
     const [title, setTitle] = useState<string>('')
     const [content, setContent] = useState<string>('')
     const [file, setFile] = useState<File | null>(null)
+
 
     const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
@@ -31,11 +34,11 @@ const CreateBlog = () => {
     }
 
     return (
-        <div>
+        <div className='overflow-hidden'>
             <div className="flex justify-end">
                 <button onClick={handleSubmit} className='dark:bg-white dark:text-black bg-black text-white py-1 px-3 rounded-md'>Submit</button>
             </div>
-            <form action="" className='w-full flex flex-col gap-5 mt-3'>
+            <form className='w-full flex flex-col gap-5 mt-3'>
                 <input
                     type="text"
                     value={title}
@@ -49,16 +52,8 @@ const CreateBlog = () => {
                     className='w-full shadow-sm dark:bg-black'
                     onChange={(e) => setFile(e.target.files?.[0] || null)}
                 />
-                <textarea
-                    id='content'
-                    name='content'
-                    placeholder='content'
-                    className='py-3 pr-3 border-none outline-none h-48 dark:bg-black text-2xl'
-                    value={content}
-                    onChange={(e) => setContent(e.target.value)}
-                />
-
             </form>
+            <BlogEditor setContent={setContent} />
         </div>
     )
 }

@@ -6,8 +6,6 @@ const prisma = new PrismaClient();
 export async function GET() {
     try {
         const blogs = await prisma.blog.findMany();
-        console.log(blogs)
-
         return NextResponse.json(blogs);
 
     } catch (error) {

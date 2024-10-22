@@ -1,14 +1,16 @@
 "use client"
 
 import './styles.scss'
-import { EditorContent, useEditor } from '@tiptap/react'
+import { EditorContent, useEditor, Editor } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import React from 'react'
 
-// 9OYf8Dsb4laXKar6j5CMhXHGKiE
+type MenuBarProps = {
+    editor: Editor | null;
+};
 
 
-const MenuBar = ({ editor }) => {
+const MenuBar = ({ editor }: MenuBarProps) => {
     if (!editor) {
         return null
     }
@@ -129,28 +131,32 @@ const MenuBar = ({ editor }) => {
     )
 }
 
-// eslint-disable-next-line react/display-name
-export default function BlogEditor({ content }) {
+type BlogEditorProps = {
+    setContent: (content: string) => void;
+};
+
+export default function BlogEditor({ setContent }: BlogEditorProps) {
     const editor = useEditor({
         extensions: [
             StarterKit
         ],
-        content: content,
+        content: "it is just the functionality",
+        onUpdate: ({ editor }) => {
+            setContent(editor.getHTML())
+        },
         editorProps: {
             attributes: {
                 spellcheck: 'false',
             },
         },
+        immediatelyRender: false
     })
-
-
-    console.log(content)
 
     return (
         <>
             <MenuBar editor={editor} />
             <div className="editor-container">
-                <EditorContent editor={editor} className='p-2' contentEditable='true' content={content} />
+                <EditorContent editor={editor} className='p-2 ' />
             </div>
         </>
     )
