@@ -3,6 +3,9 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import BlogEditor from './BlogEditor'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { bricolage_grotesque } from '@/utils/fonts'
 
 
 const CreateBlog = () => {
@@ -34,22 +37,24 @@ const CreateBlog = () => {
     }
 
     return (
-        <div className='overflow-hidden'>
+        <div className='overflow-hidden h-fit max-sm:px-4 max-sm:w-full'>
             <div className="flex justify-end">
-                <button onClick={handleSubmit} className='dark:bg-white dark:text-black bg-black text-white py-1 px-3 rounded-md'>Submit</button>
+                {/* <button onClick={handleSubmit} className='dark:bg-white dark:text-black bg-black text-white py-1 px-3 rounded-md'>Publish</button> */}
+                <Button onClick={handleSubmit}>Publish</Button>
             </div>
-            <form className='w-full flex flex-col gap-5 mt-3'>
-                <input
+            <form className='w-full flex flex-col gap-8 mt-3'>
+                <Input
                     type="text"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     placeholder='Title'
-                    className='py-3 pr-3 border-none outline-none dark:bg-black text-5xl'
+                    className={`py-5 pr-3 border-none outline-none dark:bg-black text-4xl font-semibold ${bricolage_grotesque}`}
                 />
-                <input
+
+                <Input
                     type='file'
                     placeholder='image'
-                    className='w-full shadow-sm dark:bg-black'
+                    className='w-full shadow-sm dark:bg-black py-2'
                     onChange={(e) => setFile(e.target.files?.[0] || null)}
                 />
             </form>

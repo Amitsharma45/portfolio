@@ -1,9 +1,15 @@
 "use client"
 
-import './styles.scss'
+import React from 'react'
 import { EditorContent, useEditor, Editor } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
-import React from 'react'
+import { FaCode, FaListUl, FaListOl } from 'react-icons/fa6'
+import { GrUndo, GrRedo, GrBlockQuote, GrBold } from "react-icons/gr";
+import { MdOutlineHorizontalRule, MdOutlineFormatItalic } from "react-icons/md";
+import { BiCodeBlock } from "react-icons/bi";
+import { LuHeading1, LuHeading2, LuHeading3, LuStrikethrough } from "react-icons/lu";
+import { RiText } from "react-icons/ri";
+import './styles.scss'
 
 type MenuBarProps = {
     editor: Editor | null;
@@ -16,115 +22,91 @@ const MenuBar = ({ editor }: MenuBarProps) => {
     }
 
     return (
-        <div className="control-group">
-            <div className="button-group flex gap-3">
+        <div className="control-group mt-10">
+            <div className="button-group flex gap-6 justify-center text-lg max-sm:text-sm max-sm:gap-3">
                 <button
                     onClick={() => editor.chain().focus().toggleBold().run()}
                     className={editor.isActive('bold') ? 'is-active' : ''}
                 >
-                    Bold
+                    <GrBold />
                 </button>
                 <button
                     onClick={() => editor.chain().focus().toggleItalic().run()}
                     className={editor.isActive('italic') ? 'is-active' : ''}
                 >
-                    Italic
+                    <MdOutlineFormatItalic />
                 </button>
                 <button
                     onClick={() => editor.chain().focus().toggleStrike().run()}
                     className={editor.isActive('strike') ? 'is-active' : ''}
                 >
-                    Strike
+                    <LuStrikethrough />
                 </button>
                 <button
                     onClick={() => editor.chain().focus().toggleCode().run()}
                     className={editor.isActive('code') ? 'is-active' : ''}
                 >
-                    Code
+                    <FaCode />
                 </button>
-                <button onClick={() => editor.chain().focus().unsetAllMarks().run()}>
-                    Clear marks
-                </button>
-                <button onClick={() => editor.chain().focus().clearNodes().run()}>
-                    Clear nodes
-                </button>
+
                 <button
                     onClick={() => editor.chain().focus().setParagraph().run()}
                     className={editor.isActive('paragraph') ? 'is-active' : ''}
                 >
-                    Paragraph
+                    <RiText />
                 </button>
                 <button
                     onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
                     className={editor.isActive('heading', { level: 1 }) ? 'is-active' : ''}
                 >
-                    H1
+                    <LuHeading1 />
                 </button>
                 <button
                     onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
                     className={editor.isActive('heading', { level: 2 }) ? 'is-active' : ''}
                 >
-                    H2
+                    <LuHeading2 />
                 </button>
                 <button
                     onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
                     className={editor.isActive('heading', { level: 3 }) ? 'is-active' : ''}
                 >
-                    H3
+                    <LuHeading3 />
                 </button>
-                <button
-                    onClick={() => editor.chain().focus().toggleHeading({ level: 4 }).run()}
-                    className={editor.isActive('heading', { level: 4 }) ? 'is-active' : ''}
-                >
-                    H4
-                </button>
-                <button
-                    onClick={() => editor.chain().focus().toggleHeading({ level: 5 }).run()}
-                    className={editor.isActive('heading', { level: 5 }) ? 'is-active' : ''}
-                >
-                    H5
-                </button>
-                <button
-                    onClick={() => editor.chain().focus().toggleHeading({ level: 6 }).run()}
-                    className={editor.isActive('heading', { level: 6 }) ? 'is-active' : ''}
-                >
-                    H6
-                </button>
+
                 <button
                     onClick={() => editor.chain().focus().toggleBulletList().run()}
                     className={editor.isActive('bulletList') ? 'is-active' : ''}
                 >
-                    Bullet list
+                    <FaListUl />
                 </button>
                 <button
                     onClick={() => editor.chain().focus().toggleOrderedList().run()}
                     className={editor.isActive('orderedList') ? 'is-active' : ''}
                 >
-                    Ordered list
+                    <FaListOl />
                 </button>
                 <button
                     onClick={() => editor.chain().focus().toggleCodeBlock().run()}
                     className={editor.isActive('codeBlock') ? 'is-active' : ''}
                 >
-                    Code block
+                    <BiCodeBlock />
                 </button>
                 <button
                     onClick={() => editor.chain().focus().toggleBlockquote().run()}
                     className={editor.isActive('blockquote') ? 'is-active' : ''}
                 >
-                    Blockquote
+                    <GrBlockQuote />
                 </button>
+
                 <button onClick={() => editor.chain().focus().setHorizontalRule().run()}>
-                    Horizontal rule
-                </button>
-                <button onClick={() => editor.chain().focus().setHardBreak().run()}>
-                    Hard break
+                    <MdOutlineHorizontalRule />
                 </button>
                 <button onClick={() => editor.chain().focus().undo().run()}>
-                    Undo
+                    <GrUndo />
                 </button>
                 <button onClick={() => editor.chain().focus().redo().run()}>
-                    Redo
+                    <GrRedo />
                 </button>
             </div>
         </div>
@@ -140,23 +122,24 @@ export default function BlogEditor({ setContent }: BlogEditorProps) {
         extensions: [
             StarterKit
         ],
-        content: "it is just the functionality",
+        content: "Start writing here...",
         onUpdate: ({ editor }) => {
             setContent(editor.getHTML())
         },
         editorProps: {
             attributes: {
-                spellcheck: 'false',
+                spellcheck: 'true',
+                class: 'border-none outline-none'
             },
         },
-        immediatelyRender: false
+        immediatelyRender: false,
     })
 
     return (
         <>
             <MenuBar editor={editor} />
             <div className="editor-container">
-                <EditorContent editor={editor} className='p-2 ' />
+                <EditorContent editor={editor} className='py-3 mt-5' />
             </div>
         </>
     )

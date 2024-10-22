@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { v2 as cloudinary } from 'cloudinary';
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient(); 
 
 
 cloudinary.config({
@@ -20,13 +23,21 @@ export async function POST(req:NextRequest) {
       const title = formData.get("title");
       const content = formData.get("content");
 
-      console.log("title", title)
-      console.log("content", content)
+      if(!file){
+        return NextResponse.json(
+            { error: "File not found" }, 
+            { status: 400 }
+        )
+    }
 
-         if(!file){
-            return NextResponse.json({error: "File not found"}, {status: 400})
-        }
+      if(!title || !content) {
+        return NextResponse.json(
+            { error: "Title and content are required" },
+            { status: 400 }
+        )
+    }
 
+      
        const bytes = await file.arrayBuffer()
         const buffer = Buffer.from(bytes)
 
@@ -43,9 +54,23 @@ export async function POST(req:NextRequest) {
             }
         )
 
-        console.log("image uploaded", result)
+        const blog = await prisma.blog.create({
+            data: {
+                title: title.toString(),
+                content: content.toString(),
+                author: "Fardeen Mansoori",
+                image_public_id: result.public_id,
+                createdAt: new Date()
+            }
+        })
+
+       console.log(blog)
       
-      return NextResponse.json({ message: "File uploaded successfully!" });
+      return NextResponse.json(
+        { message: "File uploaded successfully!" },
+        {status: 200}
+    );
+    
   } catch (error) {
     return NextResponse.json({
       error: `Server Error: ${error}`

@@ -58,7 +58,7 @@
     }
 
     code {
-        background-color: var(--purple-light);
+        background-color: var(--gray-3);
         border-radius: 0.4rem;
         color: var(--black);
         font-size: 0.85rem;
@@ -81,12 +81,12 @@
         margin: 1.5rem 0;
         padding-left: 1.25rem;
         font-style: italic;
-        color: var(--gray-4);
+        color: var(--gray-12);
     }
 
     hr {
         border: none;
-        border-top: 1px solid var(--gray-2);
+        border-top: 1px solid var(--gray-6);
         margin: 2rem 0;
     }
 }
