@@ -18,62 +18,68 @@ interface CloudinaryUploadResult {
 
 export async function POST(req:NextRequest) {
   try {
-      const formData = await req.formData();
-      const file = formData.get("file") as File | null;
-      const title = formData.get("title");
-      const content = formData.get("content");
+    const formData = await req.formData();
+    const file = formData.get("file") as File | null;
+    const title = formData.get("title");
+    const content = formData.get("content");
 
-      if(!file){
+    if(!file){
         return NextResponse.json(
-            { error: "File not found" }, 
+            { success: false, error: "File not found!" }, 
             { status: 400 }
         )
     }
 
-      if(!title || !content) {
+    if(!title) {
         return NextResponse.json(
-            { error: "Title and content are required" },
+            { success: false, error: "Title not found!" },
+            { status: 400 }
+        )
+    }
+
+    if(!content) {
+        return NextResponse.json(
+            { success: false, error: "Content not found!" },
             { status: 400 }
         )
     }
 
       
-       const bytes = await file.arrayBuffer()
-        const buffer = Buffer.from(bytes)
+    const bytes = await file.arrayBuffer()
+    const buffer = Buffer.from(bytes)
 
-        const result = await new Promise<CloudinaryUploadResult>(
-            (resolve, reject) => {
-                const uploadStream = cloudinary.uploader.upload_stream(
-                    {folder: "next-cloudinary-uploads"},
-                    (error, result) => {
-                        if(error) reject(error);
-                        else resolve(result as CloudinaryUploadResult);
-                    }
-                )
-                uploadStream.end(buffer)
-            }
-        )
+    const result = await new Promise<CloudinaryUploadResult>(
+        (resolve, reject) => {
+            const uploadStream = cloudinary.uploader.upload_stream(
+                {folder: "next-cloudinary-uploads"},
+                (error, result) => {
+                    if(error) reject(error);
+                    else resolve(result as CloudinaryUploadResult);
+                }
+            )
+            uploadStream.end(buffer)
+        }
+    )
 
-        const blog = await prisma.blog.create({
-            data: {
-                title: title.toString(),
-                content: content.toString(),
-                author: "Fardeen Mansoori",
-                image_public_id: result.public_id,
-                createdAt: new Date()
-            }
-        })
-
-       console.log(blog)
+    await prisma.blog.create({
+        data: {
+            title: title.toString(),
+            content: content.toString(),
+            author: "Fardeen Mansoori",
+            image_public_id: result.public_id,
+            createdAt: new Date()
+        }
+    })
       
-      return NextResponse.json(
-        { message: "File uploaded successfully!" },
-        {status: 200}
+    return NextResponse.json(
+        { success: true, message: "Blog published successfully!" },
+        { status: 200 }
     );
     
   } catch (error) {
-    return NextResponse.json({
-      error: `Server Error: ${error}`
-    })
+    return NextResponse.json(
+        { success: false, error: `Server Error: ${error}` },
+        { status: 500 }
+    );
   }
 }
