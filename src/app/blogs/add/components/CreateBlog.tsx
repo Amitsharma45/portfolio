@@ -37,9 +37,8 @@ const CreateBlog = () => {
     }
 
     return (
-        <div className='overflow-hidden h-fit max-sm:px-4 max-sm:w-full'>
+        <div className='overflow-hidden h-fit max-sm:px-4 max-sm:w-full relative'>
             <div className="flex justify-end">
-                {/* <button onClick={handleSubmit} className='dark:bg-white dark:text-black bg-black text-white py-1 px-3 rounded-md'>Publish</button> */}
                 <Button onClick={handleSubmit}>Publish</Button>
             </div>
             <form className='w-full flex flex-col gap-8 mt-3'>
@@ -48,7 +47,7 @@ const CreateBlog = () => {
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     placeholder='Title'
-                    className={`py-5 pr-3 border-none outline-none dark:bg-black text-4xl font-semibold ${bricolage_grotesque}`}
+                    className={`py-5 pr-3 border-none outline-none dark:bg-black text-4xl max-sm:text-xl font-semibold ${bricolage_grotesque}`}
                 />
 
                 <Input

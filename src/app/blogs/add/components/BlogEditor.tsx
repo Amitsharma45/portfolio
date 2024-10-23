@@ -1,9 +1,9 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import { EditorContent, useEditor, Editor } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
-import { FaCode, FaListUl, FaListOl } from 'react-icons/fa6'
+import { FaCode, FaListUl, FaListOl, FaPencil } from 'react-icons/fa6'
 import { GrUndo, GrRedo, GrBlockQuote, GrBold } from "react-icons/gr";
 import { MdOutlineHorizontalRule, MdOutlineFormatItalic } from "react-icons/md";
 import { BiCodeBlock } from "react-icons/bi";
@@ -17,108 +17,214 @@ type MenuBarProps = {
 
 
 const MenuBar = ({ editor }: MenuBarProps) => {
+    const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false)
     if (!editor) {
         return null
     }
 
     return (
-        <div className="control-group mt-10">
-            <div className="button-group flex gap-6 justify-center text-lg max-sm:text-sm max-sm:gap-3 transition-all">
-                <button
-                    onClick={() => editor.chain().focus().toggleBold().run()}
-                    className={`${editor.isActive('bold') ? 'is-active' : ''} hover:scale-110 duration-200`}
-                >
-                    <GrBold />
-                </button>
-                <button
-                    onClick={() => editor.chain().focus().toggleItalic().run()}
-                    className={`${editor.isActive('italic') ? 'is-active' : ''} hover:scale-110 duration-200`}
-                >
-                    <MdOutlineFormatItalic />
-                </button>
-                <button
-                    onClick={() => editor.chain().focus().toggleStrike().run()}
-                    className={`${editor.isActive('strike') ? 'is-active' : ''} hover:scale-110 duration-200`}
-                >
-                    <LuStrikethrough />
-                </button>
-                <button
-                    onClick={() => editor.chain().focus().toggleCode().run()}
-                    className={`${editor.isActive('code') ? 'is-active' : ''} hover:scale-110 duration-200`}
-                >
-                    <FaCode />
-                </button>
+        <>
+            <div className="control-group mt-10 fixed bottom-7 left-[25vw] max-sm:left-0 z-20 bg-black bg-opacity-10 backdrop-blur-sm border dark:border-white/20 dark:text-white text-black w-[50vw] max-sm:w-full py-3 rounded-xl shadow dark:shadow-none max-sm:hidden">
+                <div className="button-group flex gap-6 justify-center text-lg max-sm:text-sm max-sm:gap-3 transition-all">
+                    <button
+                        onClick={() => editor.chain().focus().toggleBold().run()}
+                        className={`${editor.isActive('bold') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <GrBold />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleItalic().run()}
+                        className={`${editor.isActive('italic') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <MdOutlineFormatItalic />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleStrike().run()}
+                        className={`${editor.isActive('strike') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <LuStrikethrough />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleCode().run()}
+                        className={`${editor.isActive('code') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <FaCode />
+                    </button>
 
-                <button
-                    onClick={() => editor.chain().focus().setParagraph().run()}
-                    className={`${editor.isActive('paragraph') ? 'is-active' : ''} hover:scale-110 duration-200`}
-                >
-                    <RiText />
-                </button>
-                <button
-                    onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
-                    className={`${editor.isActive('heading', { level: 1 }) ? 'is-active' : ''} hover:scale-110 duration-200`}
-                >
-                    <LuHeading1 />
-                </button>
-                <button
-                    onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
-                    className={`${editor.isActive('heading', { level: 2 }) ? 'is-active' : ''} hover:scale-110 duration-200`}
-                >
-                    <LuHeading2 />
-                </button>
-                <button
-                    onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
-                    className={`${editor.isActive('heading', { level: 3 }) ? 'is-active' : ''} hover:scale-110 duration-200`}
-                >
-                    <LuHeading3 />
-                </button>
+                    <button
+                        onClick={() => editor.chain().focus().setParagraph().run()}
+                        className={`${editor.isActive('paragraph') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <RiText />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
+                        className={`${editor.isActive('heading', { level: 1 }) ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <LuHeading1 />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
+                        className={`${editor.isActive('heading', { level: 2 }) ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <LuHeading2 />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
+                        className={`${editor.isActive('heading', { level: 3 }) ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <LuHeading3 />
+                    </button>
 
-                <button
-                    onClick={() => editor.chain().focus().toggleBulletList().run()}
-                    className={`${editor.isActive('bulletList') ? 'is-active' : ''} hover:scale-110 duration-200`}
-                >
-                    <FaListUl />
-                </button>
-                <button
-                    onClick={() => editor.chain().focus().toggleOrderedList().run()}
-                    className={`${editor.isActive('orderedList') ? 'is-active' : ''} hover:scale-110 duration-200`}
-                >
-                    <FaListOl />
-                </button>
-                <button
-                    onClick={() => editor.chain().focus().toggleCodeBlock().run()}
-                    className={`${editor.isActive('codeBlock') ? 'is-active' : ''} hover:scale-110 duration-200`}
-                >
-                    <BiCodeBlock />
-                </button>
-                <button
-                    onClick={() => editor.chain().focus().toggleBlockquote().run()}
-                    className={`${editor.isActive('blockquote') ? 'is-active' : ''} hover:scale-110 duration-200`}
-                >
-                    <GrBlockQuote />
-                </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleBulletList().run()}
+                        className={`${editor.isActive('bulletList') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <FaListUl />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleOrderedList().run()}
+                        className={`${editor.isActive('orderedList') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <FaListOl />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleCodeBlock().run()}
+                        className={`${editor.isActive('codeBlock') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <BiCodeBlock />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleBlockquote().run()}
+                        className={`${editor.isActive('blockquote') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <GrBlockQuote />
+                    </button>
 
-                <button
-                    onClick={() => editor.chain().focus().setHorizontalRule().run()}
-                    className='hover:scale-110 duration-200'
-                >
-                    <MdOutlineHorizontalRule />
-                </button>
-                <button
-                    onClick={() => editor.chain().focus().undo().run()}
-                    className='hover:scale-110 duration-200'
-                >
-                    <GrUndo />
-                </button>
-                <button
-                    onClick={() => editor.chain().focus().redo().run()}
-                    className='hover:scale-110 duration-200'
-                >
-                    <GrRedo />
-                </button>
+                    <button
+                        onClick={() => editor.chain().focus().setHorizontalRule().run()}
+                        className='hover:scale-110 duration-200'
+                    >
+                        <MdOutlineHorizontalRule />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().undo().run()}
+                        className='hover:scale-110 duration-200'
+                    >
+                        <GrUndo />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().redo().run()}
+                        className='hover:scale-110 duration-200'
+                    >
+                        <GrRedo />
+                    </button>
+                </div>
             </div>
-        </div>
+
+            <div className="fixed bottom-10 right-10 hidden max-sm:block z-30" onClick={() => setIsMenuVisible(!isMenuVisible)}>
+                <FaPencil />
+            </div>
+
+            <div className={`control-group transition-all duration-300 mt-10 fixed bottom-20 right-6 z-20 bg-black bg-opacity-10 backdrop-blur-sm border dark:border-white/20 dark:text-white text-black h-fit py-3 px-4 rounded-xl shadow dark:shadow-none ${isMenuVisible ? 'block' : 'hidden'}`}>
+                <div className="button-group flex flex-col gap-4 justify-center text-lg max-sm:text-sm">
+                    <button
+                        onClick={() => editor.chain().focus().toggleBold().run()}
+                        className={`${editor.isActive('bold') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <GrBold />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleItalic().run()}
+                        className={`${editor.isActive('italic') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <MdOutlineFormatItalic />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleStrike().run()}
+                        className={`${editor.isActive('strike') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <LuStrikethrough />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleCode().run()}
+                        className={`${editor.isActive('code') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <FaCode />
+                    </button>
+
+                    <button
+                        onClick={() => editor.chain().focus().setParagraph().run()}
+                        className={`${editor.isActive('paragraph') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <RiText />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
+                        className={`${editor.isActive('heading', { level: 1 }) ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <LuHeading1 />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
+                        className={`${editor.isActive('heading', { level: 2 }) ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <LuHeading2 />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
+                        className={`${editor.isActive('heading', { level: 3 }) ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <LuHeading3 />
+                    </button>
+
+                    <button
+                        onClick={() => editor.chain().focus().toggleBulletList().run()}
+                        className={`${editor.isActive('bulletList') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <FaListUl />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleOrderedList().run()}
+                        className={`${editor.isActive('orderedList') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <FaListOl />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleCodeBlock().run()}
+                        className={`${editor.isActive('codeBlock') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <BiCodeBlock />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().toggleBlockquote().run()}
+                        className={`${editor.isActive('blockquote') ? 'is-active' : ''} hover:scale-110 duration-200`}
+                    >
+                        <GrBlockQuote />
+                    </button>
+
+                    <button
+                        onClick={() => editor.chain().focus().setHorizontalRule().run()}
+                        className='hover:scale-110 duration-200'
+                    >
+                        <MdOutlineHorizontalRule />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().undo().run()}
+                        className='hover:scale-110 duration-200'
+                    >
+                        <GrUndo />
+                    </button>
+                    <button
+                        onClick={() => editor.chain().focus().redo().run()}
+                        className='hover:scale-110 duration-200'
+                    >
+                        <GrRedo />
+                    </button>
+                </div>
+            </div>
+
+        </>
     )
 }
 
@@ -147,7 +253,7 @@ export default function BlogEditor({ setContent }: BlogEditorProps) {
     return (
         <>
             <MenuBar editor={editor} />
-            <div className="editor-container">
+            <div className="editor-container w-[70vw] max-sm:w-full max-sm:px-3 px-3">
                 <EditorContent editor={editor} className='py-3 mt-5' />
             </div>
         </>
