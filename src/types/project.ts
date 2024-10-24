@@ -53,3 +53,12 @@ export interface ApiResponse {
   success: boolean;
   message: string;
 };
+
+export interface Blog {
+    id: string;
+    title: string;
+    author: string;
+    createdAt: string;
+    image_public_id: string;
+    content: string;
+}
