@@ -25,7 +25,7 @@ const BlogList = () => {
     }, [])
 
     return (
-        <div className='w-full px-64 max-[1025px]:px-4 max-[1285px]:px-40 max-lg:px-0 max-sm:px-4 flex flex-col gap-10 items-center mt-4 pb-8'>
+        <div className='w-full px-64 max-[1025px]:px-0 max-[1285px]:px-0 max-sm:px-2 flex flex-col gap-10 items-center mt-4 pb-8'>
             {
                 blogs && blogs.map((blog, idx) => (
                     <BlogCard key={idx} title={blog.title} author={blog.author} createdAt={blog.createdAt} image_public_id={blog.image_public_id} content={blog.content} id={blog.id} />
