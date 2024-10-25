@@ -6,12 +6,11 @@ import Footer from '@/components/Footer';
 
 const ConditionalFooter = () => {
     const pathname = usePathname();
-
-    const hideFooterRoutes = ['/blogs', '/blogs/add'];
+    const hideFooter = pathname.startsWith('/blogs');
 
     return (
         <>
-            {!hideFooterRoutes.includes(pathname) && <Footer />}
+            {!hideFooter && <Footer />}
         </>
     );
 };
