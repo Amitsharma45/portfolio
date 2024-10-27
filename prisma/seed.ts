@@ -9,7 +9,7 @@ async function main() {
       title: "How to setup the docker on windows",
       author: "Fardeen Mansoori",
       createdAt: new Date(),
-      image_public_id: "next-cloudinary-uploads/yf9lduaccg1cluljhnm5",
+      image_public_id: "next-cloudinary-uploads/q3joxrqyjkbnoxlw1n61",
       content: "Here is the youtube video link check it out: https://youtu.be/ZyBBv1JmnWQ?si=wUyZVoh0mFW-jhn6",
     },
   })

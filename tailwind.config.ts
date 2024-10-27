@@ -119,7 +119,7 @@ const config: Config = {
   				}
   			}
   		},
-		typography: (theme) => ({
+		typography: (theme: (arg0: string) => unknown) => ({
         dark: {
           css: {
             color: theme('colors.white'),
@@ -179,7 +179,6 @@ const config: Config = {
   plugins: [
 	require("tailwindcss-animate"),
 	require('@tailwindcss/typography'),
-	require('@tailwindcss/line-clamp')
 ],
 };
 export default config;
