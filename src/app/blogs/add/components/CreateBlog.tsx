@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button'
 import { bricolage_grotesque } from '@/utils/fonts'
 import { toast } from 'sonner'
 import { z } from 'zod'
+import { ApiResponse } from '@/types/project'
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024;
 const ACCEPTED_FILE_TYPES = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
@@ -49,7 +50,7 @@ const CreateBlog = () => {
         formData.append('file', file as File);
 
         try {
-            const response = await axios.post('/api/create-blog', formData, {
+            const response = await axios.post<ApiResponse>('/api/create-blog', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

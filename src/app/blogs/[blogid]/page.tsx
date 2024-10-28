@@ -15,7 +15,7 @@ export default async function page({ params }: { params: { blogid: string } }) {
 
 
     if (!blog) {
-        return <div>Blog not found</div>;
+        return <div className='flex justify-center items-center h-screen'>Blog not found</div>;
     }
 
 
