@@ -22,7 +22,7 @@ export default async function page({ params }: { params: { blogid: string } }) {
     const readingTime = calculateReadingTime(blog.content);
 
     return (
-        <div className='w-full mt-40 max-[1025px]:px-4 max-[1285px]:px-20 max-lg:px-0 max-sm:px-0 flex flex-col gap-10 items-center pb-8'>
+        <div className='w-full mt-40 max-[1025px]:px-4 max-[1285px]:px-4 max-lg:px-0 max-sm:px-0 flex flex-col gap-10 items-center pb-8'>
             <div className={`${bricolage_grotesque} px-80 max-sm:px-8 max-lg:px-0`}>
                 <h1 className='text-4xl font-bold'>{blog.title}</h1>
                 <div className="mt-5 flex items-center gap-2">
