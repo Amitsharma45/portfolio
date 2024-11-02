@@ -23,8 +23,8 @@ export default async function page({ params }: { params: { blogid: string } }) {
 
     return (
         <div className='w-full mt-40 max-[1025px]:px-4 max-[1285px]:px-4 max-lg:px-0 max-sm:px-0 flex flex-col gap-10 items-center pb-8'>
-            <div className={`${bricolage_grotesque} px-80 max-sm:px-8 max-lg:px-0`}>
-                <h1 className='text-4xl font-bold'>{blog.title}</h1>
+            <div className={`${bricolage_grotesque} px-80 max-[1285px]:px-60 max-sm:px-4 max-lg:px-20`}>
+                <h1 className='text-4xl max-sm:text-3xl font-bold'>{blog.title}</h1>
                 <div className="mt-5 flex items-center gap-2">
                     <Avatar
                         src="/fardeen.jpg"
@@ -33,8 +33,8 @@ export default async function page({ params }: { params: { blogid: string } }) {
                         size='2'
                     />
                     <Link href='https://x.com/intent/follow?screen_name=fardeen14693425' underline='none' className='text-sm text-black dark:text-white'>{blog.author}</Link>
-                    <p className='text-sm'>{formatDate(blog.createdAt.toString())}</p>
-                    <p className='text-sm'>{readingTime}</p>
+                    <p className='text-sm max-sm:text-xs'>{formatDate(blog.createdAt.toString())}</p>
+                    <p className='text-sm max-sm:text-xs'>{readingTime}</p>
 
                 </div>
                 <div className="mt-10">
