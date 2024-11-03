@@ -1,16 +1,17 @@
-'use client'
+'use client';
 
-import axios from 'axios'
-import React, { useState, useRef } from 'react'
-import BlogEditor from './BlogEditor'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { bricolage_grotesque } from '@/utils/fonts'
-import { toast } from 'sonner'
-import { z } from 'zod'
-import { ApiResponse } from '@/types/project'
+import axios from 'axios';
+import React, { useState, useRef } from 'react';
+import BlogEditor from './BlogEditor';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { bricolage_grotesque } from '@/utils/fonts';
+import { toast } from 'sonner';
+import { z } from 'zod';
+import { ApiResponse } from '@/types/project';
+import { useRouter } from 'next/navigation'; // Import useRouter
 
-const MAX_FILE_SIZE = 5 * 1024 * 1024;
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 const ACCEPTED_FILE_TYPES = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
 
 const blogSchema = z.object({
@@ -31,8 +32,8 @@ const CreateBlog = () => {
     const [content, setContent] = useState<string>('');
     const [file, setFile] = useState<File | null>(null);
     const [isPublishing, setIsPublishing] = useState<boolean>(false);
-
     const fileInputRef = useRef<HTMLInputElement>(null);
+    const router = useRouter(); // Initialize router
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -64,6 +65,7 @@ const CreateBlog = () => {
                 if (fileInputRef.current) {
                     fileInputRef.current.value = '';
                 }
+                router.push('/blogs'); // Use router to navigate
             }
         } catch (error) {
             toast.error(`Error while publishing blog: ${error}`);
@@ -89,7 +91,7 @@ const CreateBlog = () => {
                 />
                 <Input
                     type="file"
-                    placeholder="image"
+                    placeholder="Image"
                     className="w-full shadow-sm dark:bg-black py-2"
                     onChange={(e) => setFile(e.target.files?.[0] || null)}
                     ref={fileInputRef}

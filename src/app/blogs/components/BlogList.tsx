@@ -1,58 +1,41 @@
-'use client'
-
 import { Blog } from '@/types/project'
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import BlogCard from './BlogCard';
-import { Skeleton } from "@/components/ui/skeleton"
+import BlogCard from './BlogCard'
+// import { Skeleton } from "@/components/ui/skeleton"
 
-
-
-const BlogList = () => {
-    const [blogs, setBlogs] = useState<Blog[]>([]);
-    const [isFetching, setIsFetching] = useState<boolean>(false)
-
-    const fetchBlogs = async () => {
-        setIsFetching(true)
-        try {
-            const response = await axios.get('/api/blogs');
-            if (response.data.success) {
-                setBlogs(response.data.message);
+async function getBlogs() {
+    try {
+        const response = await fetch(`http://localhost:3000/api/blogs`, {
+            next: {
+                revalidate: 60 // Revalidate every 60 seconds
             }
-        } catch (error) {
-            throw new Error(`Error while fetching the blogs ${error}`)
-        } finally {
-            setIsFetching(false)
+        });
+        const data = await response.json();
+
+        if (data.success) {
+            return data.message;
         }
+        return [];
+    } catch (error) {
+        console.error(`Error while fetching the blogs: ${error}`);
+        return [];
     }
+}
 
-    useEffect(() => {
-        fetchBlogs();
-    }, [])
+async function BlogList() {
+    const blogs = await getBlogs();
 
+    // If you need loading state, you can use React Suspense instead
     return (
         <div className='w-full px-64 max-[1025px]:px-0 max-[1285px]:px-0 max-sm:px-2 flex flex-col gap-10 items-center mt-4 pb-8'>
-            {
-                isFetching && (
-                    Array.from({ length: 3 }).map((_, index) => (
-                        <div key={index} className="flex items-center space-x-4 w-[50vw] max-sm:w-full max-sm:px-4 mt-10">
-                            <div className="space-y-2">
-                                <Skeleton className="h-4 w-[50vw] max-sm:w-[90vw]" />
-                                <Skeleton className="h-12 w-[50vw] max-sm:w-[90vw]" />
-                                <div className="flex gap-4">
-                                    <Skeleton className="h-4 w-[100px]" />
-                                    <Skeleton className="h-4 w-[100px]" />
-                                </div>
-                            </div>
-                        </div>
-                    ))
-                )
-            }
-            {
-                blogs && blogs.map((blog, idx) => (
-                    <BlogCard key={idx} title={blog.title} createdAt={blog.createdAt} content={blog.content} id={blog.id} />
-                ))
-            }
+            {blogs.map((blog: Blog, idx: number) => (
+                <BlogCard
+                    key={idx}
+                    title={blog.title}
+                    createdAt={blog.createdAt}
+                    content={blog.content}
+                    id={blog.id}
+                />
+            ))}
         </div>
     )
 }
