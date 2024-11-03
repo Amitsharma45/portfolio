@@ -1,4 +1,3 @@
-// page.tsx
 import BlogList from './components/BlogList'
 import { Suspense } from 'react'
 import ClientWrapper from './components/ClientWrapper'

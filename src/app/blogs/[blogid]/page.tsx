@@ -48,10 +48,9 @@ export default async function BlogDetailPage({ params }: PageProps) {
                     <BlogPage public_id={blog.image_public_id} />
                 </div>
 
-                <div
-                    className='prose lg:prose-xl dark:prose-dark mt-7'
-                    dangerouslySetInnerHTML={{ __html: blog.content }}
-                />
+                <div className='prose lg:prose-xl dark:prose-dark mt-7'>
+                    <div className='w-[57vw] max-lg:w-[80vw] max-sm:w-full !text-base' dangerouslySetInnerHTML={{ __html: blog.content }} />
+                </div>
             </div>
         </article>
     )
