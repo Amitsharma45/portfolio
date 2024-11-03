@@ -1,4 +1,3 @@
-// app/blog/[blogid]/page.tsx
 import { getBlog } from '@/lib/getBlog'
 import { bricolage_grotesque } from '@/utils/fonts'
 import BlogPage from './components/BlogPage'
@@ -15,13 +14,12 @@ interface PageProps {
     }
 }
 
-// Generate metadata for SEO
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const blog = await getBlog(params.blogid)
 
     return {
         title: blog.title,
-        description: blog.content.slice(0, 160), // First 160 characters as description
+        description: blog.content.slice(0, 160),
         openGraph: {
             title: blog.title,
             description: blog.content.slice(0, 160),
@@ -61,11 +59,10 @@ export default async function BlogDetailPage({ params }: PageProps) {
     )
 }
 
-// Generate static params if you want to statically generate some blog pages
 export async function generateStaticParams() {
     const blogs = await prisma.blog.findMany({
         select: { id: true },
-        take: 20 // Generate static pages for latest 20 blogs
+        take: 20
     })
 
     return blogs.map((blog) => ({

@@ -1,4 +1,3 @@
-// lib/getBlog.ts
 import { PrismaClient } from "@prisma/client";
 import { notFound } from 'next/navigation'
 

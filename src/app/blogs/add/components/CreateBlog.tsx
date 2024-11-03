@@ -9,9 +9,9 @@ import { bricolage_grotesque } from '@/utils/fonts';
 import { toast } from 'sonner';
 import { z } from 'zod';
 import { ApiResponse } from '@/types/project';
-import { useRouter } from 'next/navigation'; // Import useRouter
+import { useRouter } from 'next/navigation';
 
-const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+const MAX_FILE_SIZE = 5 * 1024 * 1024;
 const ACCEPTED_FILE_TYPES = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
 
 const blogSchema = z.object({
@@ -33,7 +33,7 @@ const CreateBlog = () => {
     const [file, setFile] = useState<File | null>(null);
     const [isPublishing, setIsPublishing] = useState<boolean>(false);
     const fileInputRef = useRef<HTMLInputElement>(null);
-    const router = useRouter(); // Initialize router
+    const router = useRouter();
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -65,7 +65,7 @@ const CreateBlog = () => {
                 if (fileInputRef.current) {
                     fileInputRef.current.value = '';
                 }
-                router.push('/blogs'); // Use router to navigate
+                router.push('/blogs');
             }
         } catch (error) {
             toast.error(`Error while publishing blog: ${error}`);

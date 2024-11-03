@@ -1,4 +1,3 @@
-// app/blog/[blogid]/error.tsx
 'use client'
 
 export default function Error({

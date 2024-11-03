@@ -1,12 +1,11 @@
 import { Blog } from '@/types/project'
 import BlogCard from './BlogCard'
-// import { Skeleton } from "@/components/ui/skeleton"
 
 async function getBlogs() {
     try {
         const response = await fetch(`http://localhost:3000/api/blogs`, {
             next: {
-                revalidate: 60 // Revalidate every 60 seconds
+                revalidate: 60
             }
         });
         const data = await response.json();
@@ -24,7 +23,6 @@ async function getBlogs() {
 async function BlogList() {
     const blogs = await getBlogs();
 
-    // If you need loading state, you can use React Suspense instead
     return (
         <div className='w-full px-64 max-[1025px]:px-0 max-[1285px]:px-0 max-sm:px-2 flex flex-col gap-10 items-center mt-4 pb-8'>
             {blogs.map((blog: Blog, idx: number) => (

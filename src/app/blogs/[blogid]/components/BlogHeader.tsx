@@ -1,4 +1,3 @@
-// components/BlogHeader.tsx
 'use client'
 import { Avatar, Link } from '@radix-ui/themes'
 import { formatDate } from '@/utils/formatdate'
