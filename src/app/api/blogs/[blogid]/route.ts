@@ -1,11 +1,10 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from '@/lib/prisma'
 import { NextRequest, NextResponse } from "next/server";
 
-const prisma = new PrismaClient();
 
 export async function GET(req: NextRequest, { params }: { params: { blogid: string } }) {
     const blogid = params.blogid;
-    
+
     try {
         const blog = await prisma.blog.findUnique({
             where: {
@@ -24,5 +23,5 @@ export async function GET(req: NextRequest, { params }: { params: { blogid: stri
         );
     }
 
-    
+
 }

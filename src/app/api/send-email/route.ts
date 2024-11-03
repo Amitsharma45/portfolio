@@ -6,7 +6,6 @@ export async function POST(req: NextRequest) {
   try {
     const { email, message } = await req.json();
 
-    // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(

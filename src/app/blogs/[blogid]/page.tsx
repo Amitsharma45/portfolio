@@ -4,9 +4,7 @@ import BlogPage from './components/BlogPage'
 import BlogHeader from './components/BlogHeader'
 import { calculateReadingTime } from '@/utils/blogReadingTime'
 import { Metadata } from 'next'
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import { prisma } from '@/lib/prisma'
 
 interface PageProps {
     params: {

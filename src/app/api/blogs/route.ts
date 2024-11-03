@@ -1,7 +1,5 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from '@/lib/prisma'
 import { NextResponse } from "next/server";
-
-const prisma = new PrismaClient();
 
 export async function GET() {
     try {
@@ -28,8 +26,9 @@ export async function GET() {
         );
 
     } catch (error) {
+        console.error('Database error:', error);
         return NextResponse.json(
-            { success: false, message: `Error while fetching blogs: ${error}` },
+            { success: false, message: 'Error while fetching blogs' },
             { status: 500 }
         )
     }
