@@ -5,7 +5,18 @@ const prisma = new PrismaClient();
 
 export async function GET() {
     try {
-        const blogs = await prisma.blog.findMany();
+        const blogs = await prisma.blog.findMany({
+            orderBy: {
+                createdAt: 'desc'
+            },
+            select: {
+                id: true,
+                title: true,
+                content: true,
+                createdAt: true
+            }
+        });
+
         return NextResponse.json(
             { success: true, message: blogs },
             {
