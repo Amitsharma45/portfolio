@@ -3,7 +3,7 @@ import BlogCard from './BlogCard'
 
 async function getBlogs() {
     try {
-        const response = await fetch(`http://localhost:3000/api/blogs`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`, {
             next: {
                 revalidate: 60
             }
