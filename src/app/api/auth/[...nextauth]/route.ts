@@ -31,7 +31,7 @@ const authOptions = {
                         user.hashedPassword
                     );
 
-                    if (isPasswordCorrect) {
+                    if (!isPasswordCorrect) {
                         throw new Error('Incorrect Password!')
                     }
 

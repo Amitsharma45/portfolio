@@ -11,6 +11,7 @@ import { z } from 'zod'
 import { ApiResponse } from '@/types/project'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
+import { Skeleton } from '@/components/ui/skeleton'
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024;
 const ACCEPTED_FILE_TYPES = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
@@ -40,7 +41,15 @@ const CreateBlog = () => {
     const { status } = useSession();
 
     if (status === "loading") {
-        return <p>Loading...</p>
+        return <div className='w-full px-64 max-[1025px]:px-0 max-[1285px]:px-0 max-sm:px-2 flex flex-col gap-10 items-center mt-4 pb-8 relative'>
+            <div className="flex items-center justify-center space-x-4 w-[50vw] max-sm:w-full max-sm:px-4 mt-10">
+                <div className="space-y-4">
+                    <Skeleton className="h-12 w-[50vw] max-sm:w-[90vw]" />
+                    <Skeleton className="h-12 w-[50vw] max-sm:w-[90vw]" />
+                    <Skeleton className="h-80 w-[50vw] max-sm:w-[90vw]" />
+                </div>
+            </div>
+        </div>
     }
 
     if (status === "unauthenticated") {

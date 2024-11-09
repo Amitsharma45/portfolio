@@ -56,7 +56,7 @@ export default function LoginForm() {
 
                     <Input type="password" className='w-full h-full border dark:placeholder:text-black placeholder:text-white' placeholder='Enter Password' value={password} onChange={(e) => setPassword(e.target.value)} required />
 
-                    <Button className="dark:bg-black dark:text-white text-black bg-white mt-10 w-full">
+                    <Button className="dark:bg-black dark:text-white text-black bg-white mt-10 w-full dark:hover:bg-slate-800 hover:bg-gray-200">
                         {
                             isLoading ? 'Loading...' : 'Login'
                         }
