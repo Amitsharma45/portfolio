@@ -4,7 +4,7 @@ import { JWT } from "next-auth/jwt";
 import Credentials from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { prisma } from "@/lib/prisma";
-
+import bcrypt from 'bcryptjs'
 
 const authOptions = {
     adapter: PrismaAdapter(prisma),
@@ -26,7 +26,12 @@ const authOptions = {
                         throw new Error("No user found!")
                     }
 
-                    if (credentials?.password != 'Fardeen Mansoori') {
+                    const isPasswordCorrect = await bcrypt.compare(
+                        credentials?.password as string,
+                        user.hashedPassword
+                    );
+
+                    if (isPasswordCorrect) {
                         throw new Error('Incorrect Password!')
                     }
 

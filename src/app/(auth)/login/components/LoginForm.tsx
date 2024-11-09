@@ -35,6 +35,7 @@ export default function LoginForm() {
             }
 
             if (result?.url) {
+                toast.success('Login Successful :)')
                 router.replace('/blogs/add');
             }
 
