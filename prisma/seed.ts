@@ -13,8 +13,6 @@ async function main() {
       content: "Here is the youtube video link check it out: https://youtu.be/ZyBBv1JmnWQ?si=wUyZVoh0mFW-jhn6",
     },
   })
-
-
   console.log({ result })
 }
 main()
