@@ -7,7 +7,7 @@ import { Toaster } from "sonner";
 import { Analytics } from '@vercel/analytics/react';
 import './globals.css'
 import ConditionalFooter from "./ConditionalFooter";
-
+import Provider from "@/context/Provider";
 
 export const metadata: Metadata = {
   title: "Fardeen Mansoori - Full Stack Web Developer",
@@ -38,17 +38,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <DarkModeProvider>
-        <body className={`bg-white dark:bg-black`}>
-          <Toaster position='bottom-right' />
-          <Theme className="dark:!bg-black">
-            <Navbar />
-            {children}
-            <Analytics />
-            <ConditionalFooter />
-          </Theme>
-        </body>
-      </DarkModeProvider>
+      <Provider>
+        <DarkModeProvider>
+          <body className={`bg-white dark:bg-black`}>
+            <Toaster position='bottom-right' />
+            <Theme className="dark:!bg-black">
+              <Navbar />
+              {children}
+              <Analytics />
+              <ConditionalFooter />
+            </Theme>
+          </body>
+        </DarkModeProvider>
+      </Provider>
     </html>
   );
 }
