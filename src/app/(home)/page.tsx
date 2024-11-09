@@ -11,10 +11,10 @@ import { inter, bricolage_grotesque } from '@/utils/fonts';
 import About from "../about/components/About";
 import Contact from "@/components/Contact";
 import { motion } from "framer-motion"
-  
+
 export default function Home() {
   return (
-    <motion.div initial={{opacity: 0, y: 20}} animate={{ opacity: 1, y: 0 }} exit={{opacity: 0}} transition={{duration: 0.5}} className="max-[350px]:overflow-hidden">
+    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className="max-[350px]:overflow-hidden">
       <div className="w-full flex justify-center py-5 pt-36 dark:bg-black">
         <div className="w-2/3 max-sm:w-full flex flex-col items-center">
           <div>
@@ -28,9 +28,9 @@ export default function Home() {
 
           </div>
           <div className="mt-10">
-              <RainbowButton>
-                <ScrollLink to="contact-section" activeClass="active" smooth={true} offset={-120} duration={1100}>Get in touch</ScrollLink>
-              </RainbowButton>
+            <RainbowButton>
+              <ScrollLink to="contact-section" activeClass="active" smooth={true} offset={-120} duration={1100}>Get in touch</ScrollLink>
+            </RainbowButton>
           </div>
         </div>
       </div>
@@ -46,7 +46,7 @@ export default function Home() {
       <div className="w-full flex justify-center mt-4">
         <Experience company_link={"https://www.apnacollege.in/"} company_logo={"/company1.jpeg"} company_name={"Apna College"} duration={"Feb 2024 - June 2024"} job_title={"Teaching Assistant (MERN Stack)"} description={"Mentored over 5,000 students in MERN Stack development, resolving 500+ coding issues and improving understanding. Achieved an average rating of 4.75 for effective teaching and support."} />
       </div>
-      
+
       <div className="w-full flex justify-center mt-4">
         <Education institute_link={"https://www.uok.ac.in/"} institute_logo={"/uok.gif"} course_title={"Bachelors of Computer Application"} ending_date={"Expected July 2025"} institute_name={"University of Kota"} cgpa={8.5} description={"Currently pursuing a BCA degree, focusing on software development, web technologies, and programming languages. Maintaining a CGPA of 8.5, with coursework in data structures, operating systems, DBMS, computer networks."} />
       </div>
