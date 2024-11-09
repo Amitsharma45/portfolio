@@ -10,6 +10,7 @@ import { toast } from 'sonner'
 import { z } from 'zod'
 import { ApiResponse } from '@/types/project'
 import { useRouter } from 'next/navigation'
+import { useSession } from 'next-auth/react'
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024;
 const ACCEPTED_FILE_TYPES = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
@@ -35,6 +36,16 @@ const CreateBlog = () => {
 
     const fileInputRef = useRef<HTMLInputElement>(null);
     const router = useRouter();
+
+    const { status } = useSession();
+
+    if (status === "loading") {
+        return <p>Loading...</p>
+    }
+
+    if (status === "unauthenticated") {
+        return router.replace('/login')
+    }
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
