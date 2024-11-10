@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { v2 as cloudinary } from 'cloudinary';
 import { prisma } from '@/lib/prisma'
+import { getServerSession } from "next-auth/next";
 
 cloudinary.config({
     cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
@@ -14,6 +15,7 @@ interface CloudinaryUploadResult {
 }
 
 export async function POST(req: NextRequest) {
+    const session = await getServerSession();
     try {
         const formData = await req.formData();
         const file = formData.get("file") as File | null;
@@ -58,11 +60,12 @@ export async function POST(req: NextRequest) {
             }
         )
 
+
         await prisma.blog.create({
             data: {
                 title: title.toString(),
                 content: content.toString(),
-                author: "Fardeen Mansoori",
+                author: session?.user?.name as string,
                 image_public_id: result.public_id,
                 createdAt: new Date()
             }
