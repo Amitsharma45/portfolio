@@ -14,7 +14,7 @@ import { motion } from "framer-motion"
 
 export default function Home() {
   return (
-    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className="max-[350px]:overflow-hidden mt-10 max-sm:mt-0">
+    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className="max-[350px]:overflow-hidden mt-8 max-sm:mt-0">
       <div className="w-full flex justify-center py-5 pt-36 dark:bg-black">
         <div className="w-2/3 max-sm:w-full flex flex-col items-center">
           <div>
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full flex justify-center mt-16">
+      <div className="w-full flex justify-center mt-24 max-lg:mt-16">
         <ProjectCardList />
       </div>
 
