@@ -2,9 +2,9 @@ export type Project = {
     logo: string,
     title: string,
     description: string,
-    techStack: string[],
+    techStack?: string[],
     link?: string,
-    source: string
+    source?: string
 };
 
 export interface I_Heading {
@@ -50,8 +50,8 @@ export interface I_About {
 }
 
 export interface ApiResponse {
-  success: boolean;
-  message: string;
+    success: boolean;
+    message: string;
 };
 
 export interface Blog {

@@ -9,7 +9,7 @@ import { Badge, Link } from '@radix-ui/themes'
 import Image from 'next/image'
 import React, { useContext } from 'react'
 
-const ProjectCard = ({logo,title, description, techStack, link, source } : Project) => {
+const ProjectCard = ({ logo, title, description, techStack, link, source }: Project) => {
 
     const darkModeContext = useContext(DarkModeContext);
 
@@ -19,10 +19,10 @@ const ProjectCard = ({logo,title, description, techStack, link, source } : Proje
 
     const { isDarkMode } = darkModeContext;
 
-  return (
+    return (
         <MagicCard className="cursor-pointer rounded-lg dark:shadow-2xl w-[45%] max-sm:!w-fit h-[310px] border-none !bg-transparent" gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}>
             <ShineBorder className={`border h-full w-full relative rounded-lg flex flex-col justify-center items-start md:shadow-xl !bg-transparent !pointer-events-none`} color={["#FF9933", "#FFFFFF", "#138808"]}>
-                
+
                 <div className='px-3'>
                     <Image src={logo} alt='project-logo' width={30} height={30} />
                 </div>
@@ -34,9 +34,9 @@ const ProjectCard = ({logo,title, description, techStack, link, source } : Proje
                 </div>
                 <div className="flex gap-1 px-3 mt-4 flex-wrap !pointer-events-auto">
                     {
-                        techStack.map((tech, idx) => (
+                        techStack?.map((tech, idx) => (
                             <Badge key={idx} color="gray" variant="outline" highContrast className={`text-[10px] dark:hover:!bg-white hover:!bg-black hover:!text-white dark:hover:!text-black !pointer-events-auto ${bricolage_grotesque}`}>
-                                {tech}    
+                                {tech}
                             </Badge>
                         ))
                     }
@@ -44,23 +44,23 @@ const ProjectCard = ({logo,title, description, techStack, link, source } : Proje
                 <div className='px-3 mt-3 !pointer-events-auto flex gap-1'>
                     {
                         link && (
-                        <Link href={link} target='_blank'>
-                            <Badge color="gray" variant="solid" highContrast className={`text-[10px] py-[3px] dark:hover:bg-gray-300 ${bricolage_grotesque}`}>
-                                <GlobeIcon width={11} height={11}/> Website
-                            </Badge>
-                        </Link>
+                            <Link href={link} target='_blank'>
+                                <Badge color="gray" variant="solid" highContrast className={`text-[10px] py-[3px] dark:hover:bg-gray-300 ${bricolage_grotesque}`}>
+                                    <GlobeIcon width={11} height={11} /> Website
+                                </Badge>
+                            </Link>
                         )
                     }
-                
+
                     <Link href={source} target='_blank'>
                         <Badge color="gray" variant="solid" highContrast className={`text-[10px] py-[3px] dark:hover:bg-gray-300 ${bricolage_grotesque}`}>
-                            <GitHubLogoIcon width={11} height={11}/> Source
+                            <GitHubLogoIcon width={11} height={11} /> Source
                         </Badge>
                     </Link>
                 </div>
             </ShineBorder>
         </MagicCard>
-  )
+    )
 }
 
 export default ProjectCard
