@@ -6,10 +6,11 @@ import ProjectCard from './ProjectCard';
 import Title from '@/components/ui/Title';
 import { MagicCard } from '@/components/ui/magic-card';
 import ShineBorder from '@/components/ui/shine-border';
-import { Link } from '@radix-ui/themes';
+import { Badge, Link } from '@radix-ui/themes';
 import Image from 'next/image';
 import { bricolage_grotesque, inter } from '@/utils/fonts';
 import { DarkModeContext } from '@/context/DarkModeContext';
+import { GitHubLogoIcon, GlobeIcon } from '@radix-ui/react-icons';
 
 
 const ProjectCardList = () => {
@@ -21,7 +22,7 @@ const ProjectCardList = () => {
 
   const { isDarkMode } = darkModeContext;
   return (
-    <div className='w-full px-64 max-[1025px]:px-4 max-[1285px]:px-40 max-lg:px-0 max-sm:px-4 flex flex-col items-center mt-4 pb-8'>
+    <div className='w-full h-fit px-64 max-[1025px]:px-4 max-[1285px]:px-40 max-lg:px-0 max-sm:px-4 flex flex-col items-center mt-4 pb-8'>
       <Title title='Projects' />
 
       <MagicCard gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`} className='w-[68%] max-lg:w-[45%] max-sm:w-[95%] flex justify-center max-lg:justify-start !bg-transparent cursor-pointer mt-5 rounded-lg dark:shadow-2xl'>
@@ -38,7 +39,6 @@ const ProjectCardList = () => {
         </ShineBorder>
       </MagicCard>
 
-
       <div className="flex w-full flex-col gap-4 lg:flex-row mt-4 px-32 max-lg:px-0 max-sm:px-2 flex-wrap items-center ml-14 max-sm:ml-0 max-lg:ml-0 max-[350px]:mr-5 max-[321px]:mr-10">
         {data.map((project: Project, idx: number) => (
           <ProjectCard
@@ -51,8 +51,8 @@ const ProjectCardList = () => {
             source={project.source}
           />
         ))}
-      </div>
 
+      </div>
     </div>
   )
 }
@@ -89,7 +89,7 @@ const data: Project[] = [
     logo: "/lexicon.jpeg",
     title: "Lexicon",
     description: "Lexicon is a platform for discovering, downloading, and uploading books with a clean, user-friendly interface, working on auth and review functionality.",
-    techStack: ["NextJS", "Typescript", "Tailwind CSS", "MongoDB", "Zod"],
+    techStack: ["NextJS", "Typescript", "NextAuth", "Tailwind CSS", "MongoDB", "Zod"],
     link: "https://lexicon-sand.vercel.app/",
     source: "https://github.com/Fardeen26/lexicon",
   },
@@ -98,7 +98,7 @@ const data: Project[] = [
     logo: "/sumz.svg",
     title: "SumZ - Article Summarizer",
     description: "SumZ is an article summarizer that quickly generates concise summaries of lengthy articles, helping users grasp key points efficiently. It's designed for speed and accuracy with a clean, user-friendly interface.",
-    techStack: ["React", "OpenAI", "Tailwind CSS"],
+    techStack: ["React", "Redux", "OpenAI", "Tailwind CSS"],
     link: "https://sumz-summarize.netlify.app/",
     source: "https://github.com/Fardeen26/Article-Summarizer",
   },
