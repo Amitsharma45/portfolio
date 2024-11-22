@@ -54,8 +54,8 @@ const data: Project[] = [
     logo: "/ghostgram.png",
     title: "GhostGram - SaaS platform",
     description: "GhostGram is an anonymous messaging platform that lets users securely send and receive messages through unique, authenticated links.",
-    techStack: ["Next.js", "Typescript", "Open AI", "MongoDB", "NextAuth", "Tailwind CSS", "Shadcn"],
-    link: "",
+    techStack: ["Next.js", "Typescript", "Gemini", "MongoDB", "NextAuth", "Nodemailer", "Tailwind CSS", "Shadcn"],
+    link: "https://ghostgram-ten.vercel.app/",
     source: "https://github.com/Fardeen26/ghostgram",
   },
   {
