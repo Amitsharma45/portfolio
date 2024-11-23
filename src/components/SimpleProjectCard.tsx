@@ -20,7 +20,7 @@ const SimpleProjectCard = () => {
     return (
         <>
             {data.map((project, idx) => (
-                <MagicCard key={idx} gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`} className='w-[68%] max-lg:w-[45%] max-sm:w-[95%] flex justify-center max-lg:justify-start !bg-transparent cursor-pointer mt-5 rounded-lg dark:shadow-2xl'>
+                <MagicCard key={idx} gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`} className='w-[68%] max-lg:w-[45%] max-sm:w-full flex justify-center max-lg:justify-start !bg-transparent cursor-pointer mt-5 rounded-lg dark:shadow-2xl'>
                     <ShineBorder color={["#FF9933", "#FFFFFF", "#138808"]} className='w-full !bg-transparent !pointer-events-none flex max-lg:flex-col max-lg:items-start p-5 md:shadow-xl'>
                         <div className="w-[10vw] max-[1285px]:w-[13vw]">
                             <Link href='#' target='_blank'>
