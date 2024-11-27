@@ -62,7 +62,7 @@ const data: Project[] = [
     logo: "/lexicon.jpeg",
     title: "Lexicon",
     description: "Lexicon is a platform for discovering, downloading, and uploading books with a clean, user-friendly interface, working on auth and review functionality.",
-    techStack: ["Next.js", "Typescript", "NextAuth", "Tailwind CSS", "MongoDB", "Zod"],
+    techStack: ["Next.js", "Typescript", "NextAuth", "framer-motion", "MongoDB", "Tailwind CSS", "Shadcn", "Zod"],
     link: "https://lexicon-sand.vercel.app/",
     source: "https://github.com/Fardeen26/lexicon",
   },
