@@ -4,7 +4,6 @@ import { Project } from '@/types/project';
 import ProjectCard from './ProjectCard';
 import Title from '@/components/ui/Title';
 import SimpleProjectCard from '@/components/SimpleProjectCard';
-import MaxProjectCard from '@/components/MaxProjectCard';
 
 
 const ProjectCardList = () => {
@@ -26,7 +25,6 @@ const ProjectCardList = () => {
           />
         ))}
       </div>
-      <MaxProjectCard />
     </div>
   )
 }
@@ -67,6 +65,14 @@ const data: Project[] = [
     source: "https://github.com/Fardeen26/lexicon",
   },
   {
+    logo: "/chat-icon.png",
+    title: "The Chat Haven",
+    description: "The Chat Haven is a chat application that allows users to create & join room and send & receive messages in real-time.",
+    techStack: ["Next.js", "Node.js", "WebSockets", "TypeScript", "Tailwind CSS"],
+    link: "https://chat-app-phi-lyart.vercel.app/",
+    source: "https://github.com/Fardeen26/chat-app",
+  },
+  {
     logo: "/sumz.svg",
     title: "SumZ - Article Summarizer",
     description: "SumZ is an article summarizer that quickly generates concise summaries of lengthy articles, helping users grasp key points efficiently. It's designed for speed and accuracy with a clean, user-friendly interface.",
@@ -82,4 +88,12 @@ const data: Project[] = [
     link: "https://wanderlust-6cr5.onrender.com/",
     source: "https://github.com/Fardeen26/wanderlust_app",
   },
+  {
+    logo: '/portfolio-logo.jpg',
+    title: "Portfolio",
+    description: "A portfolio crafted and developed by me, showcasing my skills, projects, and passion for web development",
+    techStack: ["NextJS", "Prisma", "PostgreSQL", "NextAuth", "TipTap Editor", "Resend", "Cloudinary", "Zod", "framer-motion", "Tailwind CSS"],
+    link: "https://fardeenmansoori.vercel.app/",
+    source: "https://github.com/Fardeen26/portfolio",
+  }
 ];
