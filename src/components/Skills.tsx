@@ -28,6 +28,4 @@ const Skills = () => {
 
 export default Skills;
 
-const data: string[] = ["JavaScript", "TypeScript", "C++", "Java", "Solidity", "NextJS", "React", "Prisma", "MongoDB", "PostgreSql", "MySQL", "Docker", "Redux", "Recoil", "Tailwind CSS", "Bootstrap", "NodeJS", "ExpressJS", "foundry", "Zod", "Git"];
-
-// const data: string[] = ["NextJS", "TypeScript", "React", "Tailwind CSS", "NodeJS", "Express", "MongoDB", "MySQL", "REST APIs", "GitHub", "Vercel", "VS Code", "Bootstrap", "Solidity", "C", "C++", "Java", "Redux", "foundry", "Web3.js", "Ethers.js", "Zod", "MUI", "Shadcn", "Remix",];
+const data: string[] = ["JavaScript", "TypeScript", "C++", "Java", "Solidity", "Next.js", "React", "Prisma", "MongoDB", "PostgreSQL", "MySQL", "Docker", "Redux", "Recoil", "Tailwind CSS", "Bootstrap", "Node.js", "Express,js", "WebSocket", "foundry", "Zod", "Git"];

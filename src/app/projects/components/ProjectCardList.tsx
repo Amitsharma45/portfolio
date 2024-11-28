@@ -92,7 +92,7 @@ const data: Project[] = [
     logo: '/portfolio-logo.jpg',
     title: "Portfolio",
     description: "A portfolio crafted and developed by me, showcasing my skills, projects, and passion for web development",
-    techStack: ["NextJS", "Prisma", "PostgreSQL", "NextAuth", "TipTap Editor", "Resend", "Cloudinary", "Zod", "framer-motion", "Tailwind CSS"],
+    techStack: ["Next.js", "Prisma", "PostgreSQL", "NextAuth", "TipTap Editor", "Resend", "Cloudinary", "Zod", "framer-motion", "Tailwind CSS"],
     link: "https://fardeenmansoori.vercel.app/",
     source: "https://github.com/Fardeen26/portfolio",
   }

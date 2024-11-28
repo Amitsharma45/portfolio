@@ -45,10 +45,13 @@ const Navbar = () => {
                     <Link href="/blogs">
                         <Tooltip content="Blog">
                             <div className='hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300'>
-                                <RowsIcon className={`w-[16px] h-[16px] max-sm:w-[13px] max-sm:h-[13px] text-black dark:text-white ${pathname == '/blogs' ? 'dark:!text-[#FFC83D] !text-[#cc9e2b]' : ''}`} />
+                                <RowsIcon
+                                    className={`w-[16px] h-[16px] max-sm:w-[13px] max-sm:h-[13px] text-black dark:text-white ${pathname.startsWith('/blogs') ? 'dark:!text-[#FFC83D] !text-[#cc9e2b]' : ''}`}
+                                />
                             </div>
                         </Tooltip>
                     </Link>
+
 
                     <Link href="/about">
                         <Tooltip content="About">
@@ -94,7 +97,7 @@ const Navbar = () => {
 
                     <Separator orientation='vertical' size={{ sm: '1', lg: '2', xl: '2' }} className='bg-black dark:bg-gray-400' />
 
-                    <div className='hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300' onClick={toggleDarkMode}>
+                    <div className='hover:px-3 max-sm:hover:px-2 py-2.5 rounded-full transition-all duration-300 cursor-pointer' onClick={toggleDarkMode}>
                         <div className='flex items-center'>
                             <button>
                                 {isDarkMode ? <MoonIcon className='w-[18px] h-[18px] max-sm:w-[14px] max-sm:h-[14px]' /> : <SunIcon className='w-5 h-5 max-sm:w-[15px] max-sm:h-[15px]' />}
