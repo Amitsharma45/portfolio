@@ -33,7 +33,7 @@ export default ProjectCardList;
 
 const data: Project[] = [
   {
-    logo: '/enrich.png',
+    logo: '/saloon-5.png',
     title: "Enrich Salon Management",
     description: "Enrich Hair Salon is a salon booking system with online payments and an admin dashboard for managing services and bookings.",
     techStack: ["React", "MUI", "Tailwind CSS", "Razorpay", "Nodemailer", "React Charts", "Node.js", "Express.js", "MongoDB"],
@@ -41,7 +41,7 @@ const data: Project[] = [
     source: "https://github.com/Fardeen26/enrich-salon-management",
   },
   {
-    logo: '/orbittoken.png',
+    logo: '/token-2.png',
     title: "OrbitToken",
     description: "OrbitToken enables users launch their custom tokens on the Solana blockchain, with features to transfer tokens, view token balances, transfer SOL, receive airdrops, and check account balances.",
     techStack: ["React", "Web3.js", "spl-token", "Tailwind CSS"],
@@ -49,7 +49,7 @@ const data: Project[] = [
     source: "https://github.com/Fardeen26/OrbitToken",
   },
   {
-    logo: "/ghostgram.png",
+    logo: "/anon-4.png",
     title: "GhostGram - SaaS platform",
     description: "GhostGram is an anonymous messaging platform that lets users securely send and receive messages through unique, authenticated links.",
     techStack: ["Next.js", "Typescript", "Gemini", "MongoDB", "NextAuth", "Nodemailer", "Tailwind CSS", "Shadcn"],
@@ -57,7 +57,7 @@ const data: Project[] = [
     source: "https://github.com/Fardeen26/ghostgram",
   },
   {
-    logo: "/lexicon.jpeg",
+    logo: "/book-1.png",
     title: "Lexicon",
     description: "Lexicon is a platform for discovering, downloading, and uploading books with a clean, user-friendly interface, working on auth and review functionality.",
     techStack: ["Next.js", "Typescript", "NextAuth", "framer-motion", "MongoDB", "Tailwind CSS", "Shadcn", "Zod"],
@@ -81,7 +81,7 @@ const data: Project[] = [
     source: "https://github.com/Fardeen26/Article-Summarizer",
   },
   {
-    logo: '/gobegin.webp',
+    logo: '/gobegin-5.png',
     title: "GoBegin booking application",
     description: "GoBegin is a platform where users can list residences, view details, comment, and see locations on a map—similar to Airbnb.",
     techStack: ["Node.js", "Express.js", "MongoDB", "Bootstrap", "Passport.js", "EJS"],
@@ -89,7 +89,7 @@ const data: Project[] = [
     source: "https://github.com/Fardeen26/wanderlust_app",
   },
   {
-    logo: '/portfolio-logo.jpg',
+    logo: '/f-1.png',
     title: "Portfolio",
     description: "A portfolio crafted and developed by me, showcasing my skills, projects, and passion for web development",
     techStack: ["Next.js", "Prisma", "PostgreSQL", "NextAuth", "TipTap Editor", "Resend", "Cloudinary", "Zod", "framer-motion", "Tailwind CSS"],
