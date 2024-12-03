@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import { NextResponse } from "next/server";
 
+
 export async function GET() {
     try {
         const blogs = await prisma.blog.findMany({
@@ -20,7 +21,8 @@ export async function GET() {
             {
                 status: 200,
                 headers: {
-                    'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=30'
+                    'Content-Type': 'application/json',
+                    'Cache-Control': 'no-store',
                 }
             }
         );

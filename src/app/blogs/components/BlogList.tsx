@@ -4,9 +4,7 @@ import BlogCard from './BlogCard'
 async function getBlogs() {
     try {
         const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blogs`, {
-            next: {
-                revalidate: 60
-            }
+            cache: 'no-store'
         });
         const data = await response.json();
 
