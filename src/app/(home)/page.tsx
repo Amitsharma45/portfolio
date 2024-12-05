@@ -11,6 +11,9 @@ import { inter, bricolage_grotesque } from '@/utils/fonts';
 import About from "../about/components/About";
 import Contact from "@/components/Contact";
 import { motion } from "framer-motion"
+import { GithubGraph } from "@/components/ui/github";
+import Title from "@/components/ui/Title";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -37,6 +40,17 @@ export default function Home() {
 
       <div className="w-full flex justify-center mt-24 max-lg:mt-16">
         <ProjectCardList />
+      </div>
+
+      <div className="w-full flex flex-col items-center mt-8 mb-4 gap-4 max-sm:hidden">
+        <Title title="GitHub Contributions" />
+        <Link href={'https://github.com/Fardeen26'} target="_blank">
+          <GithubGraph
+            username="Fardeen26"
+            blockMargin={2}
+            colorPallete={["#1e1e2f", "#5a3e7a", "#7e5aa2", "#a87cc3", "#d9a9e6"]}
+          />
+        </Link>
       </div>
 
       <div className="w-full flex justify-center mt-4">
