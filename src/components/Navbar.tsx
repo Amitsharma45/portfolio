@@ -1,21 +1,13 @@
 'use client';
+
 import React from 'react';
-import { useContext } from 'react';
 import { Link, Separator, Tooltip } from '@radix-ui/themes';
 import { GitHubLogoIcon, SunIcon, MoonIcon, FileIcon, RowsIcon, LinkedInLogoIcon, CodeIcon, HomeIcon } from '@radix-ui/react-icons';
-import { DarkModeContext } from '@/context/DarkModeContext';
 import { usePathname } from 'next/navigation';
 import { FaXTwitter } from 'react-icons/fa6';
 import { IoPerson } from "react-icons/io5";
+import { useDarkMode } from '@/hooks/useDarkMode';
 
-
-const useDarkMode = () => {
-    const context = useContext(DarkModeContext);
-    if (!context) {
-        throw new Error("darkModeContext is possibly undefined!");
-    }
-    return context;
-};
 
 const Navbar = () => {
     const { isDarkMode, toggleDarkMode } = useDarkMode();
