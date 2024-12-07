@@ -43,8 +43,8 @@ const data: Project[] = [
   {
     logo: '/token-2.png',
     title: "OrbitToken",
-    description: "OrbitToken enables users launch their custom tokens on the Solana blockchain, with features to transfer tokens, view token balances, transfer SOL, receive airdrops, and check account balances.",
-    techStack: ["React", "Web3.js", "spl-token", "Tailwind CSS"],
+    description: "An decentralized platform enables users launch their custom tokens, transfer tokens, view token balances, transfer SOL, and check account balances.",
+    techStack: ["React", "Web3.js", "TypeScript", "Recoil", "spl-token", "Tailwind CSS"],
     link: "https://orbit-token-chi.vercel.app/",
     source: "https://github.com/Fardeen26/OrbitToken",
   },
