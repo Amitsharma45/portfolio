@@ -3,13 +3,16 @@
 import React, { useState } from 'react'
 import { EditorContent, useEditor, Editor } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
+import Image from '@tiptap/extension-image'
 import { FaCode, FaListUl, FaListOl, FaPencil } from 'react-icons/fa6'
 import { GrUndo, GrRedo, GrBlockQuote, GrBold } from "react-icons/gr";
 import { MdOutlineHorizontalRule, MdOutlineFormatItalic } from "react-icons/md";
-import { BiCodeBlock } from "react-icons/bi";
+import { BiCodeBlock, BiImage } from "react-icons/bi";
 import { LuHeading1, LuHeading2, LuHeading3, LuStrikethrough } from "react-icons/lu";
 import { RiText } from "react-icons/ri";
 import './styles.scss'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
 
 type MenuBarProps = {
     editor: Editor | null;
@@ -18,6 +21,18 @@ type MenuBarProps = {
 
 const MenuBar = ({ editor }: MenuBarProps) => {
     const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false)
+    const [imageUrl, setImageUrl] = useState<string>();
+    const [isDropDown, setIsDropDown] = useState(false)
+
+    const handleImageUrl = () => {
+        if (imageUrl) {
+            if (!editor) return
+            editor.chain().focus().setImage({ src: imageUrl }).run()
+            setImageUrl('')
+            setIsDropDown(false)
+        }
+    }
+
     if (!editor) {
         return null
     }
@@ -25,13 +40,23 @@ const MenuBar = ({ editor }: MenuBarProps) => {
     return (
         <>
             <div className="control-group mt-10 fixed bottom-7 left-[25vw] max-sm:left-0 z-20 bg-black bg-opacity-10 backdrop-blur-sm border dark:border-white/20 dark:text-white text-black w-[50vw] max-sm:w-full py-3 rounded-xl shadow dark:shadow-none max-sm:hidden">
-                <div className="button-group flex gap-6 justify-center text-lg max-sm:text-sm max-sm:gap-3 transition-all">
+                <div className="button-group flex gap-6 justify-center text-lg max-sm:text-sm max-sm:gap-3 transition-all relative">
                     <button
                         onClick={() => editor.chain().focus().toggleBold().run()}
                         className={`${editor.isActive('bold') ? 'is-active' : ''} hover:scale-110 duration-200`}
                     >
                         <GrBold />
                     </button>
+
+                    <button onClick={() => setIsDropDown(!isDropDown)}>
+                        <BiImage />
+                    </button>
+
+                    <div className={`absolute space-y-2 w-[40rem] bottom-20 ${isDropDown ? 'block' : 'hidden'}`}>
+                        <Input type='text' placeholder='Enter Image Url' className='w-full bg-white text-black' value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} />
+                        <Button className='w-full' onClick={handleImageUrl}>Add Image</Button>
+                    </div>
+
                     <button
                         onClick={() => editor.chain().focus().toggleItalic().run()}
                         className={`${editor.isActive('italic') ? 'is-active' : ''} hover:scale-110 duration-200`}
@@ -134,6 +159,16 @@ const MenuBar = ({ editor }: MenuBarProps) => {
                     >
                         <GrBold />
                     </button>
+
+                    <button onClick={() => setIsDropDown(!isDropDown)}>
+                        <BiImage />
+                    </button>
+
+                    <div className={`absolute space-y-2 w-[40rem] bottom-20 ${isDropDown ? 'block' : 'hidden'}`}>
+                        <Input type='text' placeholder='Enter Image Url' className='w-full bg-white text-black' value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} />
+                        <Button className='w-full' onClick={handleImageUrl}>Add Image</Button>
+                    </div>
+
                     <button
                         onClick={() => editor.chain().focus().toggleItalic().run()}
                         className={`${editor.isActive('italic') ? 'is-active' : ''} hover:scale-110 duration-200`}
@@ -235,7 +270,8 @@ type BlogEditorProps = {
 export default function BlogEditor({ setContent }: BlogEditorProps) {
     const editor = useEditor({
         extensions: [
-            StarterKit
+            StarterKit,
+            Image
         ],
         content: "Start writing here...",
         onUpdate: ({ editor }) => {
