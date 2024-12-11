@@ -73,6 +73,14 @@ const data: Project[] = [
     source: "https://github.com/Fardeen26/chat-app",
   },
   {
+    logo: '/codify.png',
+    title: "Codify",
+    description: "Codify transforms your source code into stunning, shareable images with customizable themes, fonts, and backgrounds—perfect for developers and tutorials.",
+    techStack: ["Next.js", "TypeScript", "Shadcn", "Tailwind CSS"],
+    link: "https://codify-silk.vercel.app/",
+    source: "https://github.com/Fardeen26",
+  },
+  {
     logo: "/sumz.svg",
     title: "SumZ - Article Summarizer",
     description: "SumZ is an article summarizer that quickly generates concise summaries of lengthy articles, helping users grasp key points efficiently. It's designed for speed and accuracy with a clean, user-friendly interface.",
@@ -80,14 +88,7 @@ const data: Project[] = [
     link: "https://sumz-summarize.netlify.app/",
     source: "https://github.com/Fardeen26/Article-Summarizer",
   },
-  {
-    logo: '/gobegin-5.png',
-    title: "GoBegin booking application",
-    description: "GoBegin is a platform where users can list residences, view details, comment, and see locations on a map—similar to Airbnb.",
-    techStack: ["Node.js", "Express.js", "MongoDB", "Bootstrap", "Passport.js", "EJS"],
-    link: "https://wanderlust-6cr5.onrender.com/",
-    source: "https://github.com/Fardeen26/wanderlust_app",
-  },
+
   {
     logo: '/f-1.png',
     title: "Portfolio",
