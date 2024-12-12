@@ -152,7 +152,7 @@ const MenuBar = ({ editor }: MenuBarProps) => {
             </div>
 
             <div className={`control-group transition-all duration-300 mt-10 fixed bottom-20 right-6 z-20 bg-black bg-opacity-10 backdrop-blur-sm border dark:border-white/20 dark:text-white text-black h-fit py-3 px-4 rounded-xl shadow dark:shadow-none ${isMenuVisible ? 'block' : 'hidden'}`}>
-                <div className="button-group flex flex-col gap-4 justify-center text-lg max-sm:text-sm">
+                <div className="button-group flex flex-col gap-4 justify-center text-lg max-sm:text-sm relative">
                     <button
                         onClick={() => editor.chain().focus().toggleBold().run()}
                         className={`${editor.isActive('bold') ? 'is-active' : ''} hover:scale-110 duration-200`}
@@ -164,7 +164,7 @@ const MenuBar = ({ editor }: MenuBarProps) => {
                         <BiImage />
                     </button>
 
-                    <div className={`absolute space-y-2 w-[40rem] bottom-20 ${isDropDown ? 'block' : 'hidden'}`}>
+                    <div className={`absolute space-y-2 w-[90vw] bottom-10 left-[-83vw] ${isDropDown ? 'block' : 'hidden'}`}>
                         <Input type='text' placeholder='Enter Image Url' className='w-full bg-white text-black' value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} />
                         <Button className='w-full' onClick={handleImageUrl}>Add Image</Button>
                     </div>
