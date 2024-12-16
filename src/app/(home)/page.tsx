@@ -58,7 +58,7 @@ export default function Home() {
       </div>
 
       <div className="w-full flex justify-center mt-4">
-        <Experience company_link={"https://www.apnacollege.in/"} company_logo={"/company1.jpeg"} company_name={"Apna College"} duration={"Feb 2024 - June 2024"} job_title={"Teaching Assistant (MERN Stack)"} description={"Mentored over 5,000 students in MERN Stack development, resolving 500+ coding issues and improving understanding. Achieved an average rating of 4.75 for effective teaching and support."} />
+        <Experience company_link={"https://x.com/fardeen14693425"} company_logo={"/stealth-startup.jpeg"} company_name={"Stealth Startup"} duration={"Feb 2024 - June 2024"} job_title={"Teaching Assistant (MERN Stack)"} description={"Mentored over 5,000 students in MERN Stack development, resolving 500+ coding issues and improving understanding. Achieved an average rating of 4.75 for effective teaching and support."} />
       </div>
 
       <div className="w-full flex justify-center mt-4">
