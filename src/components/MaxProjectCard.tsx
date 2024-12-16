@@ -1,21 +1,14 @@
-import React, { useContext } from 'react'
 import { MagicCard } from './ui/magic-card'
 import ShineBorder from './ui/shine-border';
 import { bricolage_grotesque, inter } from '@/utils/fonts';
 import { Badge, Link } from '@radix-ui/themes';
 import Image from 'next/image';
-import { DarkModeContext } from '@/context/DarkModeContext';
 import { GitHubLogoIcon, GlobeIcon } from '@radix-ui/react-icons';
 import { Project } from '@/types/project';
+import { useDarkMode } from '@/hooks/useDarkMode';
 
 const MaxProjectCard = () => {
-    const darkModeContext = useContext(DarkModeContext);
-
-    if (!darkModeContext) {
-        throw new Error("Navbar must be used within a DarkModeProvider");
-    }
-
-    const { isDarkMode } = darkModeContext;
+    const { isDarkMode } = useDarkMode()
     return (
         <>
             {

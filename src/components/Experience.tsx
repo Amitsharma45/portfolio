@@ -1,21 +1,14 @@
 'use client';
 import Image from 'next/image';
-import React, { useContext } from 'react';
 import { MagicCard } from './ui/magic-card';
 import { Link } from '@radix-ui/themes';
 import { I_Experience } from '@/types/project';
-import { DarkModeContext } from '@/context/DarkModeContext';
 import { bricolage_grotesque, inter } from '@/utils/fonts';
 import Title from './ui/Title';
+import { useDarkMode } from '@/hooks/useDarkMode';
 
 const Experience = (props: I_Experience) => {
-    const darkModeContext = useContext(DarkModeContext);
-    if (!darkModeContext) {
-        throw new Error("darkModeContext is possibly undefined!");
-    }
-
-    const { isDarkMode } = darkModeContext;
-
+    const { isDarkMode } = useDarkMode();
     return (
         <div className='w-1/2 max-lg:w-full max-lg:px-20 max-sm:w-full max-sm:px-5 flex flex-col items-center mt-4 pb-8'>
             <Title title='Experience' />

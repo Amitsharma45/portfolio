@@ -8,7 +8,6 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 import { Link as ScrollLink } from 'react-scroll';
 import Coursework from "@/components/Coursework";
 import { inter, bricolage_grotesque } from '@/utils/fonts';
-import About from "../about/components/About";
 import Contact from "@/components/Contact";
 import { motion } from "framer-motion"
 import { GithubGraph } from "@/components/ui/github";
@@ -67,10 +66,6 @@ export default function Home() {
 
       <div className="w-full flex justify-center mt-4">
         <Coursework />
-      </div>
-
-      <div className="w-full flex justify-center mt-4">
-        <About />
       </div>
 
       <div className="w-full flex justify-center mt-4" id="contact-section">
