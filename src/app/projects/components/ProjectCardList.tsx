@@ -77,7 +77,7 @@ const data: Project[] = [
     title: "GoBegin - Travel Application",
     description: "GoBegin is a platform where users can list residences, view details of available listings, add reviews, and see locations on a map—similar to Airbnb",
     techStack: ["Node.js", "Express.js", "MongoDB", "passport.js", "cloudinary", "Bootstrap"],
-    link: "https://wanderlust-6cr5.onrender.com/",
+    link: "https://gobegin.fardeen.tech/listings",
     source: "https://github.com/Fardeen26/wanderlust_app",
   },
   {
