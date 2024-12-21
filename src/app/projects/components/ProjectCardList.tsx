@@ -37,7 +37,7 @@ const data: Project[] = [
     title: "Enrich Salon Management",
     description: "Enrich Hair Salon is a salon booking system with online payments and an admin dashboard for managing services and bookings.",
     techStack: ["React", "MUI", "Tailwind CSS", "Razorpay", "Nodemailer", "React Charts", "Node.js", "Express.js", "MongoDB"],
-    link: "https://enrich-hair-salon.vercel.app/",
+    link: "https://enrich-salon.fardeen.tech",
     source: "https://github.com/Fardeen26/enrich-salon-management",
   },
   {
@@ -45,7 +45,7 @@ const data: Project[] = [
     title: "OrbitToken",
     description: "An decentralized platform enables users launch their custom tokens, transfer tokens, view token balances, transfer SOL, and check account balances.",
     techStack: ["React", "Web3.js", "TypeScript", "Recoil", "spl-token", "Tailwind CSS"],
-    link: "https://orbit-token-chi.vercel.app/",
+    link: "https://orbittoken.fardeen.tech",
     source: "https://github.com/Fardeen26/OrbitToken",
   },
   {
@@ -53,7 +53,7 @@ const data: Project[] = [
     title: "GhostGram - SaaS platform",
     description: "GhostGram is an anonymous messaging platform that lets users securely send and receive messages through unique, authenticated links.",
     techStack: ["Next.js", "Typescript", "Gemini", "MongoDB", "NextAuth", "Nodemailer", "Tailwind CSS", "Shadcn"],
-    link: "https://ghostgram-ten.vercel.app/",
+    link: "https://ghostgram.fardeen.tech",
     source: "https://github.com/Fardeen26/ghostgram",
   },
   {
@@ -61,7 +61,7 @@ const data: Project[] = [
     title: "Lexicon",
     description: "Lexicon is a platform for discovering, downloading, and uploading books with a clean, user-friendly interface, working on auth and review functionality.",
     techStack: ["Next.js", "Typescript", "NextAuth", "framer-motion", "MongoDB", "Tailwind CSS", "Shadcn", "Zod"],
-    link: "https://lexicon-sand.vercel.app/",
+    link: "https://lexicon.fardeen.tech",
     source: "https://github.com/Fardeen26/lexicon",
   },
   {
@@ -69,7 +69,7 @@ const data: Project[] = [
     title: "The Chat Haven",
     description: "The Chat Haven is a chat application that allows users to create & join room and send & receive messages in real-time.",
     techStack: ["Next.js", "Node.js", "WebSockets", "TypeScript", "Tailwind CSS"],
-    link: "https://chat-app-phi-lyart.vercel.app/",
+    link: "https://chathaven.fardeen.tech",
     source: "https://github.com/Fardeen26/chat-app",
   },
   {
@@ -85,7 +85,7 @@ const data: Project[] = [
     title: "Codify",
     description: "Codify transforms your source code into stunning, shareable images with customizable themes, fonts, and backgrounds—perfect for developers and tutorials.",
     techStack: ["Next.js", "TypeScript", "Shadcn", "Tailwind CSS"],
-    link: "https://codify-silk.vercel.app/",
+    link: "https://codify.fardeen.tech",
     source: "https://github.com/Fardeen26",
   },
   {
@@ -93,7 +93,7 @@ const data: Project[] = [
     title: "Portfolio",
     description: "A portfolio crafted and developed by me, showcasing my skills, projects, and passion for web development",
     techStack: ["Next.js", "Prisma", "PostgreSQL", "NextAuth", "TipTap Editor", "Resend", "Cloudinary", "Zod", "framer-motion", "Tailwind CSS"],
-    link: "https://fardeenmansoori.vercel.app/",
+    link: "https://fardeen.tech",
     source: "https://github.com/Fardeen26/portfolio",
   }
 ];
