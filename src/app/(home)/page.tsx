@@ -6,7 +6,7 @@ import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { Link as ScrollLink } from "react-scroll";
-import Coursework from "@/components/Coursework";
+// import Coursework from "@/components/Coursework";
 import { inter, bricolage_grotesque } from "@/utils/fonts";
 // import Contact from "@/components/Contact";
 import { motion } from "framer-motion";
@@ -109,12 +109,12 @@ export default function Home() {
         <Education
           institute_link={"https://www.uok.ac.in/"}
           institute_logo={"/uok.gif"}
-          course_title={"Bachelors of Computer Application"}
-          ending_date={"Expected July 2025"}
+          course_title={"Bachelor of Technology (CSE) "}
+          ending_date={"July 2021"}
           institute_name={"University of Kota"}
-          cgpa={8.5}
+          cgpa={8.13}
           description={
-            "Currently pursuing a BCA degree, focusing on software development, web technologies, and programming languages. Maintaining a CGPA of 8.5, with coursework in data structures, operating systems, DBMS, computer networks."
+            ""
           }
         />
       </div>
@@ -124,7 +124,7 @@ export default function Home() {
       </div>
 
       <div className="w-full flex justify-center mt-4">
-        <Coursework />
+        {/* <Coursework /> */}
       </div>
 
       <div className="w-full flex justify-center mt-4" id="contact-section">
