@@ -1,5 +1,5 @@
 "use client";
-import Avatar from "./components/Avatar";
+// import Avatar from "./components/Avatar";
 import ProjectCardList from "../projects/components/ProjectCardList";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
@@ -8,7 +8,7 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 import { Link as ScrollLink } from "react-scroll";
 import Coursework from "@/components/Coursework";
 import { inter, bricolage_grotesque } from "@/utils/fonts";
-import Contact from "@/components/Contact";
+// import Contact from "@/components/Contact";
 import { motion } from "framer-motion";
 import { GithubGraph } from "@/components/ui/github";
 import Title from "@/components/ui/Title";
